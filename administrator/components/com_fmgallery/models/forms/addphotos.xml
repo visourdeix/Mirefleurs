@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+  <fieldset addfieldpath="/administrator/components/com_categories/models/fields">
+    <field name="title" type="text" label="JGLOBAL_TITLE"
+        description="JFIELD_TITLE_DESC"
+        class="input-large"
+        size="40"
+        required="true" />
+
+    <field name="state" type="list" label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC" class="chzn-color-state"
+        filter="intval" size="1" default="1">
+      <option value="1">
+        JPUBLISHED
+      </option>
+      <option value="0">
+        JUNPUBLISHED
+      </option>
+      <option value="2">
+        JARCHIVED
+      </option>
+      <option value="-2">
+        JTRASHED
+      </option>
+    </field>
+
+    <field name="catid" type="categoryedit"
+      label="JCATEGORY" description="JFIELD_CATEGORY_DESC"
+      required="true">
+      <option value=""></option>
+    </field>
+
+    <field name="tags"
+      type="tag"
+      label="JTAG"
+      description="JTAG_DESC"
+      class="input-medium"
+      multiple="true">
+    </field>
+  </fieldset>
+
+  <fields addfieldpath="/libraries/FootManager/Form/fields">
+    <field name="uploader"
+type="fmuploadfiles"
+       url="index.php?option=com_fmgallery&amp;task=addphotos.upload"
+           types="jpg,gif,png"
+           maxFileSize="3mb" />
+
+    <field name="date_option" type="fmradio"  default="1"  label="COM_FMGALLERY_FIELD_DATE" description="COM_FMGALLERY_FIELD_DATE_OPTION_DESC">
+      <option value="1" active_class="btn-info">COM_FMGALLERY_VIEW_TAKEN</option>
+      <option value="2" active_class="btn-info">COM_FMGALLERY_CUSTOM</option>
+    </field>
+
+    <field name="date" type="fmdatepicker" label="COM_FMGALLERY_FIELD_DATE" description="COM_FMGALLERY_FIELD_DATE_DESC" />
+  </fields>
+</form>

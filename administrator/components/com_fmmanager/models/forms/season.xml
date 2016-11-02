@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset addfieldpath="/libraries/FootManager/Form/fields">
+
+    <field name="label" type="text" label="COM_FMMANAGER_FIELD_LABEL" description="COM_FMMANAGER_FIELD_LABEL_DESC" default="" required="true" />
+    <field name="start_date" type="fmdatepicker" label="COM_FMMANAGER_FIELD_START_DATE" description="COM_FMMANAGER_FIELD_START_DATE_DESC"  required="true" />
+    <field name="end_date" type="fmdatepicker" label="COM_FMMANAGER_FIELD_END_DATE" description="COM_FMMANAGER_FIELD_END_DATE_DESC"  required="true" />
+    <field name="managers" type="fmrepeater"  label="COM_FMMANAGER_FIELD_MANAGERS" description="COM_FMMANAGER_FIELD_MANAGERS_DESC">
+      <field name="person_id" type="personslist" label="COM_FMMANAGER_FIELD_PERSON" description="COM_FMMANAGER_FIELD_PERSON_DESC" defaut="" class="input-large">
+        <option value=""></option>
+      </field>
+      <field name="function_id" type="functionslist" extra="1" label="COM_FMMANAGER_FIELD_FUNCTION" description="COM_FMMANAGER_FIELD_FUNCTION_DESC" default="0" class="input-medium">
+        <option value="0">FM_MANAGER</option>
+      </field>
+    </field>
+  </fieldset>
+</form>

@@ -1,0 +1,109 @@
+﻿/* =============================================================================
+   Screen size variables
+   ========================================================================== */
+
+@mobile: 340px;
+@mobile-min: @mobile;
+@tablet: 480px;
+@tablet-min: @tablet;
+@large-tablet: 768px;
+@large-tablet-min: @large-tablet;
+@desktop: 992px;
+@desktop-min: @desktop;
+@large-desktop: 1200px;
+@large-desktop-min: @large-desktop;
+@very-large-desktop: 1600px;
+@very-large-desktop-min: @very-large-desktop;
+@mobile-max: ( @tablet-min - 1 );
+@tablet-max: ( @large-tablet-min - 1 );
+@large-tablet-max: ( @desktop-min - 1 );
+@desktop-max: ( @large-desktop-min - 1 );
+@large-desktop-max: ( @very-large-desktop-min - 1 );
+
+/* =============================================================================
+   Media queries for different screen sizes
+   ========================================================================== */
+
+// mobile only
+.mobile(@rules) {
+    @media (max-width: @mobile-max) {
+        @rules();
+    }
+}
+
+// mobile et +
+.mobile-min(@rules) {
+    @media (min-width: @mobile-min) {
+        @rules();
+    }
+}
+
+// tablet et -
+.tablet-max(@rules) {
+    @media (max-width: @tablet-max) {
+        @rules();
+    }
+}
+
+// tablet only
+.tablet(@rules) {
+    @media (min-width: @tablet-min) and (max-width: @tablet-max) {
+        @rules();
+    }
+}
+
+// tablet et +
+.tablet-min(@rules) {
+    @media (min-width: @tablet-min) {
+        @rules();
+    }
+}
+
+// large-tablet et -
+.large-tablet-max(@rules) {
+    @media (max-width: @large-tablet-max) {
+        @rules();
+    }
+}
+
+// large-tablet only
+.large-tablet(@rules) {
+    @media (min-width: @large-tablet-min) and (max-width: @large-tablet-max) {
+        @rules();
+    }
+}
+
+// large-tablet et +
+.large-tablet-min(@rules) {
+    @media (min-width: @large-tablet-min) {
+        @rules();
+    }
+}
+
+// desktop et -
+.desktop-max(@rules) {
+    @media (max-width: @desktop-max) {
+        @rules();
+    }
+}
+
+// desktop only
+.desktop(@rules) {
+    @media (min-width: @desktop-min) and (max-width: @desktop-max) {
+        @rules();
+    }
+}
+
+// desktop et +
+.desktop-min(@rules) {
+    @media (min-width: @desktop-min) {
+        @rules();
+    }
+}
+
+// large-desktop et -
+.large-desktop-max(@rules) {
+    @media (max-width: @large-desktop-max) {
+        @rules();
+    }
+}

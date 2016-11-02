@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset  addfieldpath="/libraries/FootManager/Form/fields">
+
+    <field name="roster" type="rosterslist" label="COM_FMMANAGER_FIELD_ROSTER" description="COM_FMMANAGER_FIELD_ROSTER_DESC" editLink="" default="" class="input-large">
+      <option value="">COM_FMMANAGER_KEEP_ROSTER</option>
+    </field>
+    <field name="stadium" type="stadiumslist" label="COM_FMMANAGER_FIELD_STADIUM" description="COM_FMMANAGER_FIELD_STADIUM_DESC" editLink="" default="-1" class="input-xlarge">
+      <option value="-1">COM_FMMANAGER_KEEP_STADIUM</option>
+    </field>
+  </fieldset>
+</form>

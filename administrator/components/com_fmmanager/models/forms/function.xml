@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset addfieldpath="/libraries/FootManager/Form/fields">
+
+    <field name="label" type="text" label="COM_FMMANAGER_FIELD_LABEL" description="COM_FMMANAGER_FIELD_LABEL_DESC" default="" required="true" />
+    <field name="extra" type="fmradio"  label="COM_FMMANAGER_FIELD_TYPE" description="COM_FMMANAGER_FIELD_FUNCTION_TYPE_DESC" default="0">
+      <option value="0" active_class="btn-info">FM_FUNCTION_TYPE_0</option>
+      <option value="1" active_class="btn-info">FM_FUNCTION_TYPE_1</option>
+    </field>
+  </fieldset>
+</form>

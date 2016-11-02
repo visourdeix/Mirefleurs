@@ -1,0 +1,152 @@
+﻿.fm-event-header
+{
+    background-color: @fontColor;
+    background-position: bottom left;
+    background-size: cover;
+    position: relative;
+
+    .fm-watermark
+    {
+        .opacity(100);
+    }
+
+        .fm-watermark + .fm-content
+        {
+            .opacity(80);
+        }
+
+    .fm-content
+    {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.8+1,0.15+67,0.6+100,0.3+100 */
+        background: -moz-linear-gradient(top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 1%, rgba(0,0,0,0.15) 67%, rgba(0,0,0,0.3) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 1%,rgba(0,0,0,0.15) 67%,rgba(0,0,0,0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 1%,rgba(0,0,0,0.15) 67%,rgba(0,0,0,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#4d000000',GradientType=0 ); /* IE6-9 */
+        padding-top: 1px;
+        overflow: hidden;
+        width: 100%;
+
+        .fm-button
+        {
+            margin-top:10px;
+            margin-bottom:10px;
+        }
+
+        .fm-info
+        {
+            text-align: center;
+
+            .fm-date
+            {
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                left: 0;
+                top: -12px;
+
+                & > .fm-badge
+                {
+                    padding: 5px 10px;
+                    font-size: 17px;
+                    .text-overflow();
+                    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+                }
+            }
+
+            .fm-category
+            {
+                position: absolute;
+                padding: 10px;
+                left: 0;
+                top: 0;
+                color: white !important;
+                font-size: 20px;
+                font-family: @tradeGothic;
+                text-transform: uppercase;
+
+                .mobile (
+                {
+                    display: none;
+                }
+
+                );
+            }
+
+            .fm-tournament
+            {
+                margin: 10px;
+                color: @white;
+                font-size: 15px;
+
+                .mobile(
+                {
+                    font-size: 13px !important;
+                }
+
+                );
+            }
+        }
+
+        .fm-row > div
+        {
+            padding: 2px;
+        }
+
+        .fm-stadium
+        {
+            text-align: center;
+
+            & > span
+            {
+                padding: 5px 10px;
+                color: @fontColor;
+                background-color: @white;
+                .border-top-radius(5px);
+                font-family: @tradeGothic;
+                font-size: 14px;
+                .text-overflow();
+
+                .mobile(
+                {
+                    font-size: 11px;
+                }
+
+                );
+            }
+        }
+    }
+
+            .fm-countdown {
+            .fm-label {
+                color:@borderColor!important;
+            }
+        }
+}
+
+    .fm-event-header.fm-small
+    {
+        margin: 0;
+        .flex-display();
+        .flex-flow(row nowrap);
+        .justify-content(flex-start);
+        .align-items(center);
+
+        & > div
+        {
+            padding: 0 3%;
+        }
+
+        .fm-date
+        {
+            & > .fm-badge
+            {
+                font-size: 13px !important;
+                padding: 3px 5px!important;
+            }
+        }
+
+        .fm-tournament
+        {
+            font-size: 13px !important;
+        }
+    }

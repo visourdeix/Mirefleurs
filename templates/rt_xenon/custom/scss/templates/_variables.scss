@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "TradeGothic";
+  font-weight: 700;
+  font-style: normal;
+  src: url('../../fonts/tradegothic/TradeGothicLTStd-BdCn20.eot');
+  src: url('../../fonts/tradegothic/TradeGothicLTStd-BdCn20.eot#iefix') format('embedded-opentype'), url('../../fonts/tradegothic/TradeGothicLTStd-BdCn20.woff') format('woff'), url('../../fonts/tradegothic/TradeGothicLTStd-BdCn20.ttf') format('truetype'), url('../../fonts/tradegothic/TradeGothicLTStd-BdCn20.svg#tradegothic') format('svg');
+}
+
+@font-face {
+  font-family: "roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../fonts/roboto/roboto-bold/roboto-bold-webfont.eot#iefix') format("embedded-opentype"), url('../fonts/roboto/roboto-bold/roboto-bold-webfont.woff') format("woff"), url('../../fonts/roboto/roboto-bold/roboto-bold-webfont.ttf') format("truetype"), url('../../fonts/roboto/roboto-bold/roboto-bold-webfont.svg#roboto') format("svg");
+}
+
+$tradeGothic: 'TradeGothic';
+
+$lightgreen: #459b0b;
+$darkgreen: #0D602E;

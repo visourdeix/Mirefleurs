@@ -1,0 +1,197 @@
+﻿@cellWidth: 60px;
+@cellHeight: 12px;
+
+.fm-match-info-teams
+{
+    .fm-team
+    {
+        text-align: center;
+    }
+
+    .fm-teams
+    {
+        & > .fm-row > div
+        {
+            padding: 15px 7px!important;
+        }
+    }
+
+    .fm-row
+    {
+        align-items: flex-start;
+
+        .fm-team1-phone
+        {
+            display: none;
+        }
+
+        .tablet-min(
+        {
+            & > .fm-row
+            {
+                padding: 0;
+            }
+        }
+
+        );
+
+        .tablet-max(
+        {
+            align-items: stretch;
+
+            .fm-team1
+            {
+                display: none;
+            }
+
+            .fm-team1-phone
+            {
+                display: block;
+            }
+        }
+
+        );
+    }
+
+    .fm-tactics
+    {
+        max-width: 360px;
+        width: 100%;
+        background-image: url('../images/tactic-background-2.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        padding: 5px;
+        .flex(2);
+        margin: 0 auto;
+
+        .fm-tactic
+        {
+            position: relative;
+            min-height: 250px;
+
+            .fm-logo
+            {
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 40%;
+                .opacity(40);
+            }
+        }
+    }
+
+    .fm-match-info-tactic
+    {
+        .fm-row
+        {
+            padding: 0;
+
+            & > div
+            {
+                border: 1px solid transparent;
+                position: relative;
+                max-width: @cellWidth;
+                padding: 5px 0;
+
+                .fm-tshirt
+                {
+                    .user-select(none);
+                    height: @cellHeight;
+                    line-height: @cellHeight;
+                    vertical-align: middle;
+                    text-align: center;
+                    margin: 0;
+
+                    &:before,
+                    &:after
+                    {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: @cellWidth;
+                        height: @cellHeight;
+                        line-height: @cellHeight;
+                    }
+
+                    &:before
+                    {
+                        font-family: 'icomoon';
+                        speak: none;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        font-size: 24px;
+                        -webkit-font-smoothing: antialiased;
+                        content: "\e801";
+                    }
+
+                    &:after
+                    {
+                        font-family: @tradeGothic;
+                        font-weight: bold;
+                        font-size: 14px;
+                        color: @white;
+                        content: attr(data-number);
+                        padding-top: 3px;
+                    }
+                }
+
+                .fm-person-name
+                {
+                    display: block;
+                    .text-overflow();
+                    font-size: 13px;
+                    line-height: 18px;
+                    color: @white;
+                    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+                    text-align: center;
+                }
+
+                .fm-link
+                {
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    display: block;
+                }
+
+                .fm-goals
+                {
+                    position: absolute;
+                    top: -5px;
+                    left: 40px;
+                    white-space: nowrap;
+
+                    .fm-goal
+                    {
+                        color: white!important;
+                    }
+                }
+
+                .fm-substitutions
+                {
+                    position: absolute;
+                    top: 5px;
+                    left: 40px;
+                    white-space: nowrap;
+                }
+
+                .fm-captain
+                {
+                    position: absolute;
+                    top: 5px;
+                    left: 0;
+                    color: @white;
+                    text-shadow: 1px 1px 1px @black;
+                }
+            }
+        }
+    }
+}

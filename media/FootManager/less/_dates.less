@@ -1,0 +1,138 @@
+﻿.fm-date-style1 {
+    .fm-text-tradegothic;
+    text-transform: uppercase;
+    color: @gray;
+
+    .fm-number-month-year {
+        & > div {
+            display: table-cell;
+        }
+
+        .fm-number {
+            font-size: 2.2em;
+            vertical-align: middle;
+        }
+
+        .fm-month-year {
+            font-size: 0.9em;
+            text-align: left;
+
+            .fm-year {
+                margin-top: -4px;
+            }
+        }
+    }
+
+    .fm-day {
+        font-size: 0.8em;
+        text-align: center;
+        margin-bottom: -2px;
+        .opacity(70);
+    }
+
+    .fm-time {
+        font-size: 1.4em;
+        line-height:1.3em;
+        text-align: center;
+        margin-top: -2px;
+        .opacity(65);
+    }
+}
+
+.fm-small .fm-date-style1,
+.fm-small.fm-date-style1 {
+    .fm-number-month-year {
+        .fm-number {
+            font-size: 1.65em;
+        }
+
+        .fm-month-year {
+            font-size: 0.65em;
+
+            .fm-year {
+                margin-top: -2px;
+            }
+        }
+    }
+
+    .fm-day {
+        font-size: 0.65em;
+    }
+
+    .fm-time {
+        font-size: 1.1em;
+    }
+}
+
+.fm-date-style2 {
+    .fm-text-tradegothic;
+    color: @fontColor;
+    text-transform: uppercase;
+    text-align: center;
+    .flex-display();
+    .flex-flow(row nowrap);
+    .justify-content(flex-start);
+    .align-items(stretch);
+
+    .fm-date-content {
+        -moz-min-width: 70px;
+        -ms-min-width: 70px;
+        -o-min-width: 70px;
+        -webkit-min-width: 70px;
+        min-width: 70px;
+        border: 1px solid @fontColor;
+    }
+
+    .fm-number {
+        font-size: 40px;
+        line-height: 40px;
+        vertical-align: middle;
+    }
+
+    .fm-day, .fm-month {
+        font-size: 20px;
+        line-height: 20px;
+        padding: 2px 4px;
+        background-color: @fontColor;
+        color: @white;
+    }
+
+    .fm-year {
+        line-height: 20px;
+        font-size: 20px;
+        padding: 0 5px;
+        .flex-display();
+        .flex-direction(column);
+        .justify-content(center);
+        .align-items(stretch);
+    }
+}
+
+.fm-small .fm-date-style2,
+.fm-date-style2.fm-small {
+    .fm-date-content {
+        -moz-min-width: 40px;
+        -ms-min-width: 40px;
+        -o-min-width: 40px;
+        -webkit-min-width: 40px;
+        min-width: 40px;
+    }
+
+    .fm-number {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .fm-day,
+    .fm-month {
+        font-size: 13px;
+        line-height: 13px;
+        padding: 2px 3px;
+    }
+
+    .fm-year {
+        line-height: 13px;
+        font-size: 13px;
+        padding: 0 3px;
+    }
+}

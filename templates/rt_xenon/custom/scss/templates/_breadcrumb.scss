@@ -1,0 +1,41 @@
+#g-above {
+    background-color: #000;
+    z-index: 10;    
+    margin-top: -5px;
+    @include breakpoint(mobile-only) {
+        margin-top: 1px;
+    }
+
+    .g-container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 75rem;
+
+        .custom-breadcrumb {
+            
+            .breadcrumbs {
+                color: #fff;
+                font-size: 12px;
+                text-transform: uppercase;
+                line-height: 25px;
+                padding: 0 10px;
+        
+                a {
+	                color: #fff;
+                    overflow: hidden;
+                    -o-text-overflow: ellipsis;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                a:nth-of-type(1) {
+	                font-weight: bold;
+                }
+
+                a:hover {
+	                text-decoration: underline;
+                }
+            } 
+        }   
+    }
+}

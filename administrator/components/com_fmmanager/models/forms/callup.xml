@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset addfieldpath="/libraries/FootManager/Form/fields">
+
+    <field name="date" type="fmdatepicker" label="COM_FMMANAGER_FIELD_DATE" description="COM_FMMANAGER_FIELD_DATE_DESC" required="true" />
+    <field name="time" type="fmtimepicker" label="COM_FMMANAGER_FIELD_TIME" description="COM_FMMANAGER_FIELD_TIME_DESC" required="true" />
+    <field name="end_time" type="fmtimepicker" label="COM_FMMANAGER_FIELD_END_TIME" description="COM_FMMANAGER_FIELD_END_TIME_DESC" />
+    <field name="stadium_id" type="stadiumslist"  label="COM_FMMANAGER_FIELD_STADIUM" description="COM_FMMANAGER_FIELD_STADIUM_DESC" default="" class="input-large">
+      <option value="">FMLIB_OTHER</option>
+    </field>
+    <field name="venue" type="fmtext" label="COM_FMMANAGER_FIELD_VENUE" description="COM_FMMANAGER_FIELD_VENUE_DESC" />
+    <field name="information" type="editor"  label="COM_FMMANAGER_FIELD_INFORMATIONS" description="COM_FMMANAGER_FIELD_INFORMATIONS_DESC" />
+    <field name="persons" type="personstoggles"  label="COM_FMMANAGER_FIELD_PERSONS" description="COM_FMMANAGER_FIELD_PERSONS_DESC" all="true" />
+    <field name="contacts" type="personstoggles"  label="COM_FMMANAGER_FIELD_CONTACTS" description="COM_FMMANAGER_FIELD_CONTACTS_DESC" all="true" />
+  </fieldset>
+</form>

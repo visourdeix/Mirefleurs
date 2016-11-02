@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <fieldset name="general" label="COM_FMACTIVITY_CONFIG_GENERAL" description="COM_FMACTIVITY_CONFIG_GENERAL_DESC" addfieldpath="/libraries/FootManager/Form/fields">
+  </fieldset>
+
+  <fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+    <field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" validate="rules" filter="rules" component="com_fmevents" section="component" />
+  </fieldset>
+</config>

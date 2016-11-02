@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fields name="filter" addfieldpath="/libraries/FootManager/Form/fields">
+    <field
+			name="search"
+			type="text"
+			hint="JSEARCH_FILTER"
+			class="js-stools-search-string" />
+
+    <field name="categories" type="categorieslist"  editLink="" default="" class="input-medium" multiple="true" placeholder="COM_FMMANAGER_FIELD_CATEGORY">
+      <option value="0">COM_FMMANAGER_FIELD_CATEGORY</option>
+    </field>
+    <field name="types" type="tournamenttypeslist"  editLink="" default="" class="input-medium" multiple="true" placeholder="COM_FMMANAGER_FIELD_TYPE">
+      <option value="0">COM_FMMANAGER_FIELD_TYPE</option>
+    </field>
+  </fields>
+  <fields name="list">
+    <field
+			name="fullordering"
+			type="list"
+			label="JGLOBAL_SORT_BY"
+			description="JGLOBAL_SORT_BY"
+			onchange="this.form.submit();"
+			default="fm_categories.ordering ASC">
+      <option value="">JGLOBAL_SORT_BY</option>
+      <option value="name ASC">COM_FMMANAGER_SORT_NAME_ASC</option>
+      <option value="name DESC">COM_FMMANAGER_SORT_NAME_DESC</option>
+      <option value="fm_categories.ordering ASC">COM_FMMANAGER_SORT_CATEGORY_ASC</option>
+      <option value="fm_categories.ordering DESC">COM_FMMANAGER_SORT_CATEGORY_DESC</option>
+      <option value="fm_tournament_types.ordering ASC">COM_FMMANAGER_SORT_TYPE_ASC</option>
+      <option value="fm_tournament_types.ordering DESC">COM_FMMANAGER_SORT_TYPE_DESC</option>
+      <option value="ordering ASC">COM_FMMANAGER_SORT_ORDERING_ASC</option>
+      <option value="ordering DESC">COM_FMMANAGER_SORT_ORDERING_DESC</option>
+      <option value="id ASC">COM_FMMANAGER_SORT_ID_ASC</option>
+      <option value="id DESC">COM_FMMANAGER_SORT_ID_DESC</option>
+    </field>
+
+    <field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			label="COM_CONTENT_LIST_LIMIT"
+			description="COM_CONTENT_LIST_LIMIT_DESC"
+			onchange="this.form.submit();" />
+  </fields>
+</form>

@@ -1,0 +1,65 @@
+﻿.fm-event-item {
+    padding: 0 3px 0 5px;
+    position: relative;
+    display: block;
+
+    & > .fm-row {
+        .fm-event-date {
+            .flex(none);
+        }
+    }
+
+    & > .fm-content {
+        padding: 5px 0 !important;
+        .align-items(stretch)!important;
+
+        .fm-category {
+            font-family: @tradeGothic;
+            text-transform: uppercase;
+            font-size: 13px;
+            .text-overflow();
+            background-color: @fontColor;
+            padding: 1px 4px 1px 4px;
+            border-radius: 2px;
+            color: @white;
+            .opacity(60);
+        }
+
+        .fm-time {
+            font-size: 16px;
+            font-family: @tradeGothic;
+            color: lighten(@fontColor, 35%);
+        }
+    }
+
+    .fm-event-content {
+        color: @fontColor;
+
+        .fm-row {
+            margin-top: 3px;
+
+            & > div:first-child {
+                .flex(none);
+            }
+
+            img {
+                max-height: 30px !important;
+            }
+
+            .fm-event-title {
+                text-transform: uppercase;
+                font-size: 15px;
+                font-family: @tradeGothic;
+            }
+
+            .fm-event-subtitle {
+                font-size: 12px;
+                font-style: italic;
+            }
+        }
+    }
+
+    .fm-watermark {
+        .rotate(350deg);
+    }
+}

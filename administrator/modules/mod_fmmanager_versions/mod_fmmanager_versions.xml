@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="administrator" method="upgrade">
+  <name>mod_fmmanager_versions</name>
+  <author>Stéphane ANDRE</author>
+  <creationDate>December 2015</creationDate>
+  <copyright>(C) 2015 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <authorUrl/>
+  <version>1.0.0</version>
+  <description>MOD_FMMANAGER_VERSIONS_XML_DESCRIPTION</description>
+  <position>fmmanager-right</position>
+  <!-- Runs on install/uninstall/update; New in 2.5 -->
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="format" type="list" default="short" label="MOD_FMMANAGER_VERSIONS_FORMAT_LABEL" description="MOD_FMMANAGER_VERSIONS_FORMAT_DESC">
+          <option value="short">MOD_FMMANAGER_VERSIONS_FORMAT_SHORT</option>
+          <option value="long">MOD_FMMANAGER_VERSIONS_FORMAT_LONG</option>
+        </field>
+        <field name="product" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_FMMANAGER_VERSIONS_PRODUCT_LABEL" description="MOD_FMMANAGER_VERSIONS_PRODUCT_DESC">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+        <field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+        <field name="cache" type="list" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+          <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+  <!-- /// INSTALL SCRIPT /// -->
+  <!-- /// FILES /// -->
+  <!-- /// LANGUAGES /// -->
+  <!-- /// INSTALL SCRIPT /// -->
+  <scriptfile>install.script.php</scriptfile>
+  <!-- /// FILES /// -->
+  <files folder="admin">
+    <folder>tmpl</folder>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <filename module="mod_fmmanager_versions">mod_fmmanager_versions.php</filename>
+  </files>
+  <!-- /// LANGUAGES /// -->
+  <languages folder="admin">
+    <language tag="fr-FR">language/fr-FR/fr-FR.mod_fmmanager_versions.ini</language>
+    <language tag="fr-FR">language/fr-FR/fr-FR.mod_fmmanager_versions.sys.ini</language>
+  </languages>
+</extension>

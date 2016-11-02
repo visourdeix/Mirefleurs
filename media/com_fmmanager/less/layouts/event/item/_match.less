@@ -1,0 +1,92 @@
+﻿.fm-text-tradegothic {
+    font-family: @tradeGothic;
+    text-transform: uppercase;
+}
+
+.fm-event-match {
+    min-height: 80px;
+
+    .fm-tournament {
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    .fm-matchday {
+        text-transform: none;
+    }
+
+    .fm-content {
+        margin: 0;
+        .flex-display();
+        .flex-flow(row nowrap);
+        .justify-content();
+        .align-items(center);
+
+        .fm-opposition {
+            margin: 0;
+            .flex-display();
+            .flex-flow(row nowrap);
+            .justify-content();
+            .flex(1);
+
+            .fm-logo {
+                width: 75px;
+
+                img {
+                    max-height: 75px;
+                }
+            }
+
+            .fm-teams {
+                .flex(1);
+                padding: 5px 10px;
+                color: @fontColor;
+
+                .fm-team {
+                    .mobile( {
+                        display: none;
+                    }
+
+                    );
+                }
+
+                .fm-team-mobile {
+                    display: none;
+
+                    .mobile( {
+                        display: inline-block;
+                    }
+
+                    );
+                }
+
+                .fm-my-team {
+                    background-color: transparent;
+                    padding: 0;
+                    .opacity(50);
+                }
+            }
+        }
+
+        .fm-score {
+            font-size: 40px;
+
+            .fm-penalties {
+                padding-top: 10px;
+                text-align: center;
+            }
+        }
+
+        .fm-time, .fm-score {
+            min-width: 80px;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .fm-time {
+            .fm-text-tradegothic;
+            font-size: 30px;
+            color: @gray;
+        }
+    }
+}

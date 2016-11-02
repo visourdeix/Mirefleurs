@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset addfieldpath="/libraries/FootManager/Form/fields">
+    <field name="state" type="stateslist" allowed_options="1,3" label="COM_FMMANAGER_FIELD_STATE" description="COM_FMMANAGER_FIELD_STATE_DESC" class="fm-chzn-states input-mini" />
+    <field name="rosters" type="rosterslist"  label="COM_FMMANAGER_FIELD_ROSTERS" description="COM_FMMANAGER_FIELD_ROSTERS_DESC" default="" multiple="true" class="input-large" required="true" />
+    <field name="stadium_id" type="stadiumslist"  label="COM_FMMANAGER_FIELD_STADIUM" description="COM_FMMANAGER_FIELD_STADIUM_DESC" default="" class="input-large" required="true" />
+    <field name="date" type="fmdatepicker" label="COM_FMMANAGER_FIELD_DATE" description="COM_FMMANAGER_FIELD_DATE_DESC"  required="true" />
+    <field name="start_time" type="fmtimepicker" label="COM_FMMANAGER_FIELD_START_TIME" description="COM_FMMANAGER_FIELD_START_TIME_DESC" required="true" />
+    <field name="end_time" type="fmtimepicker" label="COM_FMMANAGER_FIELD_END_TIME" description="COM_FMMANAGER_FIELD_END_TIME_DESC"  required="true" />
+    <field name="description" type="editor"  label="COM_FMMANAGER_FIELD_DESCRIPTION" description="COM_FMMANAGER_FIELD_DESCRIPTION_DESC" />
+  </fieldset>
+</form>

@@ -1,0 +1,242 @@
+#g-feature {
+    background: #f9f9f9;
+    color: #000;
+    position: relative;
+    z-index: 10;
+    
+    /* ######################################################### 
+                           Features slideshow
+       ######################################################### */
+
+    .featured-slideshow {
+        background-color: #f9f9f9;
+
+        .layout-slideshow2 {
+            margin-right: 20px;
+            margin-top: 20px;
+			@include breakpoint(mobile-only) {
+				margin-right: 0;
+				margin-top: 0;
+			}
+
+            .sprocket-features-content {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+                background: rgba(0,0,0,0.5);
+                padding: 0;
+                left: auto;
+                margin: 0;
+                min-height: 70px;
+				@include breakpoint(mobile-only) {
+					max-height: 150px;
+				}
+            }
+        }
+
+        .sprocket-features-img-container .slider-image {
+            max-width: 100%; 
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+			@include breakpoint(mobile-only) {
+				height: 400px;
+			}
+        }
+
+        .layout-slideshow2 .sprocket-features-desc {
+            padding: 0px 10px;
+        }
+
+        .layout-slideshow2 .sprocket-features-arrows .arrow {
+            bottom: 15%;
+			@include breakpoint(mobile-only) {
+				bottom: 14%;
+			}
+        }
+
+        .layout-slideshow2 .sprocket-features-arrows .prev {
+            left: 2%;
+        }
+
+        .layout-slideshow2 .sprocket-features-arrows .next {
+            right: 2%;
+        }
+
+        .layout-slideshow2 .sprocket-features-pagination li {
+            background: #F9F9F9;
+        }
+
+        a {
+            color: #fff;
+        }
+
+        a:hover {
+            color: #00ac00;
+        }
+
+		@include breakpoint(mobile-only) {
+			.layout-slideshow2 .sprocket-features-title {
+				font-size: 1.4em;
+			}
+		}
+    }
+    
+    /* ######################################################### 
+                             news & calendar
+       ######################################################### */
+
+    .newscalendar {
+        margin-top: 20px;
+
+        .g-content {
+    	    margin-top: 0px;
+        }
+
+	    .sprocket-tabs.layout-top ul.sprocket-tabs-nav {
+	        border-bottom: none;
+
+	        li.active .sprocket-tabs-inner, 
+	        li.active .sprocket-tabs-inner:hover, 
+	        li.active .sprocket-tabs-inner:focus {
+		        border-bottom-color: transparent;
+		    }
+
+		    li {
+		        border-top: 3px solid;
+		        margin-bottom: -1px;
+		    }
+
+	        li.active {
+		        border-top-color: $darkgreen !important;
+		    }
+
+		    li:not(.active) {
+		        border-top-color: #a0a0a0 !important;
+		        background-color: #f0f0f0;
+		        cursor: pointer;
+		    }
+
+		    li:not(.active):hover, 
+		    li:not(.active):active {
+		        border-top-color: $darkgreen !important;
+		    }
+
+		    li .sprocket-tabs-inner {
+		        border-top: none !important;
+		        border-bottom: 1px solid #ddd;
+		    }
+	    }
+
+	    .sprocket-tabs ul.sprocket-tabs-nav {
+	        padding: 0 !important;
+	        display: -webkit-box;
+	        display: -moz-box;
+	        display: box;
+	        display: -webkit-flex;
+	        display: -moz-flex;
+	        display: -ms-flexbox;
+	        display: flex;
+	        -webkit-box-align: stretch;
+	        -moz-box-align: stretch;
+	        box-align: stretch;
+	        -webkit-align-items: stretch;
+	        -moz-align-items: stretch;
+	        -ms-align-items: stretch;
+	        -o-align-items: stretch;
+	        align-items: stretch;
+	        -ms-flex-align: stretch;
+	        -webkit-flex-flow: row nowrap;
+	        -moz-flex-flow: row nowrap;
+	        flex-flow: row nowrap;
+	        background-color: #f9f9f9;
+
+	        li.active {
+	    	    .sprocket-tabs-inner {
+			        border-right: none !important;
+			        font-weight: bold;
+			    }
+
+			    .sprocket-tabs-inner, 
+		        .sprocket-tabs-inner:hover, 
+		        .sprocket-tabs-inner:focus {
+			        color: #333 !important;
+			        background-color: #f9f9f9;
+			        border: 1px solid #ddd;
+			        cursor: default;
+			    }
+		    }
+
+		    li:not(.active):hover, 
+		    li:not(.active):active {
+		        opacity: 0.7;
+		    }
+
+		    li:not(.active) {
+			    .sprocket-tabs-inner {
+			        border-left: 1px solid #ddd;
+			        color: #a0a0a0 !important;
+			    }
+		    }
+
+	        li.active:first-child.active .sprocket-tabs-inner {
+		        border-left: none !important;
+		    }
+
+	        li {
+		        flex: 1;
+		        position: relative !important;
+		        min-height: 1px !important;
+		        padding-left: 0 !important;
+		        padding-right: 0 !important;
+		        -webkit-transition: all 0.2s;
+		        -moz-transition: all 0.2s;
+		        transition: all 0.2s;
+		        background-color: #f9f9f9;
+		        display: -webkit-box;
+		        display: -moz-box;
+		        display: box;
+		        display: -webkit-flex;
+		        display: -moz-flex;
+		        display: -ms-flexbox;
+		        display: flex;
+		        -webkit-box-align: stretch;
+		        -moz-box-align: stretch;
+		        box-align: stretch;
+		        -webkit-align-items: stretch;
+		        -moz-align-items: stretch;
+		        -ms-align-items: stretch;
+		        -o-align-items: stretch;
+		        align-items: stretch;
+		        -ms-flex-align: stretch;
+		        -webkit-flex-flow: column;
+		        -moz-flex-flow: column;
+		        flex-flow: column;
+
+		        .sprocket-tabs-inner {
+			        position: relative;
+			        display: block;
+			        text-align: center;
+			        line-height: 1.42857;
+			        font-size: 16px;
+			        font-family: $tradeGothic;
+			        text-transform: uppercase;
+			        margin: 0;
+			        padding: 12px 5px;
+			        border: 1px solid transparent;
+			        background-color: transparent;
+			        -webkit-transition: all 0.2s;
+			        -moz-transition: all 0.2s;
+			        transition: all 0.2s;
+			        height: 100%;
+			    }
+		    }
+	    }
+
+	    .layout-top .sprocket-tabs-nav {
+	        padding: 5px 5px 0 5px !important;
+	    }
+    }
+}
+

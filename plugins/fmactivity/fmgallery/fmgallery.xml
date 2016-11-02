@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="fmactivity" method="upgrade">
+  <name>plg_fmactivity_fmgallery</name>
+  <creationDate>22 mai 2016</creationDate>
+  <version>2.0.0</version>
+  <author>Stéphane ANDRE</author>
+  <authorEmail/>
+  <authorUrl/>
+  <copyright>(C) 2010-2014 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <description>PLG_FMACTIVITY_FMGALLERY_XML_DESCRIPTION</description>
+  <!-- Runs on install/uninstall/update; New in 2.5 -->
+  <!-- /// INSTALL SCRIPT /// -->
+  <!-- /// FILES /// -->
+  <!-- /// LANGUAGES /// -->
+  <!-- /// INSTALL SCRIPT /// -->
+  <scriptfile>install.script.php</scriptfile>
+  <!-- /// FILES /// -->
+  <files folder="admin">
+    <folder>activities</folder>
+    <folder>plugins</folder>
+    <filename plugin="fmgallery">fmgallery.php</filename>
+    <filename>index.html</filename>
+  </files>
+  <!-- /// LANGUAGES /// -->
+  <languages folder="admin">
+    <language tag="fr-FR">language/fr-FR/fr-FR.plg_fmactivity_fmgallery.ini</language>
+    <language tag="fr-FR">language/fr-FR/fr-FR.plg_fmactivity_fmgallery.sys.ini</language>
+  </languages>
+</extension>

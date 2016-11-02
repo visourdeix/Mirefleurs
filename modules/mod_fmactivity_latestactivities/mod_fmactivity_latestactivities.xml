@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+  <name>mod_fmactivity_latestactivities</name>
+  <author>Stéphane ANDRE</author>
+  <creationDate>December 2015</creationDate>
+  <copyright>(C) 2015 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <version>2.0.0</version>
+  <description>MOD_FMACTIVITY_LATESTACTIVITIES_XML_DESCRIPTION</description>
+  <config>
+    <fields name="params" addfieldpath="/libraries/FootManager/Form/fields">
+      <fieldset name="basic" addfieldpath="/administrator/components/com_fmactivity/models/fields">
+        <field name="height" type="text" label="MOD_FMACTIVITY_LATESTACTIVITIES_HEIGHT" description="MOD_FMACTIVITY_LATESTACTIVITIES_HEIGHT_DESC" class="input-small"/>
+        <field name="featured" type="fmlist" label="MOD_FMACTIVITY_LATESTACTIVITIES_FEATURED" description="MOD_FMACTIVITY_LATESTACTIVITIES_FEATURED_DESC" default="1">
+          <option value="">FMLIB_NONE_1</option>
+          <option value="-1">JNO</option>
+          <option value="1">JYES</option>
+        </field>
+        <field name="extensions" type="extensionslist" label="MOD_FMACTIVITY_LATESTACTIVITIES_EXTENSIONS" description="MOD_FMACTIVITY_LATESTACTIVITIES_EXTENSIONS_DESC" multiple="true"/>
+        <field name="events" type="eventslist" label="MOD_FMACTIVITY_LATESTACTIVITIES_EVENTS" description="MOD_FMACTIVITY_LATESTACTIVITIES_EVENTS_DESC" multiple="true"/>
+        <field name="count_activities" type="fmtouchspin" label="MOD_FMACTIVITY_LATESTACTIVITIES_COUNT_ACTIVITIES" description="MOD_FMACTIVITY_LATESTACTIVITIES_COUNT_ACTIVITIES_DESC" default="10"/>
+        <field name="show_date" type="list" class="chzn-color" label="MOD_FMACTIVITY_LATESTACTIVITIES_SHOW_DATE" description="MOD_FMACTIVITY_LATESTACTIVITIES_SHOW_DATE_DESC" default="1">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+        <field name="show_time" type="list" class="chzn-color" label="MOD_FMACTIVITY_LATESTACTIVITIES_SHOW_TIME" description="MOD_FMACTIVITY_LATESTACTIVITIES_SHOW_TIME_DESC" default="1">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+        <field name="show_category" type="list" class="chzn-color" label="MOD_FMACTIVITY_LATESTACTIVITIES_SHOW_CATEGORY" description="MOD_FMACTIVITY_LATESTACTIVITIES_SHOW_CATEGORY_DESC" default="1">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+        <field name="show_description" type="list" class="chzn-color" label="MOD_FMACTIVITY_LATESTACTIVITIES_SHOW_DESCRIPTION" description="MOD_FMACTIVITY_LATESTACTIVITIES_SHOW_DESCRIPTION_DESC" default="1">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+        <field name="cache" type="list" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC" default="1">
+          <option value="1">JGLOBAL_USE_GLOBAL</option>
+          <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+        </field>
+        <field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+        <field name="cachemode" type="hidden" default="static">
+          <option value="static"/>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+  <!-- /// INSTALL SCRIPT /// -->
+  <!-- /// FILES /// -->
+  <!-- /// LANGUAGES /// -->
+  <!-- /// INSTALL SCRIPT /// -->
+  <!-- /// FILES /// -->
+  <!-- /// LANGUAGES /// -->
+  <!-- /// INSTALL SCRIPT /// -->
+  <scriptfile>install.script.php</scriptfile>
+  <!-- /// FILES /// -->
+  <files folder="site">
+    <folder>tmpl</folder>
+    <filename>CHANGELOG.md</filename>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <filename module="mod_fmactivity_latestactivities">mod_fmactivity_latestactivities.php</filename>
+  </files>
+  <!-- /// LANGUAGES /// -->
+  <languages folder="site">
+    <language tag="fr-FR">language/fr-FR/fr-FR.mod_fmactivity_latestactivities.ini</language>
+    <language tag="fr-FR">language/fr-FR/fr-FR.mod_fmactivity_latestactivities.sys.ini</language>
+  </languages>
+</extension>

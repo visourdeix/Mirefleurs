@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="library" method="upgrade" version="3.0">
+  <name>FMEvents</name>
+  <libraryname>FMEvents</libraryname>
+  <author>Stéphane ANDRE</author>
+  <creationDate>September 2015</creationDate>
+  <copyright>Copyright (C) 2015 Stéphane ANDRE. Tous droits réservés.</copyright>
+  <license>GNU General Public License version 2 or later.</license>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <version>1.0.0</version>
+  <description>Classes et outils partagés pour tous les éléments du composant FMEvents.</description>
+  <!-- /// FILES /// -->
+  <!-- /// FILES /// -->
+  <files folder="site">
+    <folder>Calendar</folder>
+    <folder>Database</folder>
+    <folder>Html</folder>
+    <filename>CHANGELOG.md</filename>
+    <filename>Helper.php</filename>
+    <filename>framework.php</filename>
+    <filename>index.html</filename>
+    <filename>library.php</filename>
+  </files>
+</extension>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset name="fmgallery" label="COM_FMGALLERY_TAB_GALLERY" addfieldpath="/libraries/FootManager/Form/fields">
+    <fields name="params" addfieldpath="/administrator/components/com_fmgallery/models/fields">
+      <field name="date" type="fmdatepicker" label="COM_FMGALLERY_FIELD_DATE" description="COM_FMGALLERY_FIELD_DATE_DESC" />
+      <field name="folder" type="selectfolder" label="COM_FMGALLERY_FIELD_FOLDER" description="COM_FMGALLERY_FIELD_FOLDER_DESC" directory="images" filter="" exclude="" stripext="" required="true" />
+    </fields>
+  </fieldset>
+</form>

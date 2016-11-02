@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="library" method="upgrade" version="3.0">
+  <name>FootManager</name>
+  <libraryname>FootManager</libraryname>
+  <author>Stéphane ANDRE</author>
+  <creationDate>September 2015</creationDate>
+  <copyright>Copyright (C) 2015 Stéphane ANDRE. Tous droits réservés.</copyright>
+  <license>GNU General Public License version 2 or later.</license>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <version>2.0.0</version>
+  <description>Classes et outils partagés pour tous les éléments du package FootManager.</description>
+  <!-- /// FILES /// -->
+  <!-- /// LANGUAGES /// -->
+  <!-- /// MEDIA /// -->
+  <!-- /// FILES /// -->
+  <!-- /// LANGUAGES /// -->
+  <!-- /// MEDIA /// -->
+  <!-- /// FILES /// -->
+  <files folder="site">
+    <folder>Calendar</folder>
+    <folder>Controller</folder>
+    <folder>Database</folder>
+    <folder>Form</folder>
+    <folder>Helpers</folder>
+    <folder>Image</folder>
+    <folder>Layout</folder>
+    <folder>Medias</folder>
+    <folder>Model</folder>
+    <folder>Plugin</folder>
+    <folder>Response</folder>
+    <folder>Router</folder>
+    <folder>Social</folder>
+    <folder>Table</folder>
+    <folder>UI</folder>
+    <folder>Utilities</folder>
+    <folder>View</folder>
+    <folder>layouts</folder>
+    <folder>vendor</folder>
+    <filename>CHANGELOG.md</filename>
+    <filename>Constants.php</filename>
+    <filename>Version.php</filename>
+    <filename>composer.json</filename>
+    <filename>composer.lock</filename>
+    <filename>framework.php</filename>
+    <filename>index.html</filename>
+    <filename>library.php</filename>
+  </files>
+  <!-- /// LANGUAGES /// -->
+  <languages folder="site">
+    <language tag="fr-FR">language/fr-FR/fr-FR.lib_FootManager.ini</language>
+  </languages>
+  <!-- /// MEDIA /// -->
+  <media destination="FootManager" folder="media">
+    <folder>css</folder>
+    <folder>fonts</folder>
+    <folder>images</folder>
+    <folder>js</folder>
+    <folder>less</folder>
+    <folder>ui</folder>
+    <filename>index.html</filename>
+  </media>
+</extension>

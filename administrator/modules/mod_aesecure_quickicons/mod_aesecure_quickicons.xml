@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="administrator" method="upgrade">
+   <name>aeSecure - Quick Icons</name>
+   <author>Christophe Avonture</author>
+   <creationDate>June 2014</creationDate>
+   <copyright>Copyright (C) 2014 - 2015 Christophe Avonture. All rights reserved.</copyright>
+   <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+   <authorEmail>christophe@aesecure.com</authorEmail>
+   <authorUrl>www.aesecure.com</authorUrl>	
+   <description>MOD_AESECURE_QUICKICONS_XML_DESCRIPTION</description>
+   <version>1.0</version>
+   <files>
+      <filename module="mod_aesecure_quickicons">mod_aesecure_quickicons.php</filename>
+      <filename>mod_aesecure_quickicons.xml</filename>
+      <filename>index.html</filename>
+	  <folder>assets</folder>
+	  <folder>language</folder>
+   </files>
+   <languages folder="language">
+      <language tag="en-GB">en-GB/en-GB.mod_aesecure_quickicons.ini</language>
+      <language tag="en-GB">en-GB/en-GB.mod_aesecure_quickicons.sys.ini</language>
+      <language tag="fr-FR">fr-FR/fr-FR.mod_aesecure_quickicons.ini</language>
+      <language tag="fr-FR">fr-FR/fr-FR.mod_aesecure_quickicons.sys.ini</language>
+   </languages>     
+   <help key="JHELP_EXTENSIONS_MODULE_MANAGER_ADMIN_AESECURE_QUICKICON" />
+</extension>

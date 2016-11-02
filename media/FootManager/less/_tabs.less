@@ -1,0 +1,190 @@
+﻿@tabBackground: @white;
+@tabColor: @black;
+
+.fm-tabs
+{
+    .flex-display();
+    .flex-flow(row nowrap);
+    .align-items(stretch);
+    margin: 10px 0!important;
+    list-style: none;
+
+    & > li
+    {
+        .flex(1);
+        position: relative !important;
+        border-top: 3px solid;
+        min-height: 1px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-bottom: -1px;
+        .transition(@transition);
+
+        & > a
+        {
+            position: relative;
+            display: block;
+            text-align: center;
+            line-height: 1.42857143;
+            .text-overflow();
+            font-size: 14px;
+            text-transform: uppercase;
+            border-top: none !important;
+            margin: 0;
+            padding: 15px 5px;
+            border: 1px solid transparent;
+            border-bottom: 1px solid @borderColor;
+            background-color: transparent;
+            .transition(@transition);
+
+            & > .fm-icon
+            {
+                font-size: 120%;
+                margin-right: 3px;
+
+                .tablet-max(
+                {
+                    font-size: 150%;
+                    margin-right: 0;
+                }
+
+                );
+            }
+
+            & > .fm-label
+            {
+                .tablet-max(
+                {
+                    display: none;
+                }
+
+                );
+            }
+        }
+
+        &:not(.active)
+        {
+            border-top-color: @inactiveDarkColor !important;
+            background-color: @inactiveLightColor;
+            cursor: pointer;
+
+            &:hover,
+            &:active
+            {
+                border-top-color: @activeBorderColor !important;
+                .opacity(70);
+
+                & > a
+                {
+                    color: @tabColor !important;
+                    background-color: @tabBackground;
+                }
+            }
+
+            & > a
+            {
+                border-left: 1px solid @borderColor;
+                color: @inactiveDarkColor !important;
+            }
+        }
+
+        &.active
+        {
+            border-top-color: @activeBorderColor !important;
+
+            > a
+            {
+                border-right: none !important;
+                font-weight: bold;
+            }
+
+            & > a,
+            & > a:hover,
+            & > a:focus
+            {
+                color: @tabColor !important;
+                background-color: @tabBackground;
+                border: 1px solid @borderColor;
+                border-bottom-color: transparent;
+                cursor: default;
+            }
+        }
+
+        &:last-child > a
+        {
+            border-right: 1px solid @borderColor;
+        }
+
+        &:first-child.active > a
+        {
+            border-left: none !important;
+        }
+    }
+}
+
+    .fm-tabs.fm-tabs-style1
+    {
+        .flex-flow(row wrap);
+        .justify-content(center);
+
+        & > li
+        {
+            border: none !important;
+            border-bottom: 3px solid transparent !important;
+            margin: 0 7px;
+            padding: 5px;
+            .flex(none);
+
+            & > a
+            {
+                font-size: 22px;
+                border: none !important;
+                padding: 0 !important;
+                font-weight: normal;
+
+                &:hover
+                {
+                    color: @activeFontColor !important;
+                }
+
+                & > .fm-label
+                {
+                    .tablet-max(
+                    {
+                        display: inline-block !important;
+                    }
+
+                    );
+                }
+            }
+
+            &:not(.active)
+            {
+                background-color: transparent !important;
+
+                &:hover
+                {
+                    border-bottom-color: @activeBorderColor !important;
+
+                    & > a
+                    {
+                        color: @activeFontColor !important;
+                        background-color: transparent;
+                    }
+                }
+            }
+
+            &.active
+            {
+                border-bottom-color: @activeBorderColor !important;
+
+                & > a,
+                & > a:hover,
+                & > a:focus
+                {
+                    color: @activeFontColor !important;
+                    background-color: transparent;
+                }
+            }
+        }
+    }

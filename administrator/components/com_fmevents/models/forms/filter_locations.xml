@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fields name="filter" addfieldpath="/libraries/FootManager/Form/fields">
+    <field name="search" type="text" hint="JSEARCH_FILTER" class="js-stools-search-string" />
+  </fields>
+  <fields name="list">
+    <field name="fullordering" type="list" label="JGLOBAL_SORT_BY" description="JGLOBAL_SORT_BY" onchange="this.form.submit();" default="city ASC">
+      <option value="">JGLOBAL_SORT_BY</option>
+      <option value="name ASC">COM_FMEVENTS_SORT_NAME_ASC</option>
+      <option value="name DESC">COM_FMEVENTS_SORT_NAME_DESC</option>
+      <option value="city ASC">COM_FMEVENTS_SORT_CITY_ASC</option>
+      <option value="city DESC">COM_FMEVENTS_SORT_CITY_DESC</option>
+      <option value="id ASC">COM_FMEVENTS_SORT_ID_ASC</option>
+      <option value="id DESC">COM_FMEVENTS_SORT_ID_DESC</option>
+    </field>
+
+    <field name="limit" type="limitbox" class="input-mini" default="25" label="COM_CONTENT_LIST_LIMIT" description="COM_CONTENT_LIST_LIMIT_DESC" onchange="this.form.submit();" />
+  </fields>
+</form>

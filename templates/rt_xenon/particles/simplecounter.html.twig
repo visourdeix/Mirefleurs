@@ -1,0 +1,42 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block javascript %}
+  {% if gantry.platform.getName() == 'joomla' %}
+    {% do joomla.html('behavior.framework') %}
+  {% elseif gantry.platform.getName() == 'wordpress' and (gantry.platform.call('wp_script_is', 'mootools.js') == true or gantry.platform.call('wp_script_is', 'rok_mootools_js') == true) %}
+  {% else %}
+    <script type="text/javascript" src="{{ url('https://ajax.googleapis.com/ajax/libs/mootools/1.5.1/mootools-yui-compressed.js') }}"></script>
+  {% endif %}
+  <script src="{{ url('gantry-theme://js/simplecounter.js') }}"></script>
+  <script type="text/javascript">
+  window.addEvent('load', function(){
+    var counter = new SimpleCounter(
+      'g-simplecounter-calendar',
+      /* Year (Full Year), Month (0 to 11), Day (1 to 31) */
+      /* For example: Date(2020,10,1) means 1 November 2020 */
+      new Date('{{ particle.year }}','{{ particle.month }}','{{ particle.date }}'),
+      {lang : {
+        d:{single:'{{ particle.daytext }}',plural:'{{ particle.daystext }}'}, //days
+        h:{single:'{{ particle.hourtext }}',plural:'{{ particle.hourstext }}'}, //hours
+        m:{single:'{{ particle.minutetext }}',plural:'{{ particle.minutestext }}'}, //minutes
+        s:{single:'{{ particle.secondtext }}',plural:'{{ particle.secondstext }}'}  //seconds
+      }
+    });
+  });
+  </script>
+{% endblock %}
+
+{% block particle %}
+
+	{% if particle.title %}<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %}
+
+	<div class="g-simplecounter {{ particle.class|e }}">
+		<div class="g-simplecounter-content">
+			{{ particle.desc|raw }}
+		</div>
+		<div class="g-simplecounter-block">
+			<div id="g-simplecounter-calendar"></div>
+		</div>	
+	</div>
+  
+{% endblock %}

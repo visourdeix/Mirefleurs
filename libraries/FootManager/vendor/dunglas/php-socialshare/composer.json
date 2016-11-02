@@ -1,0 +1,27 @@
+{
+    "name": "dunglas/php-socialshare",
+    "type": "library",
+    "description": "Retrieve social networks share counts and share links",
+    "keywords": ["social", "share", "count"],
+    "homepage": "http://dunglas.fr",
+    "license": "MIT",
+    "authors": [
+    {
+        "name": "Kévin Dunglas",
+        "email": "dunglas@gmail.com"
+    }
+    ],
+    "autoload": {
+        "psr-0": {
+            "SocialShare": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.3",
+        "ext-json": "*",
+        "doctrine/cache": "~1.3.0"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.0"
+    }
+}

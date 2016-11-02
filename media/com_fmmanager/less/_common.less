@@ -1,0 +1,221 @@
+﻿.fm-text-tradegothic
+{
+    font-family: @tradeGothic;
+    text-transform: uppercase;
+}
+
+.fm-tournament
+{
+    .fm-text-tradegothic;
+    color: lighten(@fontColor, 40%);
+    .text-overflow();
+    font-size: 14px;
+
+    .fm-logo
+    {
+        max-height: 15px;
+        margin-right: 4px;
+    }
+}
+
+.fm-time
+{
+    .fm-text-tradegothic;
+    font-size: 30px;
+    color: @gray;
+}
+
+.fm-watermark.fm-reported + .fm-content,
+.fm-watermark.fm-cancelled + .fm-content,
+.fm-watermark.fm-stopped + .fm-content
+{
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+.fm-team
+{
+    .fm-text-tradegothic;
+    color: @fontColor;
+    font-size: 20px;
+
+    &.fm-looser
+    {
+        .opacity(55);
+    }
+
+    &.fm-winner
+    {
+        color: @black;
+    }
+
+    & > .fm-logo
+    {
+        max-height: 25px;
+    }
+}
+
+.fm-my-team
+{
+    padding: 5px;
+    background-color: lighten(@gold, 25%);
+    .border-radius(2px);
+}
+
+div.fm-logo
+{
+    width: 40px;
+    text-align: center;
+
+    img
+    {
+        max-height: 40px;
+    }
+}
+
+.fm-score
+{
+    .fm-text-tradegothic;
+    color: lighten(@fontColor, 40%);
+    font-size: 24px;
+
+    &.fm-winner
+    {
+        color: @green;
+    }
+
+    &.fm-looser
+    {
+        color: @darkred;
+    }
+
+    .fm-penalties
+    {
+        font-size: 18px;
+    }
+}
+
+.fm-summary
+{
+    color: @fontColor;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 5px 0;
+}
+
+.fm-goal
+{
+    color: @black;
+    font-size: 12px;
+    margin-left: -6px;
+
+    &:first-child
+    {
+        margin-left: 0;
+    }
+}
+
+.fm-substitution
+{
+    font-size: 12px;
+
+    &.fm-out
+    {
+        color: @darkred;
+    }
+
+    &.fm-in
+    {
+        color: @green;
+    }
+}
+
+.fm-captain
+{
+    .fm-text-tradegothic;
+    font-size: 10px;
+    color: lighten(@fontColor, 40%);
+}
+
+.fm-player-number
+{
+    .fm-text-tradegothic;
+    font-size: 16px;
+    color: @fontColor;
+}
+
+.fm-person-name
+{
+    .fm-text-tradegothic;
+    font-size: 14px;
+    color: lighten(@fontColor, 40%);
+    .transition(@transition);
+}
+
+a.fm-person-name:hover,
+a:hover .fm-person-name
+{
+    color: @activeFontColor;
+}
+
+.fm-person-function
+{
+    font-size: 12px;
+    color: lighten(@fontColor, 45%);
+    font-style: italic;
+}
+
+.fm-person-position
+{
+    font-size: 13px;
+    color: lighten(@fontColor, 50%);
+    font-weight: bold;
+}
+
+.fm-map
+{
+    width: 100%;
+    height: 250px;
+    border: 1px solid @borderColor;
+}
+
+.fm-contacts
+{
+    margin: 0;
+    list-style: none;
+    .flex-display();
+    .flex-direction(row);
+    .flex-wrap(wrap);
+    .justify-content(flex-start);
+
+    .mobile(
+    {
+        .justify-content(center);
+    }
+
+    );
+}
+
+.fm-contact
+{
+    position: relative;
+    border: 1px solid @borderColor;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+    padding-right: 10px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    border-radius: 0 20px 20px 0;
+
+    & > a
+    {
+        position: absolute;
+        top: 0;
+        left: -15px;
+        margin: 0;
+        border: none;
+    }
+
+}

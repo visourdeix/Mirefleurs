@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+  <name>plg_system_fmopengraph</name>
+  <author>Stéphane ANDRE</author>
+  <creationDate>January 2016</creationDate>
+  <copyright>(C) 2015 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <authorUrl/>
+  <version>1.0.0</version>
+  <description>PLG_SYSTEM_FMOPENGRAPH_XML_DESCRIPTION</description>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+
+			</fieldset>
+    </fields>
+  </config>
+  <!-- /// FILES /// -->
+  <files folder="admin">
+    <filename plugin="fmopengraph">fmopengraph.php</filename>
+    <filename>index.html</filename>
+  </files>
+  <!-- /// LANGUAGES /// -->
+  <languages folder="admin">
+    <language tag="fr-FR">language/fr-FR/fr-FR.plg_system_fmopengraph.ini</language>
+    <language tag="fr-FR">language/fr-FR/fr-FR.plg_system_fmopengraph.sys.ini</language>
+  </languages>
+</extension>

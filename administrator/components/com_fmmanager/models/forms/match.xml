@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset addfieldpath="/libraries/FootManager/Form/fields">
+
+    <field name="team1_id" type="hidden" ></field>
+    <field name="team2_id" type="hidden" ></field>
+    <field name="matchday_id" type="hidden" ></field>
+    <field name="call_up_id" type="hidden" ></field>
+    <field name="state" type="stateslist" label="COM_FMMANAGER_FIELD_STATE" description="COM_FMMANAGER_FIELD_STATE_DESC" class="fm-chzn-states input-mini" />
+    <field name="score1" type="fmtouchspin" label="COM_FMMANAGER_FIELD_SCORE" description="COM_FMMANAGER_FIELD_SCORE_DESC" default="0" />
+    <field name="score2" type="fmtouchspin" label="COM_FMMANAGER_FIELD_SCORE" description="COM_FMMANAGER_FIELD_SCORE_DESC" default="0" />
+    <field name="penalties1" type="fmtouchspin" label="COM_FMMANAGER_FIELD_PENALTIES" description="COM_FMMANAGER_FIELD_PENALTIES_DESC" default="0" />
+    <field name="penalties2" type="fmtouchspin" label="COM_FMMANAGER_FIELD_PENALTIES" description="COM_FMMANAGER_FIELD_PENALTIES_DESC" default="0" />
+    <field name="bonus1" type="fmtouchspin" label="COM_FMMANAGER_FIELD_BONUS" description="COM_FMMANAGER_FIELD_BONUS_DESC" default="0" min="-100" />
+    <field name="bonus2" type="fmtouchspin" label="COM_FMMANAGER_FIELD_BONUS" description="COM_FMMANAGER_FIELD_BONUS_DESC" default="0" min="-100" />
+    <field name="extra_time" type="fmtoggle"  label="COM_FMMANAGER_FIELD_EXTRA_TIME" description="COM_FMMANAGER_FIELD_EXTRA_TIME_DESC" size="small" default="0" />
+    <field name="withdraw1" type="fmtoggle"  label="COM_FMMANAGER_FIELD_WITHDRAW" description="COM_FMMANAGER_FIELD_WITHDRAW_DESC" size="small" default="0" />
+    <field name="withdraw2" type="fmtoggle"  label="COM_FMMANAGER_FIELD_WITHDRAW" description="COM_FMMANAGER_FIELD_WITHDRAW_DESC" size="small" default="0" />
+    <field name="date" type="fmdatepicker" label="COM_FMMANAGER_FIELD_DATE" description="COM_FMMANAGER_FIELD_DATE_DESC" />
+    <field name="time" type="fmtimepicker" label="COM_FMMANAGER_FIELD_TIME" description="COM_FMMANAGER_FIELD_TIME_DESC" required="true" />
+    <field name="referee" type="fmtext" label="COM_FMMANAGER_FIELD_REFEREE" description="COM_FMMANAGER_FIELD_REFEREE_DESC" />
+    <field name="stadium_id" type="stadiumslist"  label="COM_FMMANAGER_FIELD_STADIUM" description="COM_FMMANAGER_FIELD_STADIUM_DESC" default="" class="input-large">
+      <option value="">FMLIB_NONE_1</option>
+    </field>
+    <field name="neutral_stadium" type="fmtoggle"  label="COM_FMMANAGER_FIELD_NEUTRAL_STADIUM" description="COM_FMMANAGER_FIELD_NEUTRAL_STADIUM_DESC" size="small" default="0" />
+    <field name="summary" type="editor"  label="COM_FMMANAGER_FIELD_SUMMARY" description="COM_FMMANAGER_FIELD_SUMMARY_DESC" filter="JComponentHelper::filterText" />
+
+    <field name="tactic1_id" type="tacticslist" label="COM_FMMANAGER_FIELD_TACTIC" description="COM_FMMANAGER_FIELD_TACTIC_DESC" class="input-medium">
+      <option value="">FMLIB_NONE_2</option>
+    </field>
+    <field name="tactic2_id" type="tacticslist" label="COM_FMMANAGER_FIELD_TACTIC" description="COM_FMMANAGER_FIELD_TACTIC_DESC" class="input-medium">
+      <option value="">FMLIB_NONE_2</option>
+    </field>
+
+    <!-- Players -->
+    <field name="players1" type="personstable">
+      <fields name="players1_list">
+        <field name="state" type="fmradio"  default="0"  label="COM_FMMANAGER_FIELD_STATE" description="COM_FMMANAGER_FIELD_STATE_DESC">
+          <option value="1" active_class="btn-success" title="FM_IN_MATCH">FM_IN_MATCH_ICON</option>
+          <option value="2" active_class="btn-primary" title="FM_FIRST_TEAM_PLAYER">FM_FIRST_TEAM_PLAYER_ICON</option>
+          <option value="3" active_class="btn-warning" title="FM_SUBSTITUTE">FM_SUBSTITUTE_ICON</option>
+          <option value="0" active_class="btn-danger" title="FM_OUT_MATCH">FM_OUT_MATCH_ICON</option>
+        </field>
+        <field name="number" type="fmtouchspin" label="COM_FMMANAGER_FIELD_NUMBER" description="COM_FMMANAGER_FIELD_NUMBER_DESC" default="" max="99" class="fm-input-xxmini" />
+        <field name="captain" type="fmtoggle" label="COM_FMMANAGER_FIELD_CAPTAIN" description="COM_FMMANAGER_FIELD_CAPTAIN_DESC" size="small" default="0" />
+        <field name="goal" type="fmbutton" label="COM_FMMANAGER_FIELD_GOAL_ICON" description="COM_FMMANAGER_FIELD_GOAL_DESC" class="btn-success btn-mini fm-addgoal" />
+      </fields>
+    </field>
+    <field name="players2" type="personstable">
+      <fields name="players2_list">
+        <field name="state" type="fmradio"  default="0"  label="COM_FMMANAGER_FIELD_STATE" description="COM_FMMANAGER_FIELD_STATE_DESC">
+          <option value="1" active_class="btn-success" title="FM_IN_MATCH">FM_IN_MATCH_ICON</option>
+          <option value="2" active_class="btn-primary" title="FM_FIRST_TEAM_PLAYER">FM_FIRST_TEAM_PLAYER_ICON</option>
+          <option value="3" active_class="btn-warning" title="FM_SUBSTITUTE">FM_SUBSTITUTE_ICON</option>
+          <option value="0" active_class="btn-danger" title="FM_OUT_MATCH">FM_OUT_MATCH_ICON</option>
+        </field>
+        <field name="number" type="fmtouchspin" label="COM_FMMANAGER_FIELD_NUMBER" description="COM_FMMANAGER_FIELD_NUMBER_DESC" default="" max="99" class="fm-input-xxmini" />
+        <field name="captain" type="fmtoggle" label="COM_FMMANAGER_FIELD_CAPTAIN" description="COM_FMMANAGER_FIELD_CAPTAIN_DESC" size="small" default="0" />
+        <field name="goal" type="fmbutton" label="COM_FMMANAGER_FIELD_GOAL_ICON" description="COM_FMMANAGER_FIELD_GOAL_DESC" class="btn-success btn-mini fm-addgoal" />
+      </fields>
+    </field>
+
+    <field name="firstTeamPlayers1" type="squadtacticeditor" labelkey="person_id" numberkey="number" readonly="true">
+      <fields name="firstTeamPlayers1_list">
+        <field name="person_id" type="personslist" label="COM_FMMANAGER_FIELD_PERSON" description="COM_FMMANAGER_FIELD_PERSON_DESC">
+          <option value=""></option>
+        </field>
+        <field name="number" type="fmtouchspin" label="COM_FMMANAGER_FIELD_NUMBER" description="COM_FMMANAGER_FIELD_NUMBER_DESC" default="" max="99" class="fm-input-xxmini" />
+        <field name="captain" type="fmtoggle" label="COM_FMMANAGER_FIELD_CAPTAIN" description="COM_FMMANAGER_FIELD_CAPTAIN_DESC" size="small" default="0" />
+      </fields>
+    </field>
+    <field name="firstTeamPlayers2" type="squadtacticeditor" labelkey="person_id" numberkey="number" readonly="true">
+      <fields name="firstTeamPlayers2_list">
+        <field name="person_id" type="personslist" label="COM_FMMANAGER_FIELD_PERSON" description="COM_FMMANAGER_FIELD_PERSON_DESC">
+          <option value=""></option>
+        </field>
+        <field name="number" type="fmtouchspin" label="COM_FMMANAGER_FIELD_NUMBER" description="COM_FMMANAGER_FIELD_NUMBER_DESC" default="" max="99" class="fm-input-xxmini" />
+        <field name="captain" type="fmtoggle" label="COM_FMMANAGER_FIELD_CAPTAIN" description="COM_FMMANAGER_FIELD_CAPTAIN_DESC" size="small" default="0" />
+      </fields>
+    </field>
+    <field name="substitutes1" type="fmrepeater">
+      <fields name="substitutes1_list">
+        <field name="state" type="hidden" default="3" ></field>
+        <field name="person_id" type="personslist" editLink="none" label="COM_FMMANAGER_FIELD_PERSON" description="COM_FMMANAGER_FIELD_PERSON_DESC">
+          <option value=""></option>
+        </field>
+        <field name="number" type="fmtouchspin" label="COM_FMMANAGER_FIELD_NUMBER" description="COM_FMMANAGER_FIELD_NUMBER_DESC" default="" max="99" class="fm-input-xxmini" />
+        <field name="row" type="hidden" default="0" />
+        <field name="column" type="hidden" default="0" />
+      </fields>
+    </field>
+    <field name="substitutes2" type="fmrepeater">
+      <fields name="substitutes2_list">
+        <field name="state" type="hidden" default="3" ></field>
+        <field name="person_id" type="personslist" editLink="none" label="COM_FMMANAGER_FIELD_PERSON" description="COM_FMMANAGER_FIELD_PERSON_DESC">
+          <option value=""></option>
+        </field>
+        <field name="number" type="fmtouchspin" label="COM_FMMANAGER_FIELD_NUMBER" description="COM_FMMANAGER_FIELD_NUMBER_DESC" default="" max="99" class="fm-input-xxmini" />
+        <field name="row" type="hidden" default="0" />
+        <field name="column" type="hidden" default="0" />
+      </fields>
+    </field>
+
+    <!-- Staff -->
+    <field name="staff1" type="personstable">
+      <fields name="staff1_list">
+        <field name="state" type="fmradio"  default="0"  label="COM_FMMANAGER_FIELD_STATE" description="COM_FMMANAGER_FIELD_STATE_DESC">
+          <option value="1" active_class="btn-success" title="FM_IN_MATCH">FM_IN_MATCH_ICON</option>
+          <option value="0" active_class="btn-danger" title="FM_OUT_MATCH">FM_OUT_MATCH_ICON</option>
+        </field>
+      </fields>
+    </field>
+
+    <field name="staff2" type="personstable">
+      <fields name="staff2_list">
+        <field name="state" type="fmradio"  default="0"  label="COM_FMMANAGER_FIELD_STATE" description="COM_FMMANAGER_FIELD_STATE_DESC">
+          <option value="1" active_class="btn-success" title="FM_IN_MATCH">FM_IN_MATCH_ICON</option>
+          <option value="0" active_class="btn-danger" title="FM_OUT_MATCH">FM_OUT_MATCH_ICON</option>
+        </field>
+      </fields>
+    </field>
+
+    <!-- Substitutions -->
+    <field name="substitutions1" type="fmrepeater" class="table-striped fm-table-responsive-fix">
+      <fields name="substitutions1_list">
+        <field name="playerOut_id" type="personslist" editLink="none" label="COM_FMMANAGER_FIELD_PLAYER_OUT" description="COM_FMMANAGER_FIELD_PLAYER_OUT_DESC">
+          <option value=""></option>
+        </field>
+        <field name="playerIn_id" type="personslist" editLink="none" label="COM_FMMANAGER_FIELD_PLAYER_IN" description="COM_FMMANAGER_FIELD_PLAYER_IN_DESC">
+          <option value=""></option>
+        </field>
+        <field name="minute" type="fmtouchspin" label="COM_FMMANAGER_FIELD_MINUTE" description="COM_FMMANAGER_FIELD_MINUTE_DESC" default="0" class="fm-input-xxmini" />
+      </fields>
+    </field>
+    <field name="substitutions2" type="fmrepeater" class="table-striped fm-table-responsive-fix">
+      <fields name="substitutions2_list">
+        <field name="playerOut_id" type="personslist" editLink="none" label="COM_FMMANAGER_FIELD_PLAYER_OUT" description="COM_FMMANAGER_FIELD_PLAYER_OUT_DESC">
+          <option value=""></option>
+        </field>
+        <field name="playerIn_id" type="personslist" editLink="none" label="COM_FMMANAGER_FIELD_PLAYER_IN" description="COM_FMMANAGER_FIELD_PLAYER_IN_DESC">
+          <option value=""></option>
+        </field>
+        <field name="minute" type="fmtouchspin" label="COM_FMMANAGER_FIELD_MINUTE" description="COM_FMMANAGER_FIELD_MINUTE_DESC" default="0" class="fm-input-xxmini" />
+      </fields>
+    </field>
+
+    <!-- Goals -->
+    <field name="goals1" type="fmrepeater">
+      <fields name="goals1_list">
+        <field name="striker_id" type="personslist" editLink="none" label="COM_FMMANAGER_FIELD_STRIKER" description="COM_FMMANAGER_FIELD_STRIKER_DESC" />
+        <field name="passer_id" type="personslist" editLink="none" label="COM_FMMANAGER_FIELD_PASSER" description="COM_FMMANAGER_FIELD_PASSER_DESC" default="0">
+          <option value="0">FMLIB_NONE_1</option>
+        </field>
+        <field name="minute" type="fmtouchspin" label="COM_FMMANAGER_FIELD_MINUTE" description="COM_FMMANAGER_FIELD_MINUTE_DESC" default="0" class="fm-input-xxmini" />
+      </fields>
+    </field>
+    <field name="goals2" type="fmrepeater">
+      <fields name="goals2_list">
+        <field name="striker_id" type="personslist" editLink="none" label="COM_FMMANAGER_FIELD_STRIKER" description="COM_FMMANAGER_FIELD_STRIKER_DESC" />
+        <field name="passer_id" type="personslist" editLink="none" label="COM_FMMANAGER_FIELD_PASSER" description="COM_FMMANAGER_FIELD_PASSER_DESC" default="0">
+          <option value="0">FMLIB_NONE_1</option>
+        </field>
+        <field name="minute" type="fmtouchspin" label="COM_FMMANAGER_FIELD_MINUTE" description="COM_FMMANAGER_FIELD_MINUTE_DESC" default="0" class="fm-input-xxmini" />
+      </fields>
+    </field>
+
+    <!-- Players Events -->
+    <field name="playersEvents1" type="fmrepeater">
+      <fields name="playersEvents1_list">
+        <field name="person_id" type="personslist" editLink="" label="COM_FMMANAGER_FIELD_PERSON" description="COM_FMMANAGER_FIELD_PERSON_DESC" />
+        <field name="statistic_id" type="statisticslist" editLink="" is_event="1" by_match="1" by_player="1" label="COM_FMMANAGER_FIELD_STATISTIC" description="COM_FMMANAGER_FIELD_STATISTIC_DESC" class="input-medium" />
+        <field name="value" type="hidden" default="1" />
+        <field name="minute" type="fmtouchspin" label="COM_FMMANAGER_FIELD_MINUTE" description="COM_FMMANAGER_FIELD_MINUTE_DESC" default="0" class="fm-input-xxmini" />
+      </fields>
+    </field>
+    <field name="playersEvents2" type="fmrepeater">
+      <fields name="playersEvents2_list">
+        <field name="person_id" type="personslist" editLink="" label="COM_FMMANAGER_FIELD_PERSON" description="COM_FMMANAGER_FIELD_PERSON_DESC" />
+        <field name="statistic_id" type="statisticslist" is_event="1" by_match="1" by_player="1" editLink="" label="COM_FMMANAGER_FIELD_STATISTIC" description="COM_FMMANAGER_FIELD_STATISTIC_DESC" class="input-medium" />
+        <field name="value" type="hidden" default="1" />
+        <field name="minute" type="fmtouchspin" label="COM_FMMANAGER_FIELD_MINUTE" description="COM_FMMANAGER_FIELD_MINUTE_DESC" default="0" class="fm-input-xxmini" />
+      </fields>
+    </field>
+
+    <!-- Staff Events -->
+    <field name="staffEvents1" type="fmrepeater">
+      <fields name="staffEvents1_list">
+        <field name="person_id" type="personslist" editLink="" label="COM_FMMANAGER_FIELD_PERSON" description="COM_FMMANAGER_FIELD_PERSON_DESC" />
+        <field name="statistic_id" type="statisticslist" is_event="1" by_match="1" by_staff="1" editLink="" label="COM_FMMANAGER_FIELD_STATISTIC" description="COM_FMMANAGER_FIELD_STATISTIC_DESC" class="input-medium" />
+        <field name="value" type="hidden" default="1" />
+        <field name="minute" type="fmtouchspin" label="COM_FMMANAGER_FIELD_MINUTE" description="COM_FMMANAGER_FIELD_MINUTE_DESC" default="0" class="fm-input-xxmini" />
+      </fields>
+    </field>
+    <field name="staffEvents2" type="fmrepeater">
+      <fields name="staffEvents2_list">
+        <field name="person_id" type="personslist" editLink="" label="COM_FMMANAGER_FIELD_PERSON" description="COM_FMMANAGER_FIELD_PERSON_DESC" />
+        <field name="statistic_id" type="statisticslist" is_event="1" by_match="1" by_staff="1" editLink="" label="COM_FMMANAGER_FIELD_STATISTIC" description="COM_FMMANAGER_FIELD_STATISTIC_DESC" class="input-medium" />
+        <field name="value" type="hidden" default="1" />
+        <field name="minute" type="fmtouchspin" label="COM_FMMANAGER_FIELD_MINUTE" description="COM_FMMANAGER_FIELD_MINUTE_DESC" default="0" class="fm-input-xxmini" />
+      </fields>
+    </field>
+
+    <!-- Players Statistics -->
+    <field name="playersStatistics1" type="personstable">
+      <fields name="playersStatistics1_list">
+      </fields>
+    </field>
+
+    <field name="playersStatistics2" type="personstable">
+      <fields name="playersStatistics2_list">
+      </fields>
+    </field>
+
+    <!-- Staff Statistics -->
+    <field name="staffStatistics1" type="personstable">
+      <fields name="staffStatistics1_list">
+      </fields>
+    </field>
+
+    <field name="staffStatistics2" type="personstable">
+      <fields name="staffStatistics2_list">
+      </fields>
+    </field>
+
+    <!-- Team Statistics -->
+    <field name="teamsStatistics" type="teamstable">
+      <fields name="teamsStatistics_list">
+      </fields>
+    </field>
+  </fieldset>
+</form>

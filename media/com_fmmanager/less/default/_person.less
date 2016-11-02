@@ -1,0 +1,52 @@
+﻿.fm-person
+{
+    .fm-photo
+    {
+        .flex(none);
+        width: 160px;
+
+        img
+        {
+            width: 150px !important;
+            max-width: 100%;
+        }
+    }
+
+    .fm-info
+    {
+        text-align: center;
+        font-family: @tradeGothic;
+        text-transform: uppercase;
+        color: @fontColor;
+        .align-items(stretch);
+        .justify-content(flex-start);
+
+        .mobile(
+        {
+            .justify-content(center);
+        }
+
+        );
+
+        & > div
+        {
+           & > div:first-child
+            {
+                font-size: 140%;
+            }
+
+            & > div:last-child
+            {
+                font-size: 160%;
+            }
+        }
+    }
+
+    .fm-person-contacts
+    {
+        .fm-contacts
+        {
+            .justify-content(flex-start)!important;
+        }
+    }
+}

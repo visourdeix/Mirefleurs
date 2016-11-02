@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <fieldset name="general" label="COM_FMGALLERY_CONFIG_GENERAL" description="COM_FMGALLERY_CONFIG_GENERAL_DESC" addfieldpath="/libraries/FootManager/Form/fields">
+  </fieldset>
+
+  <fieldset name="upload" label="COM_FMGALLERY_CONFIG_UPLOAD" description="COM_FMGALLERY_CONFIG_UPLOAD_DESC" addfieldpath="/libraries/FootManager/Form/fields">
+
+    <field name="upload_maxsize" type="fmtouchspin" class="input-small" default="3145728" max="100000000000000" label="COM_FMGALLERY_FIELD_UPLOAD_MAXIMUM_SIZE_FILE" description="COM_FMGALLERY_FIELD_UPLOAD_MAXIMUM_SIZE_FILE_DESC" />
+  </fieldset>
+
+  <fieldset name="thumbnails" label="COM_FMGALLERY_CONFIG_THUMBNAILS" description="COM_FMGALLERY_CONFIG_THUMBNAILS_DESC" addfieldpath="/libraries/FootManager/Form/fields">
+
+    <field name="thumb_crop" type="list" default="5" label="COM_FMGALLERY_FIELD_THUMB_CROP" description="COM_FMGALLERY_FIELD_THUMB_CROP_DESC">
+      <option value="0">FMLIB_NONE_4</option>
+      <option value="1">COM_FMGALLERY_ONLY_LARGE_THUMBNAIL</option>
+      <option value="2">COM_FMGALLERY_ONLY_MEDIUM_THUMBNAIL</option>
+      <option value="3">COM_FMGALLERY_ONLY_SMALL_THUMBNAIL</option>
+      <option value="4">COM_FMGALLERY_LARGE_AND_MEDIUM_THUMBNAIL</option>
+      <option value="5">COM_FMGALLERY_MEDIUM_AND_SMALL_THUMBNAIL</option>
+      <option value="6">COM_FMGALLERY_SMALL_AND_LARGE_THUMBNAIL</option>
+      <option value="7">FMLIB_ALL_4</option>
+    </field>
+
+    <field name="thumb_jpeg_quality" type="fmtouchspin" size="3" default="85" label="COM_FMGALLERY_FIELD_THUMB_JPEG_QUALITY" description="COM_FMGALLERY_FIELD_THUMB_JPEG_QUALITY_DESC" />
+
+    <field name="thumb_large_width" type="fmtouchspin" class="input-mini" default="400" max="10000" label="COM_FMGALLERY_FIELD_THUMB_LARGE_WIDTH" description="COM_FMGALLERY_FIELD_THUMB_LARGE_WIDTH_DESC" />
+    <field name="thumb_large_height" type="fmtouchspin" class="input-mini" default="400" max="10000" label="COM_FMGALLERY_FIELD_THUMB_LARGE_HEIGHT" description="COM_FMGALLERY_FIELD_THUMB_LARGE_HEIGHT_DESC" />
+    <field name="thumb_medium_width" type="fmtouchspin" class="input-mini" default="200" max="10000" label="COM_FMGALLERY_FIELD_THUMB_MEDIUM_WIDTH" description="COM_FMGALLERY_FIELD_THUMB_MEDIUM_WIDTH_DESC" />
+    <field name="thumb_medium_height" type="fmtouchspin" class="input-mini" default="200" max="10000" label="COM_FMGALLERY_FIELD_THUMB_MEDIUM_HEIGHT" description="COM_FMGALLERY_FIELD_THUMB_MEDIUM_HEIGHT_DESC" />
+    <field name="thumb_small_width" type="fmtouchspin" class="input-mini" default="100" max="10000" label="COM_FMGALLERY_FIELD_THUMB_SMALL_WIDTH" description="COM_FMGALLERY_FIELD_THUMB_SMALL_WIDTH_DESC" />
+    <field name="thumb_small_height" type="fmtouchspin" class="input-mini" default="100" max="10000" label="COM_FMGALLERY_FIELD_THUMB_SMALL_HEIGHT" description="COM_FMGALLERY_FIELD_THUMB_SMALL_HEIGHT_DESC" />
+
+    <field name="thumb_watermark" type="fmmedia" label="COM_FMGALLERY_FIELD_THUMB_WATERMARK" description="COM_FMGALLERY_FIELD_THUMB_WATERMARK_DESC" directory="fmgallery" />
+
+    <field name="thumb_watermark_x" type="list" default="center" class="input-small" label="COM_FMGALLERY_FIELD_THUMB_WATERMARK_X" description="COM_FMGALLERY_FIELD_THUMB_WATERMARK_X_DESC">
+      <option value="left">FMLIB_LEFT</option>
+      <option value="center">FMLIB_CENTER</option>
+      <option value="right">FMLIB_RIGHT</option>
+    </field>
+    <field name="thumb_watermark_y" type="list" default="middle" class="input-small" label="COM_FMGALLERY_FIELD_THUMB_WATERMARK_Y" description="COM_FMGALLERY_FIELD_THUMB_WATERMARK_Y_DESC">
+      <option value="top">FMLIB_TOP</option>
+      <option value="middle">FMLIB_MIDDLE</option>
+      <option value="bottom">FMLIB_BOTTOM</option>
+    </field>
+
+    <field name="thumb_empty_small" type="fmmedia" label="COM_FMGALLERY_CONFIG_EMPTY_THUMB_SMALL" description="COM_FMGALLERY_CONFIG_EMPTY_THUMB_SMALL_DESC" directory="fmgallery/default" default="images/fmgallery/default/small.jpg" />
+    <field name="thumb_empty_medium" type="fmmedia" label="COM_FMGALLERY_CONFIG_EMPTY_THUMB_MEDIUM" description="COM_FMGALLERY_CONFIG_EMPTY_THUMB_MEDIUM_DESC" directory="fmgallery/default" default="images/fmgallery/default/medium.jpg" />
+    <field name="thumb_empty_large" type="fmmedia" label="COM_FMGALLERY_CONFIG_EMPTY_THUMB_LARGE" description="COM_FMGALLERY_CONFIG_EMPTY_THUMB_LARGE_DESC" directory="fmgallery/default" default="images/fmgallery/default/large.jpg" />
+  </fieldset>
+
+  <fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+    <field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" validate="rules" filter="rules" component="com_fmgallery" section="component" />
+  </fieldset>
+</config>

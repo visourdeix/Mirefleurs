@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="3.0" method="upgrade">
+  <name>FMActivity</name>
+  <packagename>FMActivity</packagename>
+  <version>2.0.0</version>
+  <creationDate>May 2016</creationDate>
+  <copyright>(C) 2015 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <author>Stéphane ANDRE</author>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <packager>FMActivity</packager>
+  <description>Package contenant tous les composants nécessaires pour la gestion de l'activité des utilisateurs.</description>
+  <files>
+    <file type="library" id="FMActivity">libraries/FMActivity</file>
+    <file type="component" id="com_fmactivity">components/com_fmactivity</file>
+    <file type="module" id="mod_fmactivity_latestactivities" client="site">modules/site/mod_fmactivity_latestactivities</file>
+    <file type="plugin" id="plg_content_fmactivity" group="content">plugins/content/plg_content_fmactivity</file>
+    <file type="plugin" id="plg_fmactivity_content" group="fmactivity">plugins/fmactivity/plg_fmactivity_content</file>
+  </files>
+</extension>

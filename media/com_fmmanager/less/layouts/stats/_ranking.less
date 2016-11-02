@@ -1,0 +1,158 @@
+﻿.fm-stats-ranking
+{
+    .fm-table
+    {
+        tbody
+        {
+            tr
+            {
+                height: 60px;
+
+                .fm-col-rank
+                {
+                    font-size: 200% !important;
+                    color: @darkred;
+                }
+
+                .fm-col-team
+                {
+                    font-family: @tradeGothic;
+                    font-size: 150%;
+                    text-transform: uppercase;
+                    color: @fontColor;
+                }
+
+                .fm-col-points
+                {
+                    font-size: 170% !important;
+                    color: @black;
+                }
+
+                &.fm-my-row
+                {
+                    font-size: 130%;
+                    height: 70px;
+                    background-color: @activeBackgroundColor;
+
+                    .fm-col-number
+                    {
+                        color: @lightgray;
+                    }
+
+                    .fm-col-points,
+                    .fm-col-team,
+                    .fm-col-rank
+                    {
+                        color: @white !important;
+                    }
+                }
+            }
+
+            .tablet-max(
+            {
+                font-size: 85%;
+
+                tr
+                {
+                    height: 45px;
+
+                    img
+                    {
+                        max-height: 30px !important;
+                    }
+
+                    &.fm-my-row
+                    {
+                        height: 60px;
+                    }
+                }
+            }
+
+            );
+        }
+
+        .mobile(
+        {
+            th[data-field="logo"],
+            td[data-field="logo"]
+            {
+                display: none;
+            }
+        }
+
+        );
+    }
+
+    .fm-legend
+    {
+        margin: 10px 0;
+        list-style: none;
+        .flex-display();
+        .flex-direction(row);
+        .flex-wrap(wrap);
+        .justify-content(flex-start);
+        color: lighten(@fontColor, 20%);
+        font-style: italic;
+
+        li
+        {
+            margin: 5px;
+            .flex-display();
+            .flex-direction(row);
+            .flex-wrap(nowrap);
+            .justify-content(flex-start);
+            .align-items(center);
+
+            span:first-child
+            {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    &.fm-small
+    {
+        .fm-table
+        {
+            tbody
+            {
+                tr
+                {
+                    height: 30px;
+
+                    .fm-col-rank
+                    {
+                        font-size: 100% !important;
+                    }
+
+                    .fm-col-team
+                    {
+                        font-size: 100%;
+                    }
+
+                    .fm-col-points
+                    {
+                        font-size: 120% !important;
+                    }
+
+                    .fm-col-img img
+                    {
+                        height: 20px !important;
+                        width: auto;
+                    }
+
+                    &.fm-my-row
+                    {
+                        font-size: 110% !important;
+                        height: 35px !important;
+
+                        .fm-col-team
+                        {
+                            font-size: 110% !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

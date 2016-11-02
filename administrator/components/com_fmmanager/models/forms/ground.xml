@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset addfieldpath="/libraries/FootManager/Form/fields">
+
+    <field name="label" type="text" label="COM_FMMANAGER_FIELD_LABEL" description="COM_FMMANAGER_FIELD_LABEL_DESC" default="" required="true" />
+    <field name="image" type="fmmedia" label="COM_FMMANAGER_FIELD_IMAGE" description="COM_FMMANAGER_FIELD_IMAGE_DESC" directory="grounds" />
+  </fieldset>
+</form>

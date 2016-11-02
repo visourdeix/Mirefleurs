@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset addfieldpath="/libraries/FootManager/Form/fields">
+
+    <field name="tournament_id" type="tournamentslist" label="COM_FMMANAGER_FIELD_TOURNAMENT" description="COM_FMMANAGER_FIELD_TOURNAMENT_DESC" default="" required="true" class="input-large" />
+    <field name="season_id" type="seasonslist" label="COM_FMMANAGER_FIELD_SEASON" description="COM_FMMANAGER_FIELD_SEASON_DESC" default="" required="true" class="input-medium" />
+    <field name="default_time" type="fmtimepicker" label="COM_FMMANAGER_FIELD_DEFAULT_TIME_FOR_MATCH" description="COM_FMMANAGER_FIELD_DEFAULT_TIME_FOR_MATCH_DESC" default="15:00" />
+    <field name="victory_points" type="fmtouchspin" label="COM_FMMANAGER_FIELD_VICTORY_POINTS" description="COM_FMMANAGER_FIELD_VICTORY_POINTS_DESC" default="0" />
+    <field name="draw_points" type="fmtouchspin" label="COM_FMMANAGER_FIELD_DRAW_POINTS" description="COM_FMMANAGER_FIELD_DRAW_POINTS_DESC" default="0" />
+    <field name="defeat_points" type="fmtouchspin" label="COM_FMMANAGER_FIELD_DEFEAT_POINTS" description="COM_FMMANAGER_FIELD_DEFEAT_POINTS_DESC" default="0" />
+    <field name="victory_to_penalties_points" type="fmtouchspin" label="COM_FMMANAGER_FIELD_VICTORY_TO_PENALTIES_POINTS" description="COM_FMMANAGER_FIELD_VICTORY_TO_PENALTIES_POINTS_DESC" default="0" />
+    <field name="defeat_to_penalties_points" type="fmtouchspin" label="COM_FMMANAGER_FIELD_DEFEAT_TO_PENALTIES_POINTS" description="COM_FMMANAGER_FIELD_DEFEAT_TO_PENALTIES_POINTS_DESC" default="0" />
+    <field name="statistics" type="statisticstoggles"  label="COM_FMMANAGER_FIELD_STATISTICS" description="COM_FMMANAGER_FIELD_ALLOWED_STATISTICS_DESC" />
+    <field name="competitionTeams" type="fmrepeater" label="COM_FMMANAGER_FIELD_TEAMS" description="COM_FMMANAGER_FIELD_TEAMS_DESC">
+      <field name="team_id" type="teamslist"  label="COM_FMMANAGER_FIELD_TEAM" description="COM_FMMANAGER_FIELD_TEAM_DESC" default="" class="input-large">
+        <option value=""></option>
+      </field>
+      <field name="penalty" type="fmtouchspin"  label="COM_FMMANAGER_FIELD_PENALTY" description="COM_FMMANAGER_FIELD_PENALTY_DESC" default="0" min="-100" max="0" />
+    </field>
+    <field name="ranking_legend" type="fmrepeater" label="COM_FMMANAGER_FIELD_LEGEND" description="COM_FMMANAGER_FIELD_LEGEND_DESC">
+      <field name="range" type="text"  label="COM_FMMANAGER_FIELD_RANGE" description="COM_FMMANAGER_FIELD_RANGE_DESC" default="" class="input-medium" />
+      <field name="color" type="text" class="minicolors" label="COM_FMMANAGER_FIELD_COLOR" description="COM_FMMANAGER_FIELD_COLOR_DESC" default="#bdbdbd" />
+      <field name="label" type="text"  label="COM_FMMANAGER_FIELD_LABEL" description="COM_FMMANAGER_FIELD_LABEL_DESC" default="" class="input-medium" />
+    </field>
+    <field name="ranking_sort" type="rankingsortsortable"  label="COM_FMMANAGER_FIELD_SORT" description="COM_FMMANAGER_FIELD_SORT_DESC" />
+  </fieldset>
+
+  <fields name="attribs" label="FMLIB_TAB_PARAMS">
+    <fieldset name="basic" label="FMLIB_TAB_PARAMS">
+      <field name="results_title" type="fmtitle" label="COM_FMMANAGER_LEGEND_RESULTS" />
+
+      <field
+        name="results_show_name"
+        type="list"
+        label="COM_FMMANAGER_SHOW_NAME_FIELD"
+        description="COM_FMMANAGER_SHOW_NAME_FIELD_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="name">COM_FMMANAGER_FIELD_NAME</option>
+        <option value="small_name">COM_FMMANAGER_FIELD_SMALL_NAME</option>
+        <option value="abbreviation">COM_FMMANAGER_FIELD_ABBREVIATION</option>
+      </field>
+
+      <field name="ranking_title" type="fmtitle" label="COM_FMMANAGER_LEGEND_RANKING" />
+
+      <field
+				name="ranking_show_filters"
+				type="list"
+				class="chzn-color"
+				label="COM_FMMANAGER_SHOW_FILTERS"
+				description="COM_FMMANAGER_SHOW_FILTERS_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JSHOW</option>
+        <option value="0">JHIDE</option>
+      </field>
+
+      <field
+				name="ranking_show_name"
+				type="list"
+				label="COM_FMMANAGER_SHOW_NAME_FIELD"
+				description="COM_FMMANAGER_SHOW_NAME_FIELD_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="name">COM_FMMANAGER_FIELD_NAME</option>
+        <option value="small_name">COM_FMMANAGER_FIELD_SMALL_NAME</option>
+        <option value="abbreviation">COM_FMMANAGER_FIELD_ABBREVIATION</option>
+      </field>
+
+      <field
+				name="ranking_show_logo"
+				type="list"
+				class="chzn-color"
+				label="COM_FMMANAGER_SHOW_LOGO"
+				description="COM_FMMANAGER_SHOW_LOGO_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JSHOW</option>
+        <option value="0">JHIDE</option>
+      </field>
+
+      <field
+				name="ranking_show_legend"
+				type="list"
+				class="chzn-color"
+				label="COM_FMMANAGER_SHOW_LEGEND"
+				description="COM_FMMANAGER_SHOW_LEGEND_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JSHOW</option>
+        <option value="0">JHIDE</option>
+      </field>
+
+      <field name="ranking_count_in_series" type="fmtouchspin"  label="COM_FMMANAGER_FIELD_COUNT_IN_SERIES" description="COM_FMMANAGER_FIELD_COUNT_IN_SERIES_DESC" max="15" />
+      <field name="ranking_columns" type="rankingcolumnssortable"  label="COM_FMMANAGER_FIELD_COLUMNS" description="COM_FMMANAGER_FIELD_COLUMNS_DESC" />
+    </fieldset>
+  </fields>
+</form>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset addfieldpath="/libraries/FootManager/Form/fields">
+
+    <field name="name" type="text"  label="COM_FMEVENTS_FIELD_NAME" description="COM_FMEVENTS_FIELD_NAME_DESC" default="" required="true" />
+    <field name="photo" type="fmmedia" label="COM_FMEVENTS_FIELD_PHOTO" description="COM_FMEVENTS_FIELD_PHOTO_DESC" directory="stadiums" />
+    <field name="address" type="textarea"  label="COM_FMEVENTS_FIELD_ADDRESS" description="COM_FMEVENTS_FIELD_ADDRESS_DESC" default="" />
+    <field name="postal_code" type="text"  label="COM_FMEVENTS_FIELD_POSTAL_CODE" description="COM_FMEVENTS_FIELD_POSTAL_CODE_DESC" default="" class="input-mini" />
+    <field name="city" type="text"  label="COM_FMEVENTS_FIELD_CITY" description="COM_FMEVENTS_FIELD_CITY_DESC" default="" class="input-medium" />
+    <field name="longitude" type="text"  label="COM_FMEVENTS_FIELD_LONGITUDE" description="COM_FMEVENTS_FIELD_LONGITUDE_DESC" default="" class="input-small" />
+    <field name="latitude" type="text"  label="COM_FMEVENTS_FIELD_LATITUDE" description="COM_FMEVENTS_FIELD_LATITUDE_DESC" default="" class="input-small" />
+    <field name="description" type="editor"  label="COM_FMEVENTS_FIELD_DESCRIPTION" description="COM_FMEVENTS_FIELD_DESCRIPTION_DESC" />
+  </fieldset>
+</form>

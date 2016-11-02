@@ -1,0 +1,56 @@
+﻿.fm-stats-players
+{
+    .fm-podiums
+    {
+        .flex-display();
+        .flex-direction(row);
+        .flex-wrap(wrap);
+        .align-items(stretch);
+        .justify-content(space-around);
+
+        & > div
+        {
+            padding: 0 5px;
+        }
+
+        .fm-podium
+        {
+            min-width: 270px !important;
+        }
+    }
+
+    .fm-table
+    {
+        .fm-col-img
+        {
+            img
+            {
+                .border-radius(50%);
+            }
+        }
+
+        .fm-col-name
+        {
+            font-family: @tradeGothic;
+            font-size: 120%;
+            text-transform: uppercase;
+
+            .fm-first-name
+            {
+                font-size: 80%;
+            }
+        }
+
+        .fm-col-position
+        {
+            font-family: @tradeGothic;
+            text-transform: uppercase;
+            color: lighten(@fontColor, 30%);
+        }
+
+        .fm-col-separator
+        {
+            border-right: 1px dashed @fontColor !important;
+        }
+    }
+}

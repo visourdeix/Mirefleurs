@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<access component="com_fmmanager">
+  <section name="component">
+    <action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC" />
+    <action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />
+    <action name="core.create" title="JACTION_CREATE" description="JACTION_CREATE_COMPONENT_DESC" />
+    <action name="core.delete" title="JACTION_DELETE" description="JACTION_DELETE_COMPONENT_DESC" />
+    <action name="core.edit" title="JACTION_EDIT" description="JACTION_EDIT_COMPONENT_DESC" />
+    <action name="persons.admin" title="COM_FMMANAGER_ACCESS_ADMIN_PERSONS" description="COM_FMMANAGER_ACCESS_ADMIN_PERSONS_DESC" />
+    <action name="persons.manage" title="COM_FMMANAGER_ACCESS_MANAGE_PERSONS" description="COM_FMMANAGER_ACCESS_MANAGE_PERSONS_DESC" />
+    <action name="clubs.admin" title="COM_FMMANAGER_ACCESS_ADMIN_CLUBS" description="COM_FMMANAGER_ACCESS_ADMIN_CLUBS_DESC" />
+    <action name="clubs.manage" title="COM_FMMANAGER_ACCESS_MANAGE_CLUBS" description="COM_FMMANAGER_ACCESS_MANAGE_CLUBS_DESC" />
+    <action name="competitions.admin" title="COM_FMMANAGER_ACCESS_ADMIN_COMPETITIONS" description="COM_FMMANAGER_ACCESS_ADMIN_COMPETITIONS_DESC" />
+    <action name="competitions.manage" title="COM_FMMANAGER_ACCESS_MANAGE_COMPETITIONS" description="COM_FMMANAGER_ACCESS_MANAGE_COMPETITIONS_DESC" />
+    <action name="stadiums.admin" title="COM_FMMANAGER_ACCESS_ADMIN_STADIUMS" description="COM_FMMANAGER_ACCESS_ADMIN_STADIUMS_DESC" />
+    <action name="stadiums.manage" title="COM_FMMANAGER_ACCESS_MANAGE_STADIUMS" description="COM_FMMANAGER_ACCESS_MANAGE_STADIUMS_DESC" />
+    <action name="rosters.admin" title="COM_FMMANAGER_ACCESS_ADMIN_ROSTERS" description="COM_FMMANAGER_ACCESS_ADMIN_ROSTERS_DESC" />
+    <action name="rosters.manage" title="COM_FMMANAGER_ACCESS_MANAGE_ROSTERS" description="COM_FMMANAGER_ACCESS_MANAGE_ROSTERS_DESC" />
+    <action name="trainings.admin" title="COM_FMMANAGER_ACCESS_ADMIN_TRAININGS" description="COM_FMMANAGER_ACCESS_ADMIN_TRAININGS_DESC" />
+    <action name="trainings.manage" title="COM_FMMANAGER_ACCESS_MANAGE_TRAININGS" description="COM_FMMANAGER_ACCESS_MANAGE_TRAININGS_DESC" />
+    <action name="data.admin" title="COM_FMMANAGER_ACCESS_ADMIN_DATA" description="COM_FMMANAGER_ACCESS_ADMIN_DATA_DESC" />
+    <action name="data.manage" title="COM_FMMANAGER_ACCESS_MANAGE_DATA" description="COM_FMMANAGER_ACCESS_MANAGE_DATA_DESC" />
+  </section>
+
+  <section name="category">
+    <action name="roster.edit" title="COM_FMMANAGER_ACCESS_CATEGORY_MANAGE_ROSTERS" description="COM_FMMANAGER_ACCESS_CATEGORY_MANAGE_ROSTERS_DESC" />
+    <action name="call_up.edit" title="COM_FMMANAGER_ACCESS_CATEGORY_EDIT_CALL_UP" description="COM_FMMANAGER_ACCESS_CATEGORY_EDIT_CALL_UP_DESC" />
+    <action name="results.edit" title="COM_FMMANAGER_ACCESS_CATEGORY_EDIT_RESULTS" description="COM_FMMANAGER_ACCESS_CATEGORY_EDIT_RESULTS_DESC" />
+    <action name="stats.view" title="COM_FMMANAGER_ACCESS_CATEGORY_VIEW_STATS" description="COM_FMMANAGER_ACCESS_CATEGORY_VIEW_STATS_DESC" />
+  </section>
+</access>

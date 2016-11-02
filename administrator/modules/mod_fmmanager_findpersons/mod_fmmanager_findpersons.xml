@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="administrator" method="upgrade">
+  <name>mod_fmmanager_findpersons</name>
+  <author>Stéphane ANDRE</author>
+  <creationDate>December 2015</creationDate>
+  <copyright>(C) 2015 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <authorUrl/>
+  <version>1.0.0</version>
+  <description>MOD_FMMANAGER_FINDPERSONS_XML_DESCRIPTION</description>
+  <position>fmmanager-right</position>
+  <!-- Runs on install/uninstall/update; New in 2.5 -->
+  <config>
+    <fields name="params" addfieldpath="/administrator/components/com_fmmanager/models/fields">
+      <fieldset name="basic" addfieldpath="/libraries/FootManager/Form/fields">
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+        <field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+        <field name="cache" type="list" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+          <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+  <!-- /// INSTALL SCRIPT /// -->
+  <!-- /// FILES /// -->
+  <!-- /// LANGUAGES /// -->
+  <!-- /// INSTALL SCRIPT /// -->
+  <scriptfile>install.script.php</scriptfile>
+  <!-- /// FILES /// -->
+  <files folder="admin">
+    <folder>assets</folder>
+    <folder>tmpl</folder>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <filename module="mod_fmmanager_findpersons">mod_fmmanager_findpersons.php</filename>
+  </files>
+  <!-- /// LANGUAGES /// -->
+  <languages folder="admin">
+    <language tag="fr-FR">language/fr-FR/fr-FR.mod_fmmanager_findpersons.ini</language>
+    <language tag="fr-FR">language/fr-FR/fr-FR.mod_fmmanager_findpersons.sys.ini</language>
+  </languages>
+</extension>

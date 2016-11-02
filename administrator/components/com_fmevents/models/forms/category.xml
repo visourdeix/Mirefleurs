@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset name="fmevents" label="COM_FMEVENTS_TAB_EVENTS" addfieldpath="/libraries/FootManager/Form/fields">
+    <fields name="params" addfieldpath="/administrator/components/com_fmevents/models/fields">
+      <field name="color" type="color" label="COM_FMEVENTS_FIELD_COLOR" description="COM_FMEVENTS_FIELD_COLOR_DESC" required="true" />
+    </fields>
+  </fieldset>
+</form>

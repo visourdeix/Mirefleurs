@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset addfieldpath="/libraries/FootManager/Form/fields">
+
+    <field name="name" type="fmtext" label="COM_FMMANAGER_FIELD_NAME" description="COM_FMMANAGER_FIELD_NAME_DESC" default="" required="true" />
+    <field name="stadium_id" type="stadiumslist"  label="COM_FMMANAGER_FIELD_STADIUM" description="COM_FMMANAGER_FIELD_STADIUM_DESC" default="" class="input-large">
+      <option value="">FMLIB_NONE_1</option>
+    </field>
+    <field name="state" type="stateslist" label="COM_FMMANAGER_FIELD_STATE" description="COM_FMMANAGER_FIELD_STATE_DESC" class="fm-chzn-states input-mini" />
+    <field name="date" type="fmdatepicker" label="COM_FMMANAGER_FIELD_DATE" description="COM_FMMANAGER_FIELD_DATE_DESC" required="true" />
+    <field name="time" type="fmtimepicker" label="COM_FMMANAGER_FIELD_TIME" description="COM_FMMANAGER_FIELD_TIME_DESC" />
+    <field name="summary" type="editor"  label="COM_FMMANAGER_FIELD_SUMMARY" description="COM_FMMANAGER_FIELD_SUMMARY_DESC" />
+    <field name="competition_id" type="hidden" />
+    <field name="matches" type="fmrepeater" canAdd="0" label="COM_FMMANAGER_FIELD_MATCHES" description="COM_FMMANAGER_FIELD_MATCHES_DESC">
+      <fields name="matches_list">
+        <field name="id" type="fmbutton" label="FMLIB_EDIT_ICON" description="FMLIB_EDIT" class="fm-edit btn-primary btn-mini"></field>
+        <field name="state" type="stateslist" label="COM_FMMANAGER_FIELD_STATE" description="COM_FMMANAGER_FIELD_STATE_DESC" class="fm-chzn-states input-mini" />
+        <field name="team1_id" type="teamslist" disabled="true" label="COM_FMMANAGER_FIELD_HOME_TEAM" description="COM_FMMANAGER_FIELD_HOME_TEAM_DESC" class="input-medium" />
+        <field name="score1" type="fmtouchspin" vertical="true" label="COM_FMMANAGER_FIELD_SCORE" description="COM_FMMANAGER_FIELD_SCORE_DESC" default="0" />
+        <field name="score2" type="fmtouchspin" vertical="true" label="COM_FMMANAGER_FIELD_SCORE" description="COM_FMMANAGER_FIELD_SCORE_DESC" default="0" />
+        <field name="team2_id" type="teamslist" disabled="true" editLink="none" label="COM_FMMANAGER_FIELD_AWAY_TEAM" description="COM_FMMANAGER_FIELD_AWAY_TEAM_DESC" class="input-medium" />
+        <field name="time" type="fmtimepicker" label="COM_FMMANAGER_FIELD_TIME" description="COM_FMMANAGER_FIELD_TIME_DESC" />
+      </fields>
+    </field>
+
+    <field name="matchesToAdd" type="fmrepeater" label="COM_FMMANAGER_FIELD_MATCHES" description="COM_FMMANAGER_FIELD_MATCHES_DESC">
+      <fields name="matchesToAdd_list">
+        <field name="id" type="hidden" default="0"></field>
+        <field name="team1_id" type="teamslist"  label="COM_FMMANAGER_FIELD_HOME_TEAM" description="COM_FMMANAGER_FIELD_HOME_TEAM_DESC" class="input-medium" default="">
+          <option value=""></option>
+        </field>
+        <field name="team2_id" type="teamslist" editLink="none" label="COM_FMMANAGER_FIELD_AWAY_TEAM" description="COM_FMMANAGER_FIELD_AWAY_TEAM_DESC" class="input-medium" default="">
+          <option value=""></option>
+        </field>
+        <field name="date" type="fmdatepicker" label="COM_FMMANAGER_FIELD_DATE" description="COM_FMMANAGER_FIELD_DATE_DESC" />
+        <field name="time" type="fmtimepicker" label="COM_FMMANAGER_FIELD_TIME" description="COM_FMMANAGER_FIELD_TIME_DESC" />
+        <field name="stadium_id" type="stadiumslist"  label="COM_FMMANAGER_FIELD_STADIUM" description="COM_FMMANAGER_FIELD_STADIUM_DESC" default="" class="input-large">
+          <option value="">FMLIB_NONE_1</option>
+        </field>
+      </fields>
+    </field>
+
+    <!-- Players Statistics -->
+    <field name="playersStatistics" type="personstable">
+      <fields name="playersStatistics_list">
+      </fields>
+    </field>
+
+    <!-- Team Statistics -->
+    <field name="teamsStatistics" type="teamstable">
+      <fields name="teamsStatistics_list">
+      </fields>
+    </field>
+  </fieldset>
+</form>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset  addfieldpath="/libraries/FootManager/Form/fields">
+
+    <field name="invert_teams" type="fmtoggle" label="COM_FMMANAGER_FIELD_INVERT_TEAMS" description="COM_FMMANAGER_FIELD_INVERT_TEAMS_DESC" default="1" />
+    <field name="matchdays" type="fmrepeater">
+      <fields name="matchdays_list">
+        <field name="name" type="matchdaystext" label="COM_FMMANAGER_FIELD_NAME" description="COM_FMMANAGER_FIELD_NAME_DESC" default="" />
+        <field name="date" type="fmdatepicker" inModal="true" label="COM_FMMANAGER_FIELD_DATE" description="COM_FMMANAGER_FIELD_DATE_DESC" />
+        <field name="time" type="fmtimepicker" inModal="true" label="COM_FMMANAGER_FIELD_TIME" description="COM_FMMANAGER_FIELD_TIME_DESC" />
+        <field name="stadium_id" type="stadiumslist"  label="COM_FMMANAGER_FIELD_STADIUM" description="COM_FMMANAGER_FIELD_STADIUM_DESC" default="" class="input-large" editLink="">
+          <option value="">FMLIB_NONE_1</option>
+        </field>
+        <field name="matchday_copy" type="matchdayslist"  label="COM_FMMANAGER_FIELD_MATCHDAY_COPY" description="COM_FMMANAGER_FIELD_MATCHDAY_COPY_DESC" default="" class="input-medium" editLink="">
+          <option value="">FMLIB_NONE_1</option>
+        </field>
+      </fields>
+    </field>
+  </fieldset>
+</form>

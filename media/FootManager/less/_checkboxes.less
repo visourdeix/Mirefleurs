@@ -1,0 +1,137 @@
+﻿.fm-checkboxes
+{
+    .flex-display();
+    .flex-direction(row);
+    .flex-wrap(wrap);
+    .justify-content(center);
+    .align-items(stretch);
+
+    .mobile(
+    {
+        .flex-direction(column);
+    }
+
+    );
+}
+
+ul.fm-checkboxes
+{
+    list-style: none;
+    margin: 0;
+}
+
+.fm-checkboxes > *,
+.fm-checkbox
+{
+    margin: 3px;
+
+    & > input
+    {
+        display: none!important;
+    }
+
+    & > label
+    {
+        .flex(1);
+        .transition(@transition);
+        border: 1px solid @borderColor;
+        .flex-display();
+        .flex-direction(row);
+        .flex-wrap(nowrap);
+        .justify-content(flex-start);
+        .align-items(center);
+        .opacity(70);
+        background-color: lighten(@lightgray, 10%);
+        .fm-text-tradegothic;
+        padding: 3px 5px;
+        margin: 0;
+        max-width: none;
+
+        &:before
+        {
+            content: none!important;
+        }
+
+        &:hover
+        {
+            .opacity(85)
+            !important;
+        }
+    }
+
+        & > input:checked + label,
+        & > label:hover
+        {
+            background-color: @activeBackgroundColor !important;
+            border: 1px solid @activeBorderColor;
+            color: @activeLightFontColor;
+        }
+
+    & > input:checked + label
+    {
+        .opacity(100);
+    }
+}
+
+    .fm-checkboxes.fm-checkboxes-icon > *,
+    .fm-checkbox.fm-checkbox-icon
+    {
+        & > label
+        {
+            padding: 0;
+            .align-items(stretch);
+
+            & > span
+            {
+                padding: 3px 5px;
+                .flex-display();
+                .justify-content(center);
+                .align-items(center);
+
+                &:first-child
+                {
+                    background-color: @white;
+                    border-right: 1px solid @borderColor;
+                }
+            }
+
+            img
+            {
+                max-height: 25px !important;
+            }
+        }
+
+            & > input:checked + label,
+            & > label:hover
+            {
+                & > span:first-child
+                {
+                    border-right: 1px solid @activeBorderColor;
+                    color: @activeFontColor !important;
+                }
+            }
+    }
+
+        .fm-checkboxes.fm-checkboxes-icon.fm-checkboxes-icon-responsive > *,
+        .fm-checkbox.fm-checkbox-icon.fm-checkboxes-icon-responsive
+        {
+            .mobile(
+            {
+                .flex-direction(row);
+
+                & > li > input:not(:checked) + label
+                {
+                    & > span:last-child
+                    {
+                        display: none;
+                    }
+
+                    & > span:first-child
+                    {
+                        border-right: none;
+                    }
+                }
+            }
+
+            );
+        }

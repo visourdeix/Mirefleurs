@@ -1,0 +1,196 @@
+﻿table
+{
+    &.fm-table-responsive-fix
+    {
+        display: block;
+
+        & > thead,
+        & > tbody,
+        & > thead > tr,
+        & > tbody > tr,
+        & > thead > tr > th,
+        & > tbody > tr > td,
+        & > th,
+        & > td,
+        & > tr
+        {
+            display: block;
+        }
+
+        .hidden
+        {
+            display: none !important;
+        }
+
+        & > thead > tr
+        {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        & > tr,
+        & > thead > tr,
+        & > tbody > tr
+        {
+            border: 1px solid #ccc;
+        }
+
+            & > td,
+            & > thead > tr > th,
+            & > tbody > tr > td
+            {
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 40% !important;
+                padding-bottom: 6px !important;
+                padding-top: 6px !important;
+                white-space: normal;
+                text-align: left !important;
+
+                &:before
+                {
+                    position: absolute;
+                    /* Top/left values mimic padding */
+                    top: 6px;
+                    left: 6px;
+                    width: 45%;
+                    padding-right: 10px;
+                    white-space: nowrap;
+                    text-align: left;
+                    font-weight: bold;
+                    content: attr(data-title);
+                }
+
+                .hidden
+                {
+                    display: none !important;
+                }
+            }
+
+        .chzn-container,
+        .chzn-container .chzn-results,
+        .chzn-container-single .chzn-drop
+        {
+            width: inherit !important;
+        }
+    }
+
+    @media (max-width: 768px)
+    {
+        &.fm-table-responsive
+        {
+            .fm-table-responsive-fix;
+        }
+    }
+
+    &.fm-table
+    {
+        color: @fontColor;
+        border: none;
+
+        thead
+        {
+            tr
+            {
+                border-bottom: 3px solid @fontColor;
+
+                th
+                {
+                    background: none;
+                    border: none !important;
+                    text-align: center;
+                    color: @black;
+                    font-variant: small-caps;
+
+                    img
+                    {
+                        max-width: 14px;
+                        max-height: 14px;
+                    }
+                }
+            }
+        }
+
+        tbody
+        {
+            tr
+            {
+                border-bottom: 1px solid @borderColor;
+
+                &:nth-child(even)
+                {
+                    background-color: lighten(@lightgray, 10%);
+                }
+
+                td
+                {
+                    border: none !important;
+                    padding: 3px 5px;
+                    vertical-align: middle;
+                    line-height: 18px;
+                }
+
+                &:hover
+                {
+                    td
+                    {
+                        background: none;
+                    }
+                }
+            }
+        }
+    }
+
+    & .fm-col-number
+    {
+        text-align: center;
+        font-family: @tradeGothic;
+        font-size: 135%;
+        color: lighten(@fontColor, 20%);
+        min-width: 30px !important;
+    }
+
+    & .fm-col-img
+    {
+        width: 40px;
+        min-width: 40px;
+        text-align: center;
+
+        img
+        {
+            max-height: 40px !important;
+        }
+    }
+}
+
+.fm-small .fm-table,
+.fm-table.fm-small
+{
+    thead
+    {
+        tr
+        {
+            border-width: 2px !important;
+
+            .th-inner
+            {
+                padding: 3px !important;
+                line-height: 16px !important;
+                font-size: 95% !important;
+            }
+        }
+    }
+
+    tbody
+    {
+        tr
+        {
+            td
+            {
+                padding: 2px 2px !important;
+            }
+        }
+    }
+}

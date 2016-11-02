@@ -1,0 +1,77 @@
+﻿.fm-podium {
+    .flex-display();
+    .flex-flow(row nowrap);
+    .justify-content(flex-start);
+    .align-items(flex-end);
+    min-width: 180px;
+
+    & > div {
+        .flex(1);
+
+        & > div:first-child {
+            padding: 5px;
+
+            & > * {
+                margin: auto;
+            }
+
+            .fm-no-value {
+                text-align: center;
+                font-family: @tradeGothic;
+                font-size: 300%;
+                line-height: 60px;
+                color: lighten(@fontColor, 60%);
+            }
+        }
+
+        & > div:last-child {
+            border-top: 1px solid @borderColor;
+            margin-top: 0;
+            padding-top: 20px;
+            text-align: center;
+            font-family: @tradeGothic;
+            font-size: 500%;
+            line-height: 60px;
+        }
+
+        &.fm-rank-1 {
+            & > div:first-child {
+                margin-bottom: 5px;
+            }
+
+            & > div:last-child {
+                padding-bottom: 50px;
+            }
+        }
+
+        &.fm-rank-2 {
+            & > div:first-child {
+                margin-bottom: -15px;
+            }
+
+            & > div:last-child {
+                padding-bottom: 30px;
+            }
+
+            & > .fm-spacer {
+                height: 20px;
+                border-right: 1px solid @borderColor;
+            }
+        }
+
+        &.fm-rank-3 {
+            & > div:first-child {
+                margin-bottom: -35px;
+            }
+
+            & > div:last-child {
+                padding-bottom: 10px;
+            }
+
+            & > .fm-spacer {
+                height: 40px;
+                border-left: 1px solid @borderColor;
+            }
+        }
+    }
+}

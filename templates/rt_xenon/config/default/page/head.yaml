@@ -1,0 +1,11 @@
+meta: {  }
+head_bottom: ''
+atoms:
+  -
+    type: assets
+    title: 'Custom CSS / JS'
+    attributes:
+      enabled: '1'
+      css:
+        - { location: 'gantry-assets://css/demo.css', inline: '', extra: {  }, name: 'Demo CSS' }
+      javascript: {  }

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+  <name>com_fmgallery</name>
+  <author>Stéphane ANDRE</author>
+  <creationDate>December 2015</creationDate>
+  <copyright>(C) 2015 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <authorUrl/>
+  <version>2.0.0</version>
+  <description>COM_FMGALLERY_XML_DESCRIPTION</description>
+  <!-- Runs on install/uninstall/update; New in 2.5 -->
+  <!-- Script SQL à l'installation (Création des tables + données éventuelles)-->
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/install.sql</file>
+    </sql>
+  </install>
+  <!-- Script SQL à la désinstallation (Suppression éventuelles des tables)-->
+  <uninstall>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+    </sql>
+  </uninstall>
+  <!-- Script SQL lors des différentes mises à jour. -->
+  <update>
+    <schemas>
+      <schemapath type="mysql">sql/updates</schemapath>
+    </schemas>
+  </update>
+  <!-- Dossiers utilisés côté media. -->
+  <!-- Fichiers et dossiers utilisés côté administration. -->
+  <administration>
+    <menu link="option=com_fmgallery">COM_FMGALLERY_MENU</menu>
+    <submenu>
+      <menu view="photos">COM_FMGALLERY_MENU_PHOTOS</menu>
+      <menu view="videos">COM_FMGALLERY_MENU_VIDEOS</menu>
+      <menu view="files">COM_FMGALLERY_MENU_FILES</menu>
+      <menu link="option=com_config&amp;view=component&amp;component=com_fmgallery">COM_FMGALLERY_MENU_CONFIG</menu>
+    </submenu>
+    <!-- /// FILES /// -->
+    <!-- /// LANGUAGES /// -->
+    <!-- /// FILES /// -->
+    <files folder="admin">
+      <folder>controllers</folder>
+      <folder>helpers</folder>
+      <folder>images</folder>
+      <folder>models</folder>
+      <folder>sql</folder>
+      <folder>tables</folder>
+      <folder>views</folder>
+      <filename>CHANGELOG.md</filename>
+      <filename>access.xml</filename>
+      <filename>config.xml</filename>
+      <filename>controller.php</filename>
+      <filename>fmgallery.php</filename>
+      <filename>index.html</filename>
+    </files>
+    <!-- /// LANGUAGES /// -->
+    <languages folder="admin">
+      <language tag="fr-FR">language/fr-FR/fr-FR.com_fmgallery.ini</language>
+      <language tag="fr-FR">language/fr-FR/fr-FR.com_fmgallery.sys.ini</language>
+    </languages>
+  </administration>
+  <!-- Fichiers et dossiers utilisés côté site. -->
+  <!-- /// INSTALL SCRIPT /// -->
+  <!-- /// FILES /// -->
+  <!-- /// LANGUAGES /// -->
+  <!-- /// MEDIA /// -->
+  <!-- /// INSTALL SCRIPT /// -->
+  <scriptfile>install.script.php</scriptfile>
+  <!-- /// FILES /// -->
+  <files folder="site">
+    <folder>helpers</folder>
+    <folder>layouts</folder>
+    <folder>models</folder>
+    <folder>views</folder>
+    <filename>controller.php</filename>
+    <filename>fmgallery.php</filename>
+    <filename>index.html</filename>
+    <filename>router.php</filename>
+  </files>
+  <!-- /// LANGUAGES /// -->
+  <languages folder="site">
+    <language tag="fr-FR">language/fr-FR/fr-FR.com_fmgallery.ini</language>
+  </languages>
+  <!-- /// MEDIA /// -->
+  <media destination="com_fmgallery" folder="media">
+    <folder>css</folder>
+    <folder>js</folder>
+    <folder>less</folder>
+    <filename>index.html</filename>
+  </media>
+</extension>

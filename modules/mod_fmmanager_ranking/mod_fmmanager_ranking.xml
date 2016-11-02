@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+  <name>mod_fmmanager_ranking</name>
+  <author>Stéphane ANDRE</author>
+  <creationDate>December 2015</creationDate>
+  <copyright>(C) 2015 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <authorUrl/>
+  <version>2.0.0</version>
+  <description>MOD_FMMANAGER_RANKING_XML_DESCRIPTION</description>
+  <!-- Runs on install/uninstall/update; New in 2.5 -->
+  <config>
+    <fields name="params" addfieldpath="/libraries/FootManager/Form/fields">
+      <fieldset name="basic" addfieldpath="/administrator/components/com_fmmanager/models/fields">
+        <field name="competition" type="competitionslist" label="COM_FMMANAGER_FIELD_COMPETITION" editLink="" required="true" ranking="true" description="COM_FMMANAGER_FIELD_COMPETITION_DESC"/>
+        <field name="show_tournament" type="list" class="chzn-color" label="COM_FMMANAGER_SHOW_TOURNAMENT" description="COM_FMMANAGER_SHOW_TOURNAMENT_DESC" default="1">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+        <field name="show_link" type="list" class="chzn-color" label="COM_FMMANAGER_SHOW_LINK" description="COM_FMMANAGER_SHOW_LINK_DESC" default="1">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+        <field name="show_name" type="list" label="COM_FMMANAGER_SHOW_NAME_FIELD" description="COM_FMMANAGER_SHOW_NAME_FIELD_DESC" default="small_name">
+          <option value="name">COM_FMMANAGER_FIELD_NAME</option>
+          <option value="small_name">COM_FMMANAGER_FIELD_SMALL_NAME</option>
+          <option value="abbreviation">COM_FMMANAGER_FIELD_ABBREVIATION</option>
+        </field>
+        <field name="show_logo" type="list" class="chzn-color" label="COM_FMMANAGER_SHOW_LOGO" description="COM_FMMANAGER_SHOW_LOGO_DESC" default="1">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+        <field name="rows" type="fmtouchspin" label="COM_FMMANAGER_SHOW_ROW_NUMBER" description="COM_FMMANAGER_SHOW_ROW_NUMBER_DESC" default="0"/>
+        <field name="columns" type="rankingcolumnssortable" label="COM_FMMANAGER_FIELD_COLUMNS" description="COM_FMMANAGER_FIELD_COLUMNS_DESC" default="points"/>
+        <field name="ajax_loading" type="list" class="chzn-color" label="COM_FMMANAGER_AJAX_LOADING" description="COM_FMMANAGER_AJAX_LOADING_DESC" default="0">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+        <field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+        <field name="cache" type="list" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC" default="1">
+          <option value="1">JGLOBAL_USE_GLOBAL</option>
+          <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+  <!-- /// INSTALL SCRIPT /// -->
+  <!-- /// FILES /// -->
+  <!-- /// LANGUAGES /// -->
+  <!-- /// INSTALL SCRIPT /// -->
+  <scriptfile>install.script.php</scriptfile>
+  <!-- /// FILES /// -->
+  <files folder="site">
+    <folder>tmpl</folder>
+    <filename>CHANGELOG.md</filename>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <filename module="mod_fmmanager_ranking">mod_fmmanager_ranking.php</filename>
+  </files>
+  <!-- /// LANGUAGES /// -->
+  <languages folder="site">
+    <language tag="fr-FR">language/fr-FR/fr-FR.mod_fmmanager_ranking.ini</language>
+    <language tag="fr-FR">language/fr-FR/fr-FR.mod_fmmanager_ranking.sys.ini</language>
+  </languages>
+</extension>

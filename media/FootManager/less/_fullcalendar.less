@@ -1,0 +1,163 @@
+﻿.fc table tr:hover td {
+    background: none;
+}
+
+.fc-event {
+    border: 0 solid !important;
+    border-left-width: 7px !important;
+    border-radius: 0 !important;
+    padding: 2px 3px !important;
+
+    &:hover {
+        border-color: transparent !important;
+    }
+
+    .fc-title {
+        .fm-watermark {
+            font-size: 17px !important;
+            .rotate(350deg);
+            .opacity(80);
+        }
+    }
+
+    .fc-time {
+        font-family: @tradeGothic;
+        font-size: 13px;
+        margin-right: 5px;
+    }
+
+    .mobile( {
+        .fc-time {
+            display: none !important;
+        }
+    }
+
+    );
+
+    .tablet-max( {
+        border-left-width: 0 !important;
+    }
+
+    );
+}
+
+.fc-day-number,
+.fc-day-header {
+    font-family: @tradeGothic;
+    color: @fontColor;
+    text-transform: uppercase;
+}
+
+.fc-day-header {
+    font-size: 16px;
+    padding: 3px 0 !important;
+    background-color: @activeBackgroundColor !important;
+    color: @activeLightFontColor !important;
+}
+
+.fc-day.fc-other-month {
+    background-color: @inactiveLightColor !important;
+    .opacity(70);
+}
+
+.fc-day-number.fc-today {
+    color: @activeLightFontColor !important;
+}
+
+.fc-day.fc-today {
+    background-color: @activeBackgroundColor !important;
+    .opacity(40);
+}
+
+.fc-button {
+    text-transform: uppercase !important;
+    font-family: @tradeGothic !important;
+    background: @white !important;
+    border: 1px solid @borderColor !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    border-radius: 0 !important;
+    .transition(@transition);
+}
+
+.fc-button:focus {
+    outline: none !important;
+}
+
+.fc-button:not(.fc-state-disabled):not(.fc-prev-button):not(.fc-next-button):hover,
+.fc-button.fc-state-active {
+    background: @activeBackgroundColor !important;
+    border: 1px solid @activeBackgroundColor !important;
+    color: @white !important;
+}
+
+.fc-state-hover {
+    .transition(@transition) !important;
+}
+
+.fc-state-disabled {
+    cursor: default !important;
+    color: @fontColor !important;
+}
+
+.fc-prev-button,
+.fc-next-button {
+    color: @fontColor !important;
+    background: none !important;
+    border: 0 !important;
+    font-size: 20px !important;
+    .opacity(60);
+}
+
+.fc-prev-button:hover,
+.fc-next-button:hover {
+    .opacity(100) !important;
+}
+
+.fc-toolbar h2 {
+    margin: 0 7px !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    text-transform: uppercase !important;
+    font-family: @tradeGothic !important;
+    border: none;
+}
+
+.fc-toolbar {
+    margin-bottom: 0 !important;
+}
+
+.fc-more {
+    width: 18px;
+    height: 18px;
+    display: block;
+    border: 1px solid @borderColor;
+    line-height: 18px;
+    border-radius: 20px;
+    vertical-align: middle;
+    text-align: center;
+    color: @fontColor !important;
+    font-family: @tradeGothic !important;
+    .transition(@transition);
+    float: right;
+    margin-top: 5px !important;
+
+    &:hover {
+        background-color: @activeBackgroundColor !important;
+        border-color: @activeBackgroundColor !important;
+        color: @white !important;
+    }
+}
+
+.fm-calendar-tooltip {
+    width: 220px;
+}
+
+.fm-calendar-tooltip-date {
+    text-transform: uppercase;
+    font-family: @tradeGothic;
+    font-size: 13px;
+    text-align: center;
+    padding: 4px 4px;
+    background-color: #ddd;
+}

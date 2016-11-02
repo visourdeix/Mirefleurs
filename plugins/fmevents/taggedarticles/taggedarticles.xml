@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.2" type="plugin" group="fmevents" method="upgrade">
+  <name>plg_fmevents_taggedarticles</name>
+  <author>Stéphane ANDRE</author>
+  <creationDate>January 2016</creationDate>
+  <copyright>(C) 2015 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <authorUrl/>
+  <version>1.0.0</version>
+  <description>PLG_FMEVENTS_TAGGEDARTICLES_XML_DESCRIPTION</description>
+  <!-- Runs on install/uninstall/update; New in 2.5 -->
+  <config>
+    <fields name="params">
+      <fieldset name="basic" addfieldpath="/libraries/FootManager/Form/fields">
+        <field name="event" type="radio" class="btn-group btn-group-yesno" default="1" description="PLG_TAGGEDARTICLES_FIELD_EVENT_DESC" label="PLG_TAGGEDARTICLES_FIELD_EVENT_LABEL">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="maximum" type="fmtouchspin" default="5" description="PLG_TAGGEDARTICLES_FIELD_MAXIMUM_DESC" label="PLG_TAGGEDARTICLES_FIELD_MAXIMUM_LABEL"/>
+      </fieldset>
+    </fields>
+  </config>
+  <!-- /// INSTALL SCRIPT /// -->
+  <!-- /// FILES /// -->
+  <!-- /// LANGUAGES /// -->
+  <!-- /// INSTALL SCRIPT /// -->
+  <scriptfile>install.script.php</scriptfile>
+  <!-- /// FILES /// -->
+  <files folder="admin">
+    <filename>index.html</filename>
+    <filename plugin="taggedarticles">taggedarticles.php</filename>
+  </files>
+  <!-- /// LANGUAGES /// -->
+  <languages folder="admin">
+    <language tag="fr-FR">language/fr-FR/fr-FR.plg_fmevents_taggedarticles.ini</language>
+    <language tag="fr-FR">language/fr-FR/fr-FR.plg_fmevents_taggedarticles.sys.ini</language>
+  </languages>
+</extension>

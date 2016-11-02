@@ -1,0 +1,289 @@
+@import "dependencies";
+
+#g-header {
+    z-index: 100;
+    margin-top: 0px;
+	border-radius: 0;    
+    overflow: visible;
+
+    .g-container {
+        background: #000;
+
+        /* ######################################################### 
+                                    Header
+           ######################################################### */
+
+        .g-grid {
+
+            .g-header-custom {
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 75rem;
+
+
+                .g-header-logo {
+                    height: 90px;
+                    float: left;
+					@include breakpoint(mobile-only) {
+						height: 110px;
+						width: 100%;
+                        float: left;
+                        display: block;
+					}
+    
+                    a {
+                        color: #fff;
+                        display: block;
+                        height: 117px;
+                        position: absolute;
+                        margin-top: 8px;
+						
+						@include breakpoint(mobile-only) {
+							width: 85%;
+                            margin-left: 15%;
+                            position: relative;
+                            margin-top: 0;
+                            height: 100%;
+                            display: inline-block;
+						}
+
+                        img {
+                            z-index: 999;
+                            width: 90px;
+                            float: left;
+							@include breakpoint(mobile-only) {
+								width: 22%;
+                                margin-top: 15px;
+							}
+                        }
+
+						.g-logo-text {
+							color: #fff;
+							font-size: 30px;
+							margin-left: 20px;
+							line-height: 77px;
+							text-transform: uppercase;
+							font-family: $tradeGothic;
+							float: left;
+							@include breakpoint(mobile-only) {
+								width: 73%;
+                                margin-left: 0px;
+                                line-height: 45px;
+                                margin-top: 10px;
+							}
+						}
+                    }
+
+                    a:hover {
+                        color: $lightgreen;
+                    }
+                }
+
+                .g-header-social {
+                    float: left;
+					@include breakpoint(mobile-only) {
+						display: none;
+					}
+
+                    .moduletable {
+                        padding-top: 1rem;
+                    }
+
+                    .g-title {
+                        font-family: $tradeGothic;
+                        display: inline;
+                        text-indent: 0;
+                        width: auto;
+                        background: none;
+                        text-transform: uppercase;
+                        margin-right: 15px;
+                        float: left;
+                        color: #fff;
+                    }
+
+                    .g-social {
+
+                        a {
+                            color: #FFF;
+                        }
+
+                        a:hover {
+                            opacity: 0.7;
+                        }
+
+                        a span {
+                            vertical-align: initial;
+                        }
+                    }
+                }
+            }
+        }        
+        
+    
+        /* ######################################################### 
+                                 Navigation bar
+           ######################################################### */
+
+        .g-header-menu {
+            background: $darkgreen;
+            border-bottom: 5px solid #000;
+			@include breakpoint(mobile-only) {
+				display: none;
+			}
+
+            .g-content {
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 75rem;
+                padding: 0;
+
+				.g-main-nav {
+                    margin: 0 0 0 100px;
+                    height: 50px;
+                    z-index: 100;
+
+					.g-dropdown {
+                        background: #0A4D27;
+                        border: 1px solid #0A4D27;
+                        border-radius: 0;
+                    }
+
+                    .g-standard .g-dropdown {
+                        width: 210px;
+                    }
+
+                    .g-standard > .g-dropdown,
+                    .g-fullwidth > .g-dropdown {
+                        margin-top: 0;
+                    }
+
+					.g-toplevel {
+						& > li {
+							margin: 0;
+							height: 50px;
+							float: left;
+							padding-top: 5px;
+
+							& > .g-menu-item-container {
+								color: rgba(255, 255, 255, 0.65);
+								margin: 0.3125rem 0.9375rem;
+								font-size: 1rem;
+
+								.g-menu-parent-indicator {
+									margin-top: -5px;
+								}
+							}
+						}
+
+						& > li.g-menu-item-type-particle {
+							padding-top: 0px;
+							float: right;
+							margin-right: 90px;
+
+							& > .g-menu-item-container {
+								color: rgba(255, 255, 255, 0.65);
+								margin: -4px 0 0 0;
+							}
+
+						}
+
+						& > li:hover {
+							background-color: #0A4D27;
+							transition: background 0.1s ease-in-out, transform 0.1s ease-in-out;
+							color: #000;
+						}
+
+						& > li:hover > .g-menu-item-container,
+						& > li.active > .g-menu-item-container {
+							color: #fff;
+
+							i {
+								opacity: 1;
+							}
+						}
+
+						& > li.g-menu-item-type-particle:hover {
+							background-color: inherit;
+
+							.g-menu-item-container {
+								margin: 0;
+								padding: 0;
+							}
+						}
+					}
+
+					.g-sublevel {
+						& > li {
+							margin: 0.315rem 0 0.25rem 0.9375rem;
+						
+							& > .g-menu-item-container {
+								color: #fff;
+								border-bottom: 0;
+								font-size: 1rem;
+								color: rgba(255, 255, 255, 0.65);
+							}
+						}
+
+						& > li:hover > .g-menu-item-container,
+						& > li.active > .g-menu-item-container {
+							border-bottom: 0;
+							color: #fff;
+						}
+
+						.g-dropdown {
+							margin-left: 1px;
+							margin-top: 1px;
+						}  
+					}
+				}
+			}
+        }
+    }    
+}
+
+//Fixed Header On Scroll - Advanced
+@include breakpoint(no-mobile) {
+	#g-header.headroom--not-top {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		z-index: 998;
+		left: 0;
+		margin-top: -90px;
+
+		.g-header-logo {
+
+			a {
+				margin-top: 100px!important;
+			}
+
+			.g-logo-text {
+				display: none;
+			}
+		}
+
+		.g-header-menu {
+
+			.g-toplevel > li.g-menu-item {
+				margin-top: 2px;
+			}
+		}
+	}
+
+	#g-header.headroom--not-top + div > section,
+	#g-header.headroom--not-top + section {
+		margin-top: 145px;
+	}
+}
+
+@include breakpoint(mobile-only) {
+
+	.g-offcanvas-toggle.headroom--not-top {
+		position: fixed;
+		z-index: 999;
+	}
+
+	.g-offcanvas-open .g-offcanvas-toggle.headroom--not-top {
+		left: 17.3125rem;
+	}
+}

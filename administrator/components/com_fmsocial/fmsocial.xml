@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+  <name>com_fmsocial</name>
+  <author>Stéphane ANDRE</author>
+  <creationDate>December 2015</creationDate>
+  <copyright>(C) 2015 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <authorUrl/>
+  <version>1.0.0</version>
+  <description>COM_FMSOCIAL_XML_DESCRIPTION</description>
+  <!-- Runs on install/uninstall/update; New in 2.5 -->
+  <scriptfile>install.script.php</scriptfile>
+  <!-- Fichiers et dossiers utilisés côté administration. -->
+  <administration>
+    <!-- /// FILES /// -->
+    <files folder="admin">
+      <filename>access.xml</filename>
+      <filename>config.xml</filename>
+      <filename>controller.php</filename>
+      <filename>fmsocial.php</filename>
+      <filename>index.html</filename>
+    </files>
+    <!-- /// LANGUAGES /// -->
+    <languages folder="admin">
+      <language tag="fr-FR">language/fr-FR/fr-FR.com_fmsocial.ini</language>
+      <language tag="fr-FR">language/fr-FR/fr-FR.com_fmsocial.sys.ini</language>
+    </languages>
+  </administration>
+  <!-- /// FILES /// -->
+</extension>

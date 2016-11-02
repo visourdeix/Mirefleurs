@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="3.0" method="upgrade">
+  <name>FMSocial</name>
+  <packagename>FMSocial</packagename>
+  <version>1.0.0</version>
+  <creationDate>June 2016</creationDate>
+  <copyright>(C) 2015 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <author>Stéphane ANDRE</author>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <packager>FMSocial</packager>
+  <description>Package contenant tous les composants nécessaires pour la gestion de l'activité des utilisateurs.</description>
+  <files>
+    <file type="component" id="com_fmsocial">components/com_fmsocial</file>
+    <file type="plugin" id="plg_content_fmsocial" group="content">plugins/content/plg_content_fmsocial</file>
+    <file type="plugin" id="plg_system_fmopengraph" group="system">plugins/system/plg_system_fmopengraph</file>
+  </files>
+</extension>

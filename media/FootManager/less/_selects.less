@@ -1,0 +1,59 @@
+﻿/* Chosen color styles */
+[class^="fm-chzn-states"].chzn-single,
+[class*=" fm-chzn-states"].chzn-single,
+[class^="fm-chzn-states"].chzn-single .chzn-single-with-drop,
+[class*=" fm-chzn-states"].chzn-single .chzn-single-with-drop {
+	.box-shadow(none)!important;
+
+  & > span {
+      display:none!important;
+  }
+
+  &:before {
+      font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+          margin-right: 20px;
+          font-size:16px;
+  }
+}
+
+.fm-chzn-states.chzn-single[rel="value_0"] {
+    &:before {
+        content: "\f073";
+    }
+}
+
+.fm-chzn-states.chzn-single[rel="value_1"] {
+	.buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight)!important;
+
+    &:before {
+        content: "\f00c";
+    }
+}
+
+.fm-chzn-states.chzn-single[rel="value_2"] {
+	.buttonBackground(@btnWarningBackground, @btnWarningBackgroundHighlight)!important;
+
+    &:before {
+        content: "\f1da";
+    }
+}
+
+.fm-chzn-states.chzn-single[rel="value_3"] {
+	.buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight)!important;
+
+    &:before {
+        content: "\f00d";
+    }
+}
+
+.fm-chzn-states.chzn-single[rel="value_4"] {
+	.buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight)!important;
+
+    &:before {
+        content: "\f04d";
+    }
+}

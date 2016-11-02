@@ -1,0 +1,80 @@
+﻿.fm-text-tradegothic
+{
+    font-family: @tradeGothic;
+    text-transform: uppercase;
+}
+
+.fm-match-item
+{
+    .fm-content
+    {
+        .fm-column,
+        .fm-content
+        {
+            width: 100%;
+            padding: 0;
+        }
+
+        .fm-tournament
+        {
+            padding: 0 0 7px 0;
+            text-align: left;
+        }
+
+        .fm-team
+        {
+            .flex(1);
+
+            .fm-team-mobile
+            {
+                display: none;
+            }
+        }
+
+        .fm-logo
+        {
+            .flex(1);
+        }
+
+        .fm-score
+        {
+            color: @fontColor;
+            white-space: nowrap;
+        }
+
+        .fm-date, .fm-time
+        {
+            .fm-text-tradegothic;
+            font-size: 25px;
+            color: lighten(@fontColor, 40%);
+        }
+
+        .tablet-max(
+        {
+            .fm-team
+            {
+                .fm-team-normal
+                {
+                    display: none;
+                }
+
+                .fm-team-mobile
+                {
+                    display: inline-block;
+                }
+            }
+        }
+
+        );
+
+        .mobile(
+        {
+            .fm-date
+            {
+                display: none;
+            }
+        }
+
+        );
+    }
+}

@@ -1,0 +1,16 @@
+.fm-match-calendar .fm-matchday {
+  font-style: italic;
+  margin-top: 3px;
+}
+.fm-match-calendar .fm-row > div {
+  padding: 3px 3%;
+}
+.fm-match-calendar .fm-row > div .fm-team {
+  font-size: 16px;
+  line-height: 20px;
+}
+.fm-match-calendar .fm-row > div .fm-team .fm-logo {
+  margin: auto;
+  padding: 0;
+  max-height: none;
+}

@@ -1,0 +1,42 @@
+﻿.fm-stats-team
+{
+    text-align: center;
+    font-family: @tradeGothic;
+    text-transform: uppercase;
+    color: @fontColor;
+
+    .fm-column-border > div,
+    .fm-row-border > div.fm-column-border
+    {
+        padding: 0;
+    }
+
+    .fm-teamstats-results
+    {
+        .fm-row-border
+        {
+            align-items: stretch;
+        }
+
+        & > .fm-column-border .fm-column-border > div:last-child
+        {
+            border-bottom: none;
+        }
+    }
+
+    .fm-teamstats-stats
+    {
+        & > .fm-flex
+        {
+            & > div
+            {
+                min-width: 150px;
+
+                img
+                {
+                    height: 40px !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+﻿.mod-fmgallery-latestmedias .fm-columns-1
+{
+    float: left;
+    width: 100%;
+}
+
+.mod-fmgallery-latestmedias .fm-columns-2
+{
+    float: left;
+    width: 50%;
+}
+
+.mod-fmgallery-latestmedias .fm-columns-3
+{
+    float: left;
+    width: 33%;
+}
+
+.mod-fmgallery-latestmedias .fm-columns-4
+{
+    float: left;
+    width: 25%;
+}
+
+@media (max-width: 767px)
+{
+    .mod-fmgallery-latestmedias .fm-columns-3,
+    .mod-fmgallery-latestmedias .fm-columns-4
+    {
+        width: 50%;
+    }
+}
+
+@media (max-width: 479px)
+{
+    .mod-fmgallery-latestmedias .fm-columns-2,
+    .mod-fmgallery-latestmedias .fm-columns-3,
+    .mod-fmgallery-latestmedias .fm-columns-4
+    {
+        width: 100%;
+    }
+}
+
+.mod-fmgallery-latestmedias .fm-category-header
+{
+    padding: 10px;
+}
+
+    .mod-fmgallery-latestmedias .fm-category-header .fm-category
+    {
+        color: #3b5998;
+        margin: 0;
+        padding: 0;
+        font-size: 1.3rem;
+    }
+
+    .mod-fmgallery-latestmedias .fm-category-header .fm-title
+    {
+        color: #333;
+        font-size: 1.4rem;
+        line-height: 1.45rem;
+        margin: 7px 0;
+        padding: 0;
+        text-align: left;
+    }
+
+        .mod-fmgallery-latestmedias .fm-category-header .fm-title:before
+        {
+            border: none;
+        }
+
+    .mod-fmgallery-latestmedias .fm-category-header .fm-subtitle
+    {
+        color: #bbb;
+        margin: 0;
+        padding: 0;
+        font-size: 0.95rem;
+    }
+
+    .mod-fmgallery-latestmedias .fm-category-header .fm-button
+    {
+        margin: 0;
+        padding: 5px;
+        font-size: 0.9rem;
+    }

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fields addfieldpath="/libraries/FootManager/Form/fields">
+    <field name="period" type="fmlist" default="future" class="input-medium"  onchange="this.form.submit();">
+      <option value="all">FMLIB_ALL_3</option>
+      <option value="future">COM_FMMANAGER_FUTURE</option>
+      <option value="passed">COM_FMMANAGER_PASSED</option>
+    </field>
+  </fields>
+  <fields name="filter" addfieldpath="/libraries/FootManager/Form/fields">
+    <field name="state" type="fmradio" none="true" default="-1">
+      <option value="1" active_class="btn-success" title="FMLIB_ACTIVED">FM_IN_CLUB_ICON</option>
+      <option value="-1" active_class="btn-inverse" title="FMLIB_NONE_1">FMLIB_NONE_ICON</option>
+      <option value="3" active_class="btn-danger" title="FMLIB_CANCELLED">FM_OUT_CLUB_ICON</option>
+    </field>
+    <field name="roster" type="rosterslist" label="COM_FMMANAGER_FIELD_ROSTER" description="COM_FMMANAGER_FIELD_ROSTER_DESC" editLink="" default="" class="input-large">
+      <option value="">COM_FMMANAGER_FIELD_ROSTER</option>
+    </field>
+    <field name="stadium" type="stadiumslist" label="COM_FMMANAGER_FIELD_STADIUM" description="COM_FMMANAGER_FIELD_STADIUM_DESC" editLink="" default="" class="input-xlarge">
+      <option value="">COM_FMMANAGER_FIELD_STADIUM</option>
+    </field>
+  </fields>
+  <fields name="list">
+    <field name="fullordering" type="list" label="JGLOBAL_SORT_BY" description="JGLOBAL_SORT_BY" onchange="this.form.submit();" default="date ASC">
+      <option value="">JGLOBAL_SORT_BY</option>
+      <option value="date ASC">COM_FMMANAGER_SORT_DATE_ASC</option>
+      <option value="date DESC">COM_FMMANAGER_SORT_DATE_DESC</option>
+      <option value="state ASC">COM_FMMANAGER_SORT_STATE_ASC</option>
+      <option value="state DESC">COM_FMMANAGER_SORT_STATE_DESC</option>
+      <option value="fm_stadiums.name ASC">COM_FMMANAGER_SORT_STADIUM_ASC</option>
+      <option value="fm_stadiums.name DESC">COM_FMMANAGER_SORT_STADIUM_DESC</option>
+      <option value="id ASC">COM_FMMANAGER_SORT_ID_ASC</option>
+      <option value="id DESC">COM_FMMANAGER_SORT_ID_DESC</option>
+    </field>
+
+    <field name="limit" type="limitbox" class="input-mini" default="25" label="COM_CONTENT_LIST_LIMIT" description="COM_CONTENT_LIST_LIMIT_DESC" onchange="this.form.submit();" />
+  </fields>
+</form>

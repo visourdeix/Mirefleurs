@@ -1,0 +1,44 @@
+﻿.fm-event-callup
+{
+    & > .fm-row
+    {
+        .align-items(stretch);
+
+        & > div
+        {
+            padding: 0 5px;
+        }
+
+            & > div:first-child
+            {
+                padding: 0 5px;
+            }
+
+        & > .fm-info
+        {
+            .flex-display();
+            .align-items(center);
+            .justify-content(center);
+            text-align: center;
+
+            .fm-time
+            {
+                font-size: 50px;
+            }
+
+            .fm-location
+            {
+                color: @fontColor;
+                font-size: 25px;
+                line-height: 25px;
+                font-family: @tradeGothic;
+                text-transform: uppercase;
+            }
+
+            .fm-google-map
+            {
+                margin: auto;
+            }
+        }
+    }
+}

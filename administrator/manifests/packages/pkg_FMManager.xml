@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="3.0" method="upgrade">
+  <name>FMManager</name>
+  <packagename>FMManager</packagename>
+  <version>2.0.0</version>
+  <creationDate>September 2015</creationDate>
+  <copyright>(C) 2015 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <author>Stéphane ANDRE</author>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <packager>FMManager</packager>
+  <description>Package contenant tous les composants nécessaires pour la gestion d'un club de football.</description>
+  <files>
+    <file type="library" id="FMManager">libraries/FMManager</file>
+    <file type="component" id="com_fmmanager">components/com_fmmanager</file>
+    <file type="module" id="mod_fmmanager_versions" client="administrator">modules/admin/mod_fmmanager_versions</file>
+    <file type="module" id="mod_fmmanager_nextmatches" client="administrator">modules/admin/mod_fmmanager_nextmatches</file>
+    <file type="module" id="mod_fmmanager_findpersons" client="administrator">modules/admin/mod_fmmanager_findpersons</file>
+    <file type="module" id="mod_fmmanager_findmatches" client="administrator">modules/admin/mod_fmmanager_findmatches</file>
+    <file type="module" id="mod_fmmanager_lastmatches" client="administrator">modules/admin/mod_fmmanager_lastmatches</file>
+    <file type="module" id="mod_fmmanager_ranking" client="site">modules/site/mod_fmmanager_ranking</file>
+    <file type="module" id="mod_fmmanager_results" client="site">modules/site/mod_fmmanager_results</file>
+    <file type="plugin" id="plg_fmmanager_medias" group="fmmanager">plugins/fmmanager/plg_fmmanager_medias</file>
+    <file type="plugin" id="plg_fmmanager_taggedarticles" group="fmmanager">plugins/fmmanager/plg_fmmanager_taggedarticles</file>
+    <file type="plugin" id="plg_fmmanager_taggedmedias" group="fmmanager">plugins/fmmanager/plg_fmmanager_taggedmedias</file>
+    <file type="plugin" id="plg_fmmanager_tagscreator" group="fmmanager">plugins/fmmanager/plg_fmmanager_tagscreator</file>
+    <file type="plugin" id="plg_fmactivity_fmmanager" group="fmactivity">plugins/fmactivity/plg_fmactivity_fmmanager</file>
+    <file type="plugin" id="plg_quickicon_fmmanager" group="quickicon">plugins/quickicon/plg_quickicon_fmmanager</file>
+    <file type="plugin" id="plg_fmevents_matchdays" group="fmevents">plugins/fmevents/plg_fmevents_matchdays</file>
+    <file type="plugin" id="plg_fmevents_matches" group="fmevents">plugins/fmevents/plg_fmevents_matches</file>
+    <file type="plugin" id="plg_fmevents_trainings" group="fmevents">plugins/fmevents/plg_fmevents_trainings</file>
+    <file type="plugin" id="plg_search_fmpersons" group="search">plugins/search/plg_search_fmpersons</file>
+  </files>
+</extension>

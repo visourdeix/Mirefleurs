@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="3.0" method="upgrade">
+  <name>FMEvents</name>
+  <packagename>FMEvents</packagename>
+  <version>2.0.0</version>
+  <creationDate>December 2015</creationDate>
+  <copyright>(C) 2015 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <author>Stéphane ANDRE</author>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <packager>FMEvents</packager>
+  <description>Package contenant tous les composants nécessaires pour la gestion événements datés.</description>
+  <files>
+    <file type="library" id="FMEvents">libraries/FMEvents</file>
+    <file type="component" id="com_fmevents">components/com_fmevents</file>
+    <file type="module" id="mod_fmevents_nextevents" client="site">modules/site/mod_fmevents_nextevents</file>
+    <file type="plugin" id="plg_fmactivity_fmevents" group="fmactivity">plugins/fmactivity/plg_fmactivity_fmevents</file>
+    <file type="plugin" id="plg_fmevents_events" group="fmevents">plugins/fmevents/plg_fmevents_events</file>
+    <file type="plugin" id="plg_fmevents_medias" group="fmevents">plugins/fmevents/plg_fmevents_medias</file>
+    <file type="plugin" id="plg_fmevents_taggedarticles" group="fmevents">plugins/fmevents/plg_fmevents_taggedarticles</file>
+    <file type="plugin" id="plg_fmevents_taggedmedias" group="fmevents">plugins/fmevents/plg_fmevents_taggedmedias</file>
+    <file type="plugin" id="plg_fmevents_tagscreator" group="fmevents">plugins/fmevents/plg_fmevents_tagscreator</file>
+    <file type="plugin" id="plg_fmcontenttemplates_planning" group="fmcontenttemplates">plugins/fmcontenttemplates/plg_fmcontenttemplates_planning</file>
+  </files>
+</extension>

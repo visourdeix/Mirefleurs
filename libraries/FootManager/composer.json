@@ -1,0 +1,11 @@
+{
+  "require": {
+    "illuminate/database": "*",
+    "illuminate/events": "*",
+    "illuminate/cache": "*",
+    "illuminate/filesystem": "*",
+    "watson/rememberable": "*",
+    "chencha/share": "^5.2",
+    "dunglas/php-socialshare": "~0.1"
+  }
+}

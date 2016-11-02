@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.2" type="plugin" group="fmmanager" method="upgrade">
+  <name>plg_fmmanager_medias</name>
+  <author>Stéphane ANDRE</author>
+  <creationDate>January 2016</creationDate>
+  <copyright>(C) 2015 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <authorUrl/>
+  <version>1.0.0</version>
+  <description>PLG_FMMANAGER_MEDIAS_XML_DESCRIPTION</description>
+  <!-- Runs on install/uninstall/update; New in 2.5 -->
+  <config>
+    <fields name="params">
+      <fieldset name="basic" addfieldpath="/libraries/FootManager/Form/fields">
+        <field name="path" type="fmsortable" label="PLG_FMMANAGER_MEDIAS_PATH" description="PLG_FMMANAGER_MEDIAS_PATH_DESC">
+          <option value="season">PLG_FMMANAGER_MEDIAS_SEASON</option>
+          <option value="category">PLG_FMMANAGER_MEDIAS_CATEGORY</option>
+          <option value="tournament">PLG_FMMANAGER_MEDIAS_COMPETITION</option>
+          <option value="matchday">PLG_FMMANAGER_MEDIAS_MATCHDAY</option>
+        </field>
+        <field name="show_photos" type="list" class="chzn-color" label="PLG_FMMANAGER_MEDIAS_SHOW_PHOTOS" description="PLG_FMMANAGER_MEDIAS_SHOW_PHOTOS_DESC" default="1">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+        <field name="show_videos" type="list" class="chzn-color" label="PLG_FMMANAGER_MEDIAS_SHOW_VIDEOS" description="PLG_FMMANAGER_MEDIAS_SHOW_VIDEOS_DESC" default="1">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+        <field name="show_files" type="list" class="chzn-color" label="PLG_FMMANAGER_MEDIAS_SHOW_FILES" description="PLG_FMMANAGER_MEDIAS_SHOW_FILES_DESC" default="1">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+        <field name="video_thumb_size" type="fmlist" default="medium" class="input-small" label="PLG_FMMANAGER_MEDIAS_VIDEO_THUMB_SIZE" description="PLG_FMMANAGER_MEDIAS_VIDEO_THUMB_SIZE_DESC">
+          <option value="small">FMLIB_SMALL</option>
+          <option value="medium">FMLIB_MEDIUM</option>
+          <option value="large">FMLIB_LARGE</option>
+        </field>
+        <field name="file_thumb_size" type="fmlist" default="small" class="input-small" label="PLG_FMMANAGER_MEDIAS_FILE_THUMB_SIZE" description="PLG_FMMANAGER_MEDIAS_FILE_THUMB_SIZE_DESC">
+          <option value="small">FMLIB_SMALL</option>
+          <option value="medium">FMLIB_MEDIUM</option>
+          <option value="large">FMLIB_LARGE</option>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+  <!-- /// INSTALL SCRIPT /// -->
+  <!-- /// FILES /// -->
+  <!-- /// LANGUAGES /// -->
+  <!-- /// INSTALL SCRIPT /// -->
+  <scriptfile>install.script.php</scriptfile>
+  <!-- /// FILES /// -->
+  <files folder="admin">
+    <filename>index.html</filename>
+    <filename plugin="medias">medias.php</filename>
+  </files>
+  <!-- /// LANGUAGES /// -->
+  <languages folder="admin">
+    <language tag="fr-FR">language/fr-FR/fr-FR.plg_fmmanager_medias.ini</language>
+    <language tag="fr-FR">language/fr-FR/fr-FR.plg_fmmanager_medias.sys.ini</language>
+  </languages>
+</extension>

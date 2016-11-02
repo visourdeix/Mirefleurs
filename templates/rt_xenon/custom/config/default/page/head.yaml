@@ -1,0 +1,12 @@
+meta: {  }
+head_bottom: ''
+atoms:
+  -
+    type: assets
+    title: 'Custom CSS / JS'
+    attributes:
+      enabled: '1'
+      css:
+        - { location: 'gantry-assets://css/demo.css', inline: '', extra: {  }, name: 'Demo CSS' }
+      javascript:
+        - { location: 'gantry-assets://custom/js/Headroom.min.js', inline: "// Headroom (on header)\n\t\t\tvar myElement = document.querySelector(\"#g-header\");\n\t\t\tvar headroom  = new Headroom(myElement, { offset: \"182\"});\n\t\t\theadroom.init();\n\t\t\t// Headroom (on offcanvas)\n\t\t\tvar myElement = document.querySelector(\".g-offcanvas-toggle\");\n\t\t\tvar headroom  = new Headroom(myElement);\n\t\t\theadroom.init();", in_footer: '1', extra: {  }, name: Headroom }

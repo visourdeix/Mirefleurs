@@ -1,0 +1,52 @@
+﻿.fm-matchday-header {
+    .fm-no-matches {
+        text-align: center;
+        color: @white;
+        padding: 20px;
+        font-style: italic;
+    }
+
+    .fm-matchday-header-matches {
+
+        & > div {
+            margin: 8px 4px;
+        }
+
+        .fm-matchday-header-match {
+            .flex-display();
+            .flex-flow(row nowrap);
+            .justify-content(flex-start);
+            .align-items(center);
+
+            & > div {
+                padding: 0 3%;
+            }
+
+            .fm-logo {
+                width: 20px;
+                text-align: center;
+            }
+
+            .fm-team {
+                .flex(1);
+                color: @white !important;
+                .opacity(90);
+
+                &.fm-looser {
+                    .opacity(70);
+                }
+
+                &.fm-winner {
+                    .opacity(100);
+                }
+
+            }
+
+                            .fm-score {
+                    font-size: 17px !important;
+                    line-height: 15px !important;
+                                        margin:auto;
+                }
+        }
+    }
+}

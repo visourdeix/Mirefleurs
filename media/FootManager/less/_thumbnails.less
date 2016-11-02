@@ -1,0 +1,346 @@
+﻿.fm-thumbnail-color
+{
+    position: relative;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    overflow: hidden;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    width: 20px;
+
+    &.fm-thumbnail-color-rounded
+    {
+        border-radius: 20px;
+    }
+
+    &.fm-thumbnail-color-small
+    {
+        width: 15px;
+        height: 15px;
+    }
+
+    & > span
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: none;
+        .box-shadow(inset 0 9px 0 rgba(255, 255, 255, .1));
+        display: inline-block;
+        left: 0;
+        top: 0;
+    }
+}
+
+.fm-thumbnails-group
+{
+    margin-left: 15px;
+}
+
+ul.fm-thumbnails,
+ul.fm-bulls
+{
+    margin: 0;
+}
+
+.fm-thumbnails,
+.fm-bulls
+{
+    list-style: none;
+    .flex-display();
+    .flex-flow(row wrap);
+    .justify-content(flex-start);
+    .align-items(flex-start);
+
+    .mobile(
+    {
+        .justify-content(center);
+    }
+
+    );
+}
+
+    .fm-thumbnails > li,
+    .fm-thumbnail
+    {
+        border: 1px @borderColor solid;
+        .box-shadow(2px 2px 10px 0 @shadowColor);
+        margin: 5px;
+        position: relative;
+        /*.flex-display();
+        .flex-direction(column);
+        .justify-content(flex-start);
+        .align-items(stretch);*/
+        display: block;
+
+        & > .disabled,
+        &.disabled
+        {
+            .opacity(60);
+        }
+    }
+
+        .fm-thumbnails > li > a,
+        .fm-thumbnail > a,
+        a.fm-thumbnail
+        {
+            display: block;
+            text-decoration: none;
+
+            &.disabled,
+            & > .disabled
+            {
+                cursor: auto;
+            }
+        }
+
+    .fm-bulls > *:not(.tooltip),
+    .fm-bull
+    {
+        min-width: 30px;
+        min-height: 30px;
+        line-height: 28px;
+        text-align: center;
+        vertical-align: middle;
+        .border-radius(50%);
+        .fm-text-title;
+        font-size: 18px;
+        background-color: @gray;
+        border: 1px solid @white;
+        color: @white;
+        margin: 3px;
+
+        & > .fm-disabled,
+        &.fm-disabled
+        {
+            .opacity(60)
+            !important;
+            cursor: default!important;
+        }
+    }
+
+    .fm-bulls.fm-bulls-hover > *,
+    .fm-bulls > a,
+    .fm-bull-hover,
+    a.fm-bull
+    {
+        display: block;
+        text-decoration: none;
+        .border-radius(50%);
+        color: @white !important;
+        .transition(@transition);
+        cursor: pointer;
+
+        &:not(.fm-disabled):hover,
+        &:not(.fm-disabled):active
+        {
+            background-color: @activeBackgroundColor !important;
+        }
+
+        &.fm-disabled
+        {
+            .opacity(60%);
+        }
+    }
+
+    .fm-bulls.fm-bulls-large > *:not(.tooltip),
+    .fm-bull.fm-bull-large
+    {
+        min-width: 50px;
+        min-height: 50px;
+        line-height: 48px;
+        font-size: 30px;
+        margin: 5px;
+    }
+
+    .fm-bulls.fm-bulls-mini > *:not(.tooltip),
+    .fm-bull.fm-bull-mini
+    {
+        min-width: 20px;
+        min-height: 20px;
+        line-height: 18px;
+        font-size: 12px;
+        margin: 3px;
+    }
+
+    .fm-bulls.fm-bulls-blue > *,
+    .fm-bull.fm-bull-blue
+    {
+        background-color: @lightblue !important;
+    }
+
+    .fm-bulls.fm-bulls-blue > a:hover:not(.fm-disabled),
+    .fm-bulls.fm-bulls-blue > a:active:not(.fm-disabled),
+    a.fm-bull-blue:not(.fm-disabled):hover,
+    a.fm-bull-blue:not(.fm-disabled):active,
+    .fm-bulls.fm-bulls-blue.fm-bulls-hover > *:not(.fm-disabled):hover,
+    .fm-bulls.fm-bulls-blue.fm-bulls-hover > *:not(.fm-disabled):active,
+    .fm-bull-blue.fm-bull-hover:not(.fm-disabled):hover,
+    .fm-bull-blue.fm-bull-hover:not(.fm-disabled):active
+    {
+        background-color: darken(@lightblue, 15%) !important;
+    }
+
+    .fm-bulls.fm-bulls-dark-blue > *,
+    .fm-bull.fm-bull-dark-blue
+    {
+        background-color: @darkblue !important;
+    }
+
+    .fm-bulls.fm-bulls-dark-blue > a:hover:not(.fm-disabled),
+    .fm-bulls.fm-bulls-dark-blue > a:active:not(.fm-disabled),
+    a.fm-bull-dark-blue:not(.fm-disabled):hover,
+    a.fm-bull-dark-blue:not(.fm-disabled):active,
+    .fm-bulls.fm-bulls-dark-blue.fm-bulls-hover > *:not(.fm-disabled):hover,
+    .fm-bulls.fm-bulls-dark-blue.fm-bulls-hover > *:not(.fm-disabled):active,
+    .fm-bull-dark-blue.fm-bull-hover:not(.fm-disabled):hover,
+    .fm-bull-dark-blue.fm-bull-hover:not(.fm-disabled):active
+    {
+        background-color: lighten(@darkblue, 15%) !important;
+    }
+
+    .fm-bulls.fm-bulls-green > *,
+    .fm-bull-green
+    {
+        background-color: @green !important;
+    }
+
+    .fm-bulls.fm-bulls-green > a:hover:not(.fm-disabled),
+    .fm-bulls.fm-bulls-green > a:active:not(.fm-disabled),
+    a.fm-bull-green:not(.fm-disabled):hover,
+    a.fm-bull-green:not(.fm-disabled):active,
+    .fm-bulls.fm-bulls-green.fm-bulls-hover > *:not(.fm-disabled):hover,
+    .fm-bulls.fm-bulls-green.fm-bulls-hover > *:not(.fm-disabled):active,
+    .fm-bull-green.fm-bull-hover:not(.fm-disabled):hover,
+    .fm-bull-green.fm-bull-hover:not(.fm-disabled):active
+    {
+        background-color: lighten(@green, 15%) !important;
+    }
+		
+	.fm-bulls.fm-bulls-dark-green > *,
+	.fm-bull.fm-bull-dark-green {
+		background-color: @darkgreen !important;
+        top: 59%;
+        left: 54%;
+	}
+
+	.fm-bulls.fm-bulls-dark-green > a:hover:not(.fm-disabled),
+	.fm-bulls.fm-bulls-dark-green > a:active:not(.fm-disabled),
+	a.fm-bull-dark-green:not(.fm-disabled):hover,
+	a.fm-bull-dark-green:not(.fm-disabled):active,
+	.fm-bulls.fm-bulls-dark-green.fm-bulls-hover > *:not(.fm-disabled):hover,
+	.fm-bulls.fm-bulls-dark-green.fm-bulls-hover > *:not(.fm-disabled):active,
+	.fm-bull-dark-green.fm-bull-hover:not(.fm-disabled):hover,
+	.fm-bull-dark-green.fm-bull-hover:not(.fm-disabled):active {
+		background-color: @darkgreen !important;
+	}
+
+    .fm-bulls.fm-bulls-red > *,
+    .fm-bull-red
+    {
+        background-color: @red !important;
+    }
+
+        .fm-bulls.fm-bulls-red > a:hover:not(.fm-disabled),
+        .fm-bulls.fm-bulls-red > a:active:not(.fm-disabled),
+        a.fm-bull-red:not(.fm-disabled):hover,
+        a.fm-bull-red:not(.fm-disabled):active,
+        .fm-bulls.fm-bulls-red.fm-bulls-hover > *:not(.fm-disabled):hover,
+        .fm-bulls.fm-bulls-red.fm-bulls-hover > *:not(.fm-disabled):active,
+        .fm-bull-red.fm-bull-hover:not(.fm-disabled):hover,
+        .fm-bull-red.fm-bull-hover:not(.fm-disabled):active
+        {
+            background-color: lighten(@red, 15%) !important;
+        }
+
+    .fm-bulls.fm-bulls-gray > *,
+    .fm-bull-gray
+    {
+        background-color: @gray !important;
+    }
+
+        .fm-bulls.fm-bulls-gray > a:hover:not(.fm-disabled),
+        .fm-bulls.fm-bulls-gray > a:active:not(.fm-disabled),
+        a.fm-bull-gray:not(.fm-disabled):hover,
+        a.fm-bull-gray:not(.fm-disabled):active,
+        .fm-bulls.fm-bulls-gray.fm-bulls-hover > *:not(.fm-disabled):hover,
+        .fm-bulls.fm-bulls-gray.fm-bulls-hover > *:not(.fm-disabled):active,
+        .fm-bull-gray.fm-bull-hover:not(.fm-disabled):hover,
+        .fm-bull-gray.fm-bull-hover:not(.fm-disabled):active
+        {
+            background-color: lighten(@gray, 15%) !important;
+        }
+
+    .fm-bulls.fm-bulls-light-gray > *,
+    .fm-bull-light-gray
+    {
+        background-color: lighten(@gray, 20%) !important;
+    }
+
+        .fm-bulls.fm-bulls-light-gray > a:hover:not(.fm-disabled),
+        .fm-bulls.fm-bulls-light-gray > a:active:not(.fm-disabled),
+        a.fm-bull-light-gray:not(.fm-disabled):hover,
+        a.fm-bull-light-gray:not(.fm-disabled):active,
+        .fm-bulls.fm-bulls-light-gray.fm-bulls-hover > *:not(.fm-disabled):hover,
+        .fm-bulls.fm-bulls-light-gray.fm-bulls-hover > *:not(.fm-disabled):active,
+        .fm-bull-light-gray.fm-bull-hover:not(.fm-disabled):hover,
+        .fm-bull-light-gray.fm-bull-hover:not(.fm-disabled):active
+        {
+            background-color: lighten(@gray, 30%) !important;
+        }
+
+    .fm-bulls.fm-bulls-orange > *,
+    .fm-bull-orange
+    {
+        background-color: @orange !important;
+    }
+
+        .fm-bulls.fm-bulls-orange > a:hover:not(.fm-disabled),
+        .fm-bulls.fm-bulls-orange > a:active:not(.fm-disabled),
+        a.fm-bull-orange:not(.fm-disabled):hover,
+        a.fm-bull-orange:not(.fm-disabled):active,
+        .fm-bulls.fm-bulls-orange.fm-bulls-hover > *:not(.fm-disabled):hover,
+        .fm-bulls.fm-bulls-orange.fm-bulls-hover > *:not(.fm-disabled):active,
+        .fm-bull-orange.fm-bull-hover:not(.fm-disabled):hover,
+        .fm-bull-orange.fm-bull-hover:not(.fm-disabled):active
+        {
+            background-color: lighten(@orange, 15%) !important;
+        }
+
+ul.fm-list
+{
+    margin: 0;
+    list-style: none;
+    .flex-display();
+    .flex-flow(column);
+    .justify-content();
+    .align-items();
+
+    & > li
+    {
+        border-bottom: 1px solid @borderColor;
+        position: relative;
+
+        &:nth-child(even)
+        {
+            background-color: lighten(@lightgray, 10%);
+        }
+
+        .fm-content
+        {
+            margin: 0;
+            .flex-display();
+            .flex-flow(row nowrap);
+            .justify-content();
+            .align-items(center);
+            padding: 12px 0;
+
+            & > div
+            {
+                padding: 0 3%;
+            }
+        }
+    }
+}

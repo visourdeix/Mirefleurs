@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fields addfieldpath="/libraries/FootManager/Form/fields">
+
+    <field name="start_date" type="fmdatepicker" label="COM_FMMANAGER_FIELD_START_DATE_2" description="COM_FMMANAGER_FIELD_START_DATE_2_DESC" />
+    <field name="end_date" type="fmdatepicker" label="COM_FMMANAGER_FIELD_END_DATE_2" description="COM_FMMANAGER_FIELD_END_DATE_2_DESC" />
+    <field name="states" type="stateslist" multiple="true" label="COM_FMMANAGER_FIELD_STATES" placeholder="COM_FMMANAGER_FIELD_STATES" description="COM_FMMANAGER_FIELD_STATES_DESC" class="fm-chzn-states input-medium" />
+    <field name="categories" type="categorieslist"  editLink="" default="" class="input-large" multiple="true" label="COM_FMMANAGER_FIELD_CATEGORIES" placeholder="COM_FMMANAGER_FIELD_CATEGORIES" description="COM_FMMANAGER_FIELD_CATEGORIES_DESC" />
+    <field name="teams" type="teamslist"  editLink="" default="" class="input-large" multiple="true" label="COM_FMMANAGER_FIELD_TEAMS" placeholder="COM_FMMANAGER_FIELD_TEAMS" description="COM_FMMANAGER_FIELD_TEAMS_DESC" />
+    <field name="competition" type="competitionslist"  editLink="" default="" class="input-large" label="COM_FMMANAGER_FIELD_COMPETITION" placeholder="COM_FMMANAGER_FIELD_COMPETITION" description="COM_FMMANAGER_FIELD_COMPETITION_DESC">
+      <option value="">FMLIB_NONE_2</option>
+    </field>
+    <field name="group_by" type="list"
+            label="COM_FMMANAGER_GROUP_BY"
+       class="input-medium"
+       default="dates"
+            description="COM_FMMANAGER_GROUP_BY_DESC">
+      <option value="dates">COM_FMMANAGER_FIELD_DATE</option>
+      <option value="competitions">COM_FMMANAGER_FIELD_COMPETITION</option>
+    </field>
+  </fields>
+</form>

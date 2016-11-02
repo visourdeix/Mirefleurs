@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fields name="filter">
+    <field
+			name="search"
+			type="text"
+			hint="JSEARCH_FILTER"
+			class="js-stools-search-string" />
+  </fields>
+  <fields name="list">
+    <field
+			name="fullordering"
+			type="list"
+			label="JGLOBAL_SORT_BY"
+			description="JGLOBAL_SORT_BY"
+			onchange="this.form.submit();"
+			default="ordering ASC">
+      <option value="">JGLOBAL_SORT_BY</option>
+      <option value="label ASC">COM_FMMANAGER_SORT_LABEL_ASC</option>
+      <option value="label DESC">COM_FMMANAGER_SORT_LABEL_DESC</option>
+      <option value="by_player ASC">COM_FMMANAGER_SORT_BY_PLAYER_ASC</option>
+      <option value="by_player DESC">COM_FMMANAGER_SORT_BY_PLAYER_DESC</option>
+      <option value="by_staff ASC">COM_FMMANAGER_SORT_BY_STAFF_ASC</option>
+      <option value="by_staff DESC">COM_FMMANAGER_SORT_BY_STAFF_DESC</option>
+      <option value="by_team ASC">COM_FMMANAGER_SORT_BY_TEAM_ASC</option>
+      <option value="by_team DESC">COM_FMMANAGER_SORT_BY_TEAM_DESC</option>
+      <option value="by_match ASC">COM_FMMANAGER_SORT_BY_MATCH_ASC</option>
+      <option value="by_match DESC">COM_FMMANAGER_SORT_BY_MATCH_DESC</option>
+      <option value="by_matchday ASC">COM_FMMANAGER_SORT_BY_MATCHDAY_ASC</option>
+      <option value="by_matchday DESC">COM_FMMANAGER_SORT_BY_MATCHDAY_DESC</option>
+      <option value="unit ASC">COM_FMMANAGER_SORT_UNIT_ASC</option>
+      <option value="unit DESC">COM_FMMANAGER_SORT_UNIT_DESC</option>
+      <option value="calculation ASC">COM_FMMANAGER_SORT_CALCULATION_ASC</option>
+      <option value="calculation DESC">COM_FMMANAGER_SORT_CALCULATION_DESC</option>
+      <option value="ordering ASC">COM_FMMANAGER_SORT_ORDERING_ASC</option>
+      <option value="ordering DESC">COM_FMMANAGER_SORT_ORDERING_DESC</option>
+      <option value="id ASC">COM_FMMANAGER_SORT_ID_ASC</option>
+      <option value="id DESC">COM_FMMANAGER_SORT_ID_DESC</option>
+    </field>
+
+    <field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			label="COM_CONTENT_LIST_LIMIT"
+			description="COM_CONTENT_LIST_LIMIT_DESC"
+			onchange="this.form.submit();" />
+  </fields>
+</form>

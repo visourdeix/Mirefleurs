@@ -1,0 +1,210 @@
+$width: 50px;
+$height: $width;
+$inputWidth: 350px;
+$inputWidthMobile: 10rem;
+
+#my-mod_search {
+    position: relative;
+    margin: 0;
+
+    #search {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $width;
+        height: $height;
+    }
+
+    #label {
+        width: $width;
+        height: $height;
+        position: relative;
+        z-index: 20;
+		@include breakpoint(mobile-only) {
+		    position: absolute;
+			right: 0;
+		}
+
+		label {
+			display: block;
+			width: $width;
+			height: $height;
+			line-height: $height;
+			text-align: center;
+			vertical-align: middle;
+			cursor: pointer;
+			font-size: 30px;
+			@include transition(all 0.2s);
+			border: 1px solid transparent;
+			border-right: none;
+			@include breakpoint(mobile-only) {
+				width: $width;
+				height: $width;
+				line-height: $width !important;
+				color: #ffffff;
+				border-color: #fff !important;
+				background: $darkgreen;
+			}
+
+			i {
+				@include breakpoint(mobile-only) {
+					margin: 0;
+					float: none;
+				}
+			}
+		}
+    }
+
+    #label:hover label {
+        color: #fff;
+    }
+
+    #label.active label {
+        color: #fff;
+        border-color: #fff !important;
+        background: $header-background;
+    }
+
+    #input {
+        position: absolute;
+        top: 0;
+        left: $width;
+        width: $inputWidth + $width;
+        height: $height;
+        z-index: -5;
+        overflow: hidden;
+        @include breakpoint(mobile-only) {
+            z-index: 0;            
+        }
+
+		input {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -($inputWidth + $width);
+			width: $inputWidth + $width;
+			height: 100%;
+			margin: 0;
+			padding: 0 10px;
+			border: none;
+			background-color: $header-text-color;
+			color: #000;
+			font-size: 0.9rem;
+			backface-visibility: none;
+			border-radius: 0;
+			text-transform: uppercase;
+			@include transition(left 0);
+		}
+
+		input:focus {
+			outline: none;
+		}
+    }
+
+    #input.focus {
+        z-index: 20;
+
+		input {
+			left: 0;
+			@include transition(left 0.3s);
+		}
+    }
+	
+    &.direction-right,
+    &.direction-bottom {
+        #label label {
+            border-right: 1px solid transparent;
+            border-left: none;
+        }
+
+        #input {
+            left: -$inputWidth;
+            width: $inputWidth;
+			@include breakpoint(mobile-only) {
+				left: 0;
+				width: $inputWidthMobile;
+			}
+
+            input {
+                left: $inputWidth;
+				@include breakpoint(mobile-only) {
+					left: 0;
+					width: $inputWidthMobile;
+				}
+            }
+        }
+
+        #input.focus input {
+            left: 0;
+        }
+    }
+}
+
+#searchForm {
+
+	.input-append, 
+	.input-prepend {
+	
+		input[type="text"] {
+			max-width: 100%;
+			width: 200px;
+			border-radius: 4px 0 0 4px;
+		}
+
+		.add-on:last-child, 
+		.btn:last-child, 
+		.btn-group:last-child > .dropdown-toggle {
+			-webkit-border-radius: 0 4px 4px 0;
+			-moz-border-radius: 0 4px 4px 0;
+			border-radius: 0 4px 4px 0;
+		}
+
+		.add-on, 
+		.btn, 
+		.btn-group {
+			margin-left: -1px;
+		}
+
+		.btn {
+			background: $darkgreen;
+			font-size: 0.9rem;
+			border: 1px solid transparent;
+			line-height: 1.5;
+
+			.icon-search:before {
+				content: "\f002";
+				font: normal normal normal 14px/1 FontAwesome;
+			}
+		}
+
+		.btn:hover, 
+		.btn:active, 
+		.btn:focus {
+			background: #0a4d27;
+			transition: background 0.1s ease-in-out, transform 0.1s ease-in-out;
+		}
+
+		.form-limit {
+			width: 50%;
+			text-align: right;
+
+			label {
+				display: inline-block;
+			}
+
+			#limit_chzn {
+				margin-top: -5px;
+			}
+		}
+
+		.searchintro {
+			width: 50%;
+			text-align: left;
+
+			p {
+				margin: 0;
+			}
+		}
+
+	}
+}

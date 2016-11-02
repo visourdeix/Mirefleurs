@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.0" method="upgrade" group="content">
+  <name>plg_content_fmsocial</name>
+  <creationDate>22 mai 2015</creationDate>
+  <version>1.0.0</version>
+  <author>Stéphane ANDRE</author>
+  <authorEmail/>
+  <authorUrl/>
+  <copyright>(C) 2010-2014 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <description>PLG_CONTENT_FMSOCIAL_XML_DESCRIPTION</description>
+  <!-- Runs on install/uninstall/update; New in 2.5 -->
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="show_fb" type="radio" default="1" class="btn-group" label="PLG_CONTENT_FMSOCIAL_SHOW_FB" description="PLG_CONTENT_FMSOCIAL_SHOW_FB_DESC">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+        <field name="text_fb" type="text" default="" label="PLG_CONTENT_FMSOCIAL_FIELD_TEXT_FB" description="PLG_CONTENT_FMSOCIAL_FIELD_TEXT_FB_DESC"/>
+        <field name="show_twitter" type="radio" default="1" class="btn-group" label="PLG_CONTENT_FMSOCIAL_SHOW_TWITTER" description="PLG_CONTENT_FMSOCIAL_SHOW_TWITTER_DESC">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+        <field name="text_twitter" type="text" default="" label="PLG_CONTENT_FMSOCIAL_FIELD_TEXT_TWITTER" description="PLG_CONTENT_FMSOCIAL_FIELD_TEXT_TWITTER_DESC"/>
+        <field name="show_gp" type="radio" default="1" class="btn-group" label="PLG_CONTENT_FMSOCIAL_SHOW_GP" description="PLG_CONTENT_FMSOCIAL_SHOW_GP_DESC">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+        <field name="text_gp" type="text" default="" label="PLG_CONTENT_FMSOCIAL_FIELD_TEXT_GP" description="PLG_CONTENT_FMSOCIAL_FIELD_TEXT_GP_DESC"/>
+        <field name="show_mail" type="radio" default="1" class="btn-group" label="PLG_CONTENT_FMSOCIAL_SHOW_MAIL" description="PLG_CONTENT_FMSOCIAL_SHOW_MAIL_DESC">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+        <field name="text_mail" type="text" default="" label="PLG_CONTENT_FMSOCIAL_FIELD_TEXT_MAIL" description="PLG_CONTENT_FMSOCIAL_FIELD_TEXT_MAIL_DESC"/>
+        <field name="intro_mail" type="text" default="" label="PLG_CONTENT_FMSOCIAL_FIELD_INTRO_MAIL" description="PLG_CONTENT_FMSOCIAL_FIELD_INTRO_MAIL_DESC"/>
+      </fieldset>
+    </fields>
+  </config>
+  <!-- /// INSTALL SCRIPT /// -->
+  <scriptfile>install.script.php</scriptfile>
+  <!-- /// FILES /// -->
+  <files folder="admin">
+    <folder>tmpl</folder>
+    <filename plugin="fmsocial">fmsocial.php</filename>
+    <filename>index.html</filename>
+  </files>
+  <!-- /// LANGUAGES /// -->
+  <languages folder="admin">
+    <language tag="fr-FR">language/fr-FR/fr-FR.plg_content_fmsocial.ini</language>
+    <language tag="fr-FR">language/fr-FR/fr-FR.plg_content_fmsocial.sys.ini</language>
+  </languages>
+</extension>

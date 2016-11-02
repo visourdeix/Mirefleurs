@@ -1,0 +1,273 @@
+﻿.fm-match-header
+{
+    .fm-content
+    {
+        .fm-teams-and-score
+        {
+            .flex-display();
+            .flex-direction(row);
+            .flex-wrap(nowrap);
+            .align-items(stretch);
+            .justify-content(center);
+            margin: 15px 0;
+
+            & > div
+            {
+                padding: 0 1%;
+            }
+
+            .fm-team-and-logo
+            {
+                .flex(1);
+                .flex-display();
+                .flex-direction(column);
+                .align-items(stretch);
+                text-align: center;
+                position: relative;
+
+                .fm-team
+                {
+                    color: @white !important;
+                    font-size: 35px !important;
+                    line-height: 38px !important;
+                    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+                    margin-bottom:5px;
+
+                    .tablet-max(
+                    {
+                        font-size: 24px !important;
+                        line-height: 26px !important;
+                    }
+
+                    );
+
+                    .mobile(
+                    {
+                        font-size: 19px !important;
+                        line-height: 21px !important;
+                    }
+
+                    );
+                }
+
+                .fm-logo
+                {
+                    margin: 15px auto;
+                    width: 100%;
+
+                    img
+                    {
+                        max-height: 150px !important;
+                        max-width: 150px !important;
+                        margin: auto;
+
+                        .tablet-max(
+                        {
+                            max-height: 90px !important;
+                            max-width: 90px !important;
+                        }
+
+                        );
+
+                        .mobile(
+                        {
+                            max-height: 65px !important;
+                            max-width: 65px !important;
+                        }
+
+                        );
+                    }
+                }
+            }
+
+            .fm-score-info
+            {
+                .flex-display();
+                .flex-direction(column);
+                .justify-content(center);
+                .align-items(center);
+
+                & > * {
+                    white-space:nowrap;
+                }
+
+                & > .fm-penalties
+                {
+                    span
+                    {
+                        color: @gray;
+                    }
+                }
+
+                & > .fm-score.fm-badge-large
+                {
+                    .tablet-max(
+                    {
+                        font-size: 58px;
+                        line-height: 58px;
+                        padding: 8px;
+                    }
+
+                    );
+
+                    .mobile(
+                    {
+                        font-size: 40px;
+                        line-height: 40px;
+                        padding: 5px;
+                    }
+
+                    );
+                }
+
+                .fm-referee
+                {
+                    color: @white;
+                    margin-bottom: 3px;
+                    text-align: center;
+                }
+
+                .fm-extra-time
+                {
+                    color: @white;
+                    font-style: italic;
+                    font-size: 11px;
+                    margin-bottom: 3px;
+                }
+            }
+        }
+
+        .fm-match-header-stats
+        {
+            margin: 10px 0;
+
+            .fm-match-info-statistics
+            {
+                color: @white;
+                font-family: @tradeGothic;
+                font-size: 20px;
+
+                img
+                {
+                    max-height: 17px;
+                }
+            }
+
+            .fm-strikers
+            {
+                .fm-goal
+                {
+                    color: @white;
+                }
+
+                .fm-person-name
+                {
+                    color: @lightgray;
+                    text-shadow: 1px 1px 1px @black;
+                }
+            }
+        }
+    }
+}
+
+    .fm-match-header.fm-small
+    {
+        .fm-content
+        {
+            .fm-teams-and-score
+            {
+                .fm-team-and-logo
+                {
+                    .fm-team
+                    {
+                    font-size: 30px !important;
+                    line-height: 33px !important;
+
+                    .mobile(
+                    {
+                        font-size: 19px !important;
+                        line-height: 21px !important;
+                    }
+
+                    );
+                    }
+
+                    .fm-logo
+                    {
+                        img
+                    {
+                        max-height: 100px !important;
+                        max-width: 100px !important;
+                        margin: auto;
+
+                        .tablet-max(
+                        {
+                            max-height: 80px !important;
+                            max-width: 80px !important;
+                        }
+
+                        );
+
+                        .mobile(
+                        {
+                            max-height: 50px !important;
+                            max-width: 50px !important;
+                        }
+
+                        );
+                    }
+                    }
+                }
+
+                .fm-score-info
+                {
+                    & > .fm-score.fm-badge-medium
+                    {
+                        font-size: 40px;
+                        line-height: 40px;
+                        padding: 3px;
+                    }
+                }
+            }
+
+            .fm-stadium > span
+            {
+                font-size: 12px !important;
+                line-height: 14px !important;
+            }
+
+            .fm-referee
+            {
+                font-size: 10px !important;
+                line-height: 13px !important;
+            }
+
+            .fm-match-header-stats
+            {
+                margin: 5px 0;
+
+                .fm-match-info-statistics
+                {
+                    font-size: 14px;
+
+                    img
+                    {
+                        max-height: 12px;
+                    }
+                }
+
+                .fm-strikers
+                {
+                    .fm-goal
+                    {
+                        font-size: 9px;
+                    }
+
+                    .fm-person-name
+                    {
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+    }

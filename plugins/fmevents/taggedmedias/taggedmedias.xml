@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.2" type="plugin" group="fmevents" method="upgrade">
+  <name>plg_fmevents_taggedmedias</name>
+  <author>Stéphane ANDRE</author>
+  <creationDate>January 2016</creationDate>
+  <copyright>(C) 2015 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <authorUrl/>
+  <version>1.0.0</version>
+  <description>PLG_FMEVENTS_TAGGEDMEDIAS_XML_DESCRIPTION</description>
+  <!-- Runs on install/uninstall/update; New in 2.5 -->
+  <config>
+    <fields name="params">
+      <fieldset name="basic" addfieldpath="/libraries/FootManager/Form/fields">
+        <field name="event" type="radio" class="btn-group btn-group-yesno" default="1" description="PLG_FMEVENTS_TAGGEDMEDIAS_EVENT_DESC" label="PLG_FMEVENTS_TAGGEDMEDIAS_EVENT_LABEL">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="show_photos" type="list" class="chzn-color" label="PLG_FMEVENTS_TAGGEDMEDIAS_SHOW_PHOTOS" description="PLG_FMEVENTS_TAGGEDMEDIAS_SHOW_PHOTOS_DESC" default="1">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+        <field name="show_videos" type="list" class="chzn-color" label="PLG_FMEVENTS_TAGGEDMEDIAS_SHOW_VIDEOS" description="PLG_FMEVENTS_TAGGEDMEDIAS_SHOW_VIDEOS_DESC" default="1">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+        <field name="show_files" type="list" class="chzn-color" label="PLG_FMEVENTS_TAGGEDMEDIAS_SHOW_FILES" description="PLG_FMEVENTS_TAGGEDMEDIAS_SHOW_FILES_DESC" default="1">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+        <field name="video_thumb_size" type="fmlist" default="medium" class="input-small" label="PLG_FMEVENTS_TAGGEDMEDIAS_VIDEO_THUMB_SIZE" description="PLG_FMEVENTS_TAGGEDMEDIAS_VIDEO_THUMB_SIZE_DESC">
+          <option value="small">FMLIB_SMALL</option>
+          <option value="medium">FMLIB_MEDIUM</option>
+          <option value="large">FMLIB_LARGE</option>
+        </field>
+        <field name="file_thumb_size" type="fmlist" default="medium" class="input-small" label="PLG_FMEVENTS_TAGGEDMEDIAS_FILE_THUMB_SIZE" description="PLG_FMEVENTS_TAGGEDMEDIAS_FILE_THUMB_SIZE_DESC">
+          <option value="small">FMLIB_SMALL</option>
+          <option value="medium">FMLIB_MEDIUM</option>
+          <option value="large">FMLIB_LARGE</option>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+  <!-- /// INSTALL SCRIPT /// -->
+  <!-- /// FILES /// -->
+  <!-- /// LANGUAGES /// -->
+  <!-- /// INSTALL SCRIPT /// -->
+  <scriptfile>install.script.php</scriptfile>
+  <!-- /// FILES /// -->
+  <files folder="admin">
+    <filename>index.html</filename>
+    <filename plugin="taggedmedias">taggedmedias.php</filename>
+  </files>
+  <!-- /// LANGUAGES /// -->
+  <languages folder="admin">
+    <language tag="fr-FR">language/fr-FR/fr-FR.plg_fmevents_taggedmedias.ini</language>
+    <language tag="fr-FR">language/fr-FR/fr-FR.plg_fmevents_taggedmedias.sys.ini</language>
+  </languages>
+</extension>

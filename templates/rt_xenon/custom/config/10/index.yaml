@@ -1,0 +1,54 @@
+name: '10'
+timestamp: 1476986403
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: home_-_particles
+  timestamp: 1471875073
+positions: {  }
+sections:
+  overlay: Overlay
+  top: Top
+  navigation: Navigation
+  above: Above
+  showcase: Showcase
+  utility: Utility
+  feature: Feature
+  sidebar: Sidebar
+  mainbar: Mainbar
+  expanded: Expanded
+  extension: Extension
+  bottom: Bottom
+  copyright: Copyright
+  header: Header
+  aside: Aside
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  promocontent:
+    promocontent-2765: 'Pricing Table Particle'
+  pricingtable:
+    pricingtable-9113: Basic
+    pricingtable-4601: Premium
+    pricingtable-9543: Platinum
+  module:
+    position-module-1089: 'Header Logo/Social'
+    position-module-4389: 'Featured Slideshow'
+    position-module-7883: 'Fil d''infos - Agenda'
+    position-module-4751: 'MatchZone Tabs'
+    position-module-1734: 'Media Module'
+    position-module-3497: Partners
+  menu:
+    menu-8681: Menu
+  custom:
+    custom-4829: 'Match Zone Label'
+    custom-1747: 'Media Label'
+  branding:
+    branding-6288: Branding
+  copyright:
+    copyright-4648: Copyright
+  totop:
+    totop-3618: 'To Top'
+  mobile-menu:
+    mobile-menu-7582: 'Mobile Menu'
+inherit: {  }

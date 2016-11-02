@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset addfieldpath="/libraries/FootManager/Form/fields">
+
+    <field name="last_name" type="text"  label="COM_FMMANAGER_FIELD_LAST_NAME" description="COM_FMMANAGER_FIELD_LAST_NAME_DESC" default="" required="true" />
+    <field name="first_name" type="text"  label="COM_FMMANAGER_FIELD_FIRST_NAME" description="COM_FMMANAGER_FIELD_FIRST_NAME_DESC" default="" required="true" />
+    <field name="photo" type="fmmedia" label="COM_FMMANAGER_FIELD_PHOTO" description="COM_FMMANAGER_FIELD_PHOTO_DESC" directory="persons" />
+    <field name="gender" type="genderradio" label="COM_FMMANAGER_FIELD_GENDER" description="COM_FMMANAGER_FIELD_GENDER_DESC" default="1" />
+    <field name="birthdate" type="fmdatepicker" label="COM_FMMANAGER_FIELD_BIRTHDATE" description="COM_FMMANAGER_FIELD_BIRTHDATE_DESC" />
+    <field name="license" type="text"  label="COM_FMMANAGER_FIELD_LICENSE" description="COM_FMMANAGER_FIELD_LICENSE_DESC" default="" class="input-small" />
+    <field name="active" type="fmtoggle"  label="COM_FMMANAGER_FIELD_ACTIVE" description="COM_FMMANAGER_FIELD_ACTIVE_DESC" default="1" />
+    <field name="category_id" type="categorieslist"  label="COM_FMMANAGER_FIELD_CATEGORY" description="COM_FMMANAGER_FIELD_CATEGORY_DESC" default="" class="input-medium">
+      <option value="">FMLIB_NONE_2</option>
+    </field>
+    <field name="position_id" type="positionslist"  label="COM_FMMANAGER_FIELD_POSITION" description="COM_FMMANAGER_FIELD_DEFAULT_POSITION_DESC" default="" class="input-medium">
+      <option value="">FMLIB_NONE_2</option>
+    </field>
+    <field name="country_id" type="countrieslist"  label="COM_FMMANAGER_FIELD_COUNTRY" description="COM_FMMANAGER_FIELD_COUNTRY_DESC" default="" class="input-medium">
+      <option value="">FMLIB_NONE_2</option>
+    </field>
+    <field name="weight" type="fmtouchspin"  label="COM_FMMANAGER_FIELD_WEIGHT" description="COM_FMMANAGER_FIELD_WEIGHT_DESC" default="" max="150" />
+    <field name="height" type="fmtouchspin"  label="COM_FMMANAGER_FIELD_HEIGHT" description="COM_FMMANAGER_FIELD_HEIGHT_DESC" default="" max="280" />
+    <field name="diplomas" type="diplomastoggles"  label="COM_FMMANAGER_FIELD_DIPLOMAS" description="COM_FMMANAGER_FIELD_DIPLOMAS_DESC" />
+    <field name="address" type="textarea"  label="COM_FMMANAGER_FIELD_ADDRESS" description="COM_FMMANAGER_FIELD_ADDRESS_DESC" default="" />
+    <field name="postal_code" type="fmtext"  label="COM_FMMANAGER_FIELD_POSTAL_CODE" description="COM_FMMANAGER_FIELD_POSTAL_CODE_DESC" default="" class="input-mini" />
+    <field name="city" type="fmtext"  label="COM_FMMANAGER_FIELD_CITY" description="COM_FMMANAGER_FIELD_CITY_DESC" default="" class="input-medium" />
+    <field name="contacts" type="fmrepeater"  label="COM_FMMANAGER_FIELD_CONTACTS" description="COM_FMMANAGER_FIELD_CONTACTS_DESC">
+      <field name="type" type="contacttypeslist"  label="COM_FMMANAGER_FIELD_CONTACT_TYPE" description="COM_FMMANAGER_FIELD_CONTACT_TYPE_DESC" default="1" class="input-small" />
+      <field name="value" type="text"  label="COM_FMMANAGER_FIELD_CONTACT_VALUE" description="COM_FMMANAGER_FIELD_CONTACT_VALUE_DESC" default="" class="input-medium" />
+      <field name="label" type="text"  label="COM_FMMANAGER_FIELD_LABEL" description="COM_FMMANAGER_FIELD_LABEL_DESC" default="" class="input-small" />
+      <field name="default" type="fmtoggle"  label="COM_FMMANAGER_FIELD_DEFAULT" description="COM_FMMANAGER_FIELD_DEFAULT_DESC" size="mini" default="0" />
+    </field>
+  </fieldset>
+</form>

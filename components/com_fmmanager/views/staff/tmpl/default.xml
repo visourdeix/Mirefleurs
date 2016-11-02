@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="com_fmmanager_staff_view_default_title" option="com_fmmanager_staff_view_default_option">
+    <message>
+      <![CDATA[com_fmmanager_staff_view_default_desc]]>
+    </message>
+  </layout>
+
+  <!-- Add fields to the request variables for the layout. -->
+  <fields name="request">
+    <fieldset name="request"
+			addfieldpath="/administrator/components/com_fmmanager/models/fields">
+
+      <field name="id" type="seasonslist"
+				label="COM_FMMANAGER_FIELD_SEASON"
+             editLink=""
+             required="true"
+				description="COM_FMMANAGER_FIELD_SEASON_DESC" />
+    </fieldset>
+  </fields>
+
+  <!-- Add fields to the parameters object for the layout. -->
+  <fields name="params">
+
+    <!-- Basic options. -->
+    <fieldset name="basic"
+			label="FMLIB_TAB_PARAMS" addfieldpath="/libraries/FootManager/Form/fields">
+
+      <field name="staff_group_by" type="list"
+             label="COM_FMMANAGER_GROUP_BY"
+             description="COM_FMMANAGER_GROUP_BY_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="categories">COM_FMMANAGER_FIELD_CATEGORY</option>
+        <option value="teams">COM_FMMANAGER_FIELD_TEAM</option>
+      </field>
+
+      <field
+       name="staff_show_function"
+       type="list"
+       class="chzn-color"
+       label="COM_FMMANAGER_SHOW_FUNCTION"
+       description="COM_FMMANAGER_SHOW_FUNCTION_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JSHOW</option>
+        <option value="0">JHIDE</option>
+      </field>
+
+      <field
+       name="staff_show_diploma"
+       type="list"
+       class="chzn-color"
+       label="COM_FMMANAGER_SHOW_DIPLOMA"
+       description="COM_FMMANAGER_SHOW_DIPLOMA_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JSHOW</option>
+        <option value="0">JHIDE</option>
+      </field>
+
+      <field
+ name="staff_show_contacts"
+ type="list"
+ class="chzn-color"
+ label="COM_FMMANAGER_SHOW_CONTACTS"
+ description="COM_FMMANAGER_SHOW_CONTACTS_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JSHOW</option>
+        <option value="0">JHIDE</option>
+      </field>
+    </fieldset>
+  </fields>
+</metadata>

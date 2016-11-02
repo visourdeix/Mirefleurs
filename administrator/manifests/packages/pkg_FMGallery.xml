@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="3.0" method="upgrade">
+  <name>FMGallery</name>
+  <packagename>FMGallery</packagename>
+  <version>2.0.0</version>
+  <creationDate>December 2015</creationDate>
+  <copyright>(C) 2015 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <author>Stéphane ANDRE</author>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <packager>FMGallery</packager>
+  <description>Package contenant tous les composants nécessaires pour la gestion d'une médiathèques.</description>
+  <files>
+    <file type="library" id="FMGallery">libraries/FMGallery</file>
+    <file type="component" id="com_fmgallery">components/com_fmgallery</file>
+    <file type="module" id="mod_fmgallery_latestmedias" client="site">modules/site/mod_fmgallery_latestmedias</file>
+    <file type="plugin" id="plg_fmactivity_fmgallery" group="fmactivity">plugins/fmactivity/plg_fmactivity_fmgallery</file>
+    <file type="plugin" id="plg_quickicon_fmgallery" group="quickicon">plugins/quickicon/plg_quickicon_fmgallery</file>
+  </files>
+</extension>

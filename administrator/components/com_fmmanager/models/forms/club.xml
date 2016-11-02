@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset addfieldpath="/libraries/FootManager/Form/fields">
+
+    <field name="name" type="text"  label="COM_FMMANAGER_FIELD_NAME" description="COM_FMMANAGER_FIELD_NAME_DESC" default="" required="true" />
+    <field name="small_name" type="text"  label="COM_FMMANAGER_FIELD_SMALL_NAME" description="COM_FMMANAGER_FIELD_TEAM_NAME_DESC" default="" class="input-small" required="true" />
+    <field name="abbreviation" type="text"  label="COM_FMMANAGER_FIELD_ABBREVIATION" description="COM_FMMANAGER_FIELD_ABBREVIATION_DESC" default="" class="input-mini" required="true" />
+    <field name="logo" type="fmmedia" label="COM_FMMANAGER_FIELD_LOGO" description="COM_FMMANAGER_FIELD_LOGO_DESC" directory="clubs" />
+    <field name="city" type="text"  label="COM_FMMANAGER_FIELD_CITY" description="COM_FMMANAGER_FIELD_CITY_DESC" default="" />
+    <field name="head_office" type="text"  label="COM_FMMANAGER_FIELD_HEAD_OFFICE" description="COM_FMMANAGER_FIELD_HEAD_OFFICE_DESC" default="" />
+    <field name="colors" type="text"  label="COM_FMMANAGER_FIELD_COLORS" description="COM_FMMANAGER_FIELD_COLORS_DESC" default="" />
+    <field name="person_id" type="personslist" label="COM_FMMANAGER_FIELD_CONTACT" description="COM_FMMANAGER_FIELD_CONTACT_DESC" default="" class="input-large">
+      <option value="">FMLIB_NONE_2</option>
+    </field>
+    <field name="fff_form_url" type="text"  label="COM_FMMANAGER_FIELD_FFF_FORM_URL" description="COM_FMMANAGER_FIELD_FFF_FORM_URL_DESC" default="" />
+    <field name="facebook" type="text"  label="COM_FMMANAGER_FIELD_FACEBOOK" description="COM_FMMANAGER_FIELD_FACEBOOK_DESC" default="" />
+    <field name="twitter" type="text"  label="COM_FMMANAGER_FIELD_TWITTER" description="COM_FMMANAGER_FIELD_TWITTER_DESC" default="" />
+    <field name="googleplus" type="text"  label="COM_FMMANAGER_FIELD_GOOGLEPLUS" description="COM_FMMANAGER_FIELD_GOOGLEPLUS_DESC" default="" />
+    <field name="home_color" type="color" label="COM_FMMANAGER_FIELD_HOME_COLOR" description="COM_FMMANAGER_FIELD_HOME_COLOR_DESC" default="#bdbdbd" required="true" />
+    <field name="away_color" type="color" label="COM_FMMANAGER_FIELD_AWAY_COLOR" description="COM_FMMANAGER_FIELD_AWAY_COLOR_DESC" default="#bdbdbd" required="true" />
+    <field name="teams" type="fmrepeater" label="COM_FMMANAGER_FIELD_TEAMS" description="COM_FMMANAGER_FIELD_TEAMS_DESC">
+      <field name="id" type="hidden" ></field>
+      <field name="category_id" type="categorieslist"  label="COM_FMMANAGER_FIELD_CATEGORY" description="COM_FMMANAGER_FIELD_CATEGORY_DESC" default="" class="input-small" />
+      <field name="suffix" type="text"  label="COM_FMMANAGER_FIELD_SUFFIX" description="COM_FMMANAGER_FIELD_SUFFIX_DESC" default="" class="fm-input-xxmini" />
+      <field name="stadium_id" type="stadiumslist"  label="COM_FMMANAGER_FIELD_STADIUM" description="COM_FMMANAGER_FIELD_STADIUM_DESC" default="" class="input-large">
+        <option value="">FMLIB_NONE_1</option>
+      </field>
+    </field>
+  </fieldset>
+</form>

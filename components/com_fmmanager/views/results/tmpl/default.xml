@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="com_fmmanager_results_view_default_title" option="com_fmmanager_results_view_default_option">
+    <message>
+      <![CDATA[com_fmmanager_results_view_default_desc]]>
+    </message>
+  </layout>
+
+  <!-- Add fields to the request variables for the layout. -->
+  <fields name="request">
+    <fieldset name="request"
+			addfieldpath="/administrator/components/com_fmmanager/models/fields">
+
+      <field name="id" type="competitionslist"
+				label="COM_FMMANAGER_FIELD_COMPETITION"
+             required="true"
+				description="COM_FMMANAGER_FIELD_COMPETITION_DESC" />
+    </fieldset>
+  </fields>
+
+  <!-- Add fields to the parameters object for the layout. -->
+  <fields name="params">
+
+    <!-- Basic options. -->
+    <fieldset name="basic"
+			label="FMLIB_TAB_PARAMS" addfieldpath="/libraries/FootManager/Form/fields">
+
+      <field
+				name="results_show_name"
+				type="list"
+				label="COM_FMMANAGER_SHOW_NAME_FIELD"
+				description="COM_FMMANAGER_SHOW_NAME_FIELD_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="name">COM_FMMANAGER_FIELD_NAME</option>
+        <option value="small_name">COM_FMMANAGER_FIELD_SMALL_NAME</option>
+        <option value="abbreviation">COM_FMMANAGER_FIELD_ABBREVIATION</option>
+      </field>
+    </fieldset>
+  </fields>
+</metadata>

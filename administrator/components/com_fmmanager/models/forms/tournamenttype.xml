@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset addfieldpath="/libraries/FootManager/Form/fields">
+
+    <field name="label" type="text"  label="COM_FMMANAGER_FIELD_LABEL" description="COM_FMMANAGER_FIELD_LABEL_DESC" default="" required="true" />
+    <field name="has_ranking" type="fmtoggle"  label="COM_FMMANAGER_FIELD_HAS_RANKING" description="COM_FMMANAGER_FIELD_HAS_RANKING_DESC" default="0" />
+    <field name="by_match" type="fmtoggle"  label="COM_FMMANAGER_FIELD_BY_MATCH" description="COM_FMMANAGER_FIELD_BY_MATCH_DESC" default="1" />
+  </fieldset>
+</form>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.2" type="plugin" group="fmevents" method="upgrade">
+  <name>plg_fmevents_tagscreator</name>
+  <author>Stéphane ANDRE</author>
+  <creationDate>January 2016</creationDate>
+  <copyright>(C) 2015 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <authorUrl/>
+  <version>1.0.0</version>
+  <description>PLG_FMEVENTS_TAGSCREATOR_XML_DESCRIPTION</description>
+  <!-- Runs on install/uninstall/update; New in 2.5 -->
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="autopublish" type="radio" class="btn-group btn-group-yesno" default="1" description="PLG_TAGSCREATOR_FIELD_AUTOPUBLISH_DESC" label="PLG_TAGSCREATOR_FIELD_AUTOPUBLISH_LABEL">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="event" type="radio" class="btn-group btn-group-yesno" default="1" description="PLG_TAGSCREATOR_FIELD_PERSON_DESC" label="PLG_TAGSCREATOR_FIELD_PERSON_LABEL">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+  <!-- /// INSTALL SCRIPT /// -->
+  <!-- /// FILES /// -->
+  <!-- /// LANGUAGES /// -->
+  <!-- /// INSTALL SCRIPT /// -->
+  <scriptfile>install.script.php</scriptfile>
+  <!-- /// FILES /// -->
+  <files folder="admin">
+    <filename>index.html</filename>
+    <filename plugin="tagscreator">tagscreator.php</filename>
+  </files>
+  <!-- /// LANGUAGES /// -->
+  <languages folder="admin">
+    <language tag="fr-FR">language/fr-FR/fr-FR.plg_fmevents_tagscreator.ini</language>
+    <language tag="fr-FR">language/fr-FR/fr-FR.plg_fmevents_tagscreator.sys.ini</language>
+  </languages>
+</extension>

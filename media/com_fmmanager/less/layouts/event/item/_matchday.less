@@ -1,0 +1,32 @@
+﻿.fm-text-tradegothic {
+    font-family: @tradeGothic;
+    text-transform: uppercase;
+}
+
+.fm-event-matchday {
+    .fm-tournament {
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    .fm-content {
+        margin: 0;
+        .flex-display();
+        .flex-flow(row nowrap);
+        .justify-content();
+        .align-items(center);
+
+        .fm-matchday {
+            .fm-text-tradegothic;
+            font-size: 20px;
+            .flex(1);
+            color: @fontColor;
+        }
+
+        .fm-time {
+            .fm-text-tradegothic;
+            font-size: 30px;
+            color: @gray;
+        }
+    }
+}

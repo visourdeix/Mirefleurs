@@ -1,0 +1,57 @@
+﻿.fm-content-item
+{
+    & > div:first-child
+    {
+        .flex(none);
+        margin-left: 10px;
+    }
+
+    & > div:last-child
+    {
+        .align-items(flex-start);
+
+        & > div
+        {
+            padding: 2px 5px;
+        }
+
+        .fm-photo
+        {
+            .flex(none);
+            width: 130px !important;
+
+            img
+            {
+                width: 100% !important;
+            }
+        }
+
+        .fm-info
+        {
+            color: @fontColor;
+            font-size: 120%;
+
+            .fm-article-category
+            {
+                font-size: 80%;
+                color: @gray;
+                text-transform: uppercase;
+                font-family: @tradeGothic;
+            }
+
+            .fm-article-intro
+            {
+                font-size: 90%;
+                color: @gray;
+                margin-top: 5px;
+            }
+
+            .fm-article-title
+            {
+                text-transform: uppercase;
+                margin-top: 2px;
+                font-weight: bold;
+            }
+        }
+    }
+}

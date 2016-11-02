@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset addfieldpath="/libraries/FootManager/Form/fields">
+
+    <field name="name" type="text" label="COM_FMMANAGER_FIELD_NAME" description="COM_FMMANAGER_FIELD_NAME_DESC" default="" required="true" />
+    <field name="small_name" type="text" label="COM_FMMANAGER_FIELD_SMALL_NAME" description="COM_FMMANAGER_FIELD_SMALL_NAME_DESC" default="" required="true" class="input-small" />
+    <field name="logo" type="fmmedia" label="COM_FMMANAGER_FIELD_LOGO" description="COM_FMMANAGER_FIELD_IMAGE_DESC" directory="tournaments" />
+    <field name="category_id" type="categorieslist" label="COM_FMMANAGER_FIELD_CATEGORY" description="COM_FMMANAGER_FIELD_CATEGORY_DESC" default="" required="true" class="input-medium" />
+    <field name="type_id" type="tournamenttypeslist" label="COM_FMMANAGER_FIELD_TYPE" description="COM_FMMANAGER_FIELD_TYPE_DESC" default="" required="true" class="input-medium" />
+    <field name="extra_time" type="fmtoggle" label="COM_FMMANAGER_FIELD_EXTRA_TIME" description="COM_FMMANAGER_FIELD_EXTRA_TIME_ALLOWED_DESC" />
+    <field name="penalties" type="fmtoggle" label="COM_FMMANAGER_FIELD_PENALTIES" description="COM_FMMANAGER_FIELD_PENALTIES_ALLOWED_DESC" />
+  </fieldset>
+</form>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fields addfieldpath="/libraries/FootManager/Form/fields">
+    <field name="days" type="fmtouchspin" label="COM_FMMANAGER_FIELD_DAYS" description="COM_FMMANAGER_FIELD_DAYS_DESC" default="5" max="375" class="fm-input-xxmini on_change" />
+    <field name="states" type="stateslist" multiple="true" label="COM_FMMANAGER_FIELD_STATES" placeholder="COM_FMMANAGER_FIELD_STATES" description="COM_FMMANAGER_FIELD_STATES_DESC" class="fm-chzn-states input-medium on_change" />
+
+    <field name="teams" type="fmradio"  default="my"  label="COM_FMMANAGER_FIELD_TEAMS" placeholder="COM_FMMANAGER_FIELD_TEAMS" description="COM_FMMANAGER_FIELD_TEAMS_DESC"  class="on_change">
+      <option value="all" active_class="btn-info">FMLIB_ALL_4</option>
+      <option value="my" active_class="btn-info">FM_MY_TEAMS</option>
+    </field>
+
+    <field name="categories" type="categorieslist"  editLink="" default="" class="input-xlarge on_change" multiple="true" label="COM_FMMANAGER_FIELD_CATEGORIES" placeholder="COM_FMMANAGER_FIELD_CATEGORIES" description="COM_FMMANAGER_FIELD_CATEGORIES_DESC" />
+
+    <field name="group_by" type="list"
+            label="COM_FMMANAGER_GROUP_BY"
+           class="input-medium on_change"
+           default="dates"
+            description="COM_FMMANAGER_GROUP_BY_DESC">
+      <option value="dates">COM_FMMANAGER_FIELD_DATE</option>
+      <option value="competitions">COM_FMMANAGER_FIELD_COMPETITION</option>
+    </field>
+  </fields>
+</form>

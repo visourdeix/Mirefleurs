@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="com_fmgallery_photos_view_default_title" option="com_fmgallery_photos_view_default_option">
+    <message>
+      <![CDATA[com_fmgallery_photos_view_default_desc]]>
+    </message>
+  </layout>
+
+  <!-- Add fields to the request variables for the layout. -->
+  <fields name="request">
+    <fieldset name="request"
+			addfieldpath="/administrator/components/com_fmgallery/models/fields">
+
+      <field name="id" type="category"
+				label="JCATEGORY"
+             extension="com_fmgallery"
+             required="true"
+				description="JFIELD_CATEGORY_DESC">
+        <option value="1">JGLOBAL_ROOT</option>
+      </field>
+    </fieldset>
+  </fields>
+
+  <!-- Add fields to the parameters object for the layout. -->
+  <fields name="params">
+
+    <!-- Basic options. -->
+    <fieldset name="basic"
+			label="COM_FMGALLERY_ATTRIBS_SETTINGS" addfieldpath="/libraries/FootManager/Form/fields">
+      <field name="thumb_size" type="fmlist" default="medium" class="input-small" label="COM_FMGALLERY_FIELD_THUMB_SIZE" description="COM_FMGALLERY_FIELD_THUMB_SIZE_DESC">
+        <option value="small">FMLIB_SMALL</option>
+        <option value="medium">FMLIB_MEDIUM</option>
+        <option value="large">FMLIB_LARGE</option>
+      </field>
+    </fieldset>
+  </fields>
+</metadata>

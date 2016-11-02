@@ -1,0 +1,96 @@
+﻿.fm-about
+{
+    font-family: @tradeGothic;
+    text-transform: uppercase;
+    color: @fontColor;
+
+    .fm-header
+    {
+        background-color: @borderColor;
+        padding: 7px;
+        margin: 1px 0 0 0;
+        font-size: 18px;
+        cursor: pointer;
+        .transition(@transition);
+
+        &:not(.collapsed),
+        &:hover
+        {
+            background-color: @activeBackgroundColor;
+            color: @activeLightFontColor;
+
+            .fm-value
+            {
+                color: @activeLightFontColor !important;
+            }
+        }
+
+        .fm-label
+        {
+            margin-bottom: 3px;
+            margin-top: 3px;
+        }
+    }
+
+    .collapse
+    {
+        padding: 0;
+    }
+
+    .fm-content
+    {
+        & > div:nth-child(odd)
+        {
+            background-color: lighten(@lightgray, 7%);
+
+            .fm-title-about
+            {
+                background-color: lighten(@gray, 30%);
+            }
+        }
+
+        & > div:nth-child(even)
+        {
+            background-color: lighten(@lightgray, 11%);
+
+            .fm-title-about
+            {
+                background-color: lighten(@gray, 40%);
+            }
+        }
+
+        .fm-row
+        {
+            .align-items(stretch);
+
+            & > div
+            {
+                padding: 10px !important;
+            }
+        }
+
+        .fm-title-about
+        {
+            width: 30%;
+            flex: none;
+            text-align: left;
+            font-size: 1.4rem;
+
+            .mobile(
+            {
+                width: 100%;
+            });
+        }
+
+        .fm-information
+        {
+            color: @fontColor;
+            font-size: 150% !important;
+
+            .fm-contact {
+                margin-left: 10px;
+                margin-bottom: 5px; 
+            }
+        }
+    }
+}

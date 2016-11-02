@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fields addfieldpath="/administrator/components/com_fmevents/models/fields">
+
+    <field name="start_date" type="fmdatepicker" label="COM_FMEVENTS_FIELD_START_DATE" description="COM_FMEVENTS_FIELD_START_DATE_DESC" required="true" />
+    <field name="end_date" type="fmdatepicker" label="COM_FMEVENTS_FIELD_END_DATE" description="COM_FMEVENTS_FIELD_END_DATE_DESC" required="true" />
+    <field name="types" type="typeslist"
+           multiple="true"
+label="COM_FMEVENTS_FIELD_TYPES"
+description="COM_FMEVENTS_FIELD_TYPES_DESC"
+           default="all"
+           required="true">
+      <option value="all">FMLIB_ALL_3</option>
+    </field>
+    <field name="categories" type="categorieslist"
+           multiple="true"
+      label="COM_FMEVENTS_FIELD_CATEGORIES"
+      description="COM_FMEVENTS_FIELD_CATEGORIES_DESC"
+           default="all"
+           required="true">
+      <option value="all">FMLIB_ALL_4</option>
+    </field>
+  </fields>
+</form>

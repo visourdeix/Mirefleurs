@@ -1,0 +1,52 @@
+﻿.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
+    color: @white !important;
+    background-color: #15497c !important;
+}
+
+.btn .caret {
+    margin-bottom: 0 !important;
+}
+
+.minicolors {
+    text-align: left;
+}
+
+.dropdown-menu {
+    font-size:12px;
+    }
+
+#fm {
+    .dropdown-menu {
+        padding: 0 !important;
+        .border-radius(0)!important;
+
+        & > li {
+            & > a {
+                .fm-text-title;
+                padding: 10px 20px !important;
+                color: lighten(@fontColor, 10%) !important;
+                line-height: 15px;
+                font-size: 16px !important;
+
+                &:hover,
+                &:focus {
+                    background: none !important;
+                }
+            }
+
+            &.group > a {
+                line-height: 14px;
+                font-size: 17px !important;
+                text-align: center;
+                cursor: default;
+                color: @gray !important;
+            }
+
+            &:not(.group) > a:hover,
+            &:not(.group) > a:focus {
+                background-color: @activeBackgroundColor !important;
+                color: @white !important;
+            }
+        }
+    }
+}

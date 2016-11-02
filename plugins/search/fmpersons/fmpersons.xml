@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="search" method="upgrade">
+  <name>plg_search_fmpersons</name>
+  <author>Stéphane ANDRE</author>
+  <creationDate>January 2016</creationDate>
+  <copyright>(C) 2015 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <authorUrl/>
+  <version>1.0.0</version>
+  <description>PLG_SEARCH_FMPERSONS_XML_DESCRIPTION</description>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="search_limit" type="text" default="50" description="PLG_SEARCH_FMPERSONS_FIELD_SEARCHLIMIT_DESC" label="PLG_SEARCH_FMPERSONS_FIELD_SEARCHLIMIT" size="5"/>
+      </fieldset>
+    </fields>
+  </config>
+  <!-- /// FILES /// -->
+  <!-- /// LANGUAGES /// -->
+  <!-- /// FILES /// -->
+  <files folder="admin">
+    <filename plugin="fmpersons">fmpersons.php</filename>
+    <filename>index.html</filename>
+  </files>
+  <!-- /// LANGUAGES /// -->
+  <languages folder="admin">
+    <language tag="fr-FR">language/fr-FR/fr-FR.plg_search_fmpersons.ini</language>
+    <language tag="fr-FR">language/fr-FR/fr-FR.plg_search_fmpersons.sys.ini</language>
+  </languages>
+</extension>

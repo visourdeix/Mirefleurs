@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset addfieldpath="/libraries/FootManager/Form/fields">
+
+    <field name="photo" type="fmmedia" label="COM_FMMANAGER_FIELD_PHOTO" description="COM_FMMANAGER_FIELD_PHOTO_DESC" directory="rosters" />
+    <field name="season_id" type="seasonslist"  label="COM_FMMANAGER_FIELD_SEASON" description="COM_FMMANAGER_FIELD_SEASON_DESC" default="" required="true" />
+    <field name="team_id" type="teamslist"  label="COM_FMMANAGER_FIELD_TEAM" description="COM_FMMANAGER_FIELD_TEAM_DESC" default="" required="true" />
+    <field name="relation_team_id" type="teamslist"  label="COM_FMMANAGER_FIELD_RELATION_TEAM" description="COM_FMMANAGER_FIELD_RELATION_TEAM_DESC" default="0">
+      <option value="0">FMLIB_NONE_2</option>
+    </field>
+    <field name="players" type="fmrepeater" label="COM_FMMANAGER_FIELD_PLAYERS" description="COM_FMMANAGER_FIELD_PLAYERS_DESC" component="com_fmmanager" view="persons" primaryKey="person_id">
+      <field name="person_id" type="personslist"  label="COM_FMMANAGER_FIELD_PERSON" description="COM_FMMANAGER_FIELD_PERSON_DESC" default="" class="input-large">
+        <option value=""></option>
+      </field>
+      <field name="category_id" type="categorieslist"  label="COM_FMMANAGER_FIELD_CATEGORY" description="COM_FMMANAGER_FIELD_CATEGORY_DESC" default="" class="input-small">
+        <option value=""></option>
+      </field>
+      <field name="position_id" type="positionslist"  label="COM_FMMANAGER_FIELD_POSITION" description="COM_FMMANAGER_FIELD_POSITION_DESC" default="0" class="input-medium">
+        <option value="0">FMLIB_NONE_2</option>
+      </field>
+      <field name="outclassed" type="fmtoggle"  label="COM_FMMANAGER_FIELD_OUTCLASSED" description="COM_FMMANAGER_FIELD_OUTCLASSED_DESC" size="mini" default="0" />
+    </field>
+    <field name="staff" type="fmrepeater" label="COM_FMMANAGER_FIELD_STAFF" description="COM_FMMANAGER_FIELD_STAFF_DESC" component="com_fmmanager" view="persons" primaryKey="person_id">
+      <field name="person_id" type="personslist"  label="COM_FMMANAGER_FIELD_PERSON" description="COM_FMMANAGER_FIELD_PERSON_DESC" default="" class="input-large">
+        <option value=""></option>
+      </field>
+      <field name="function_id" type="functionslist" extra="0" label="COM_FMMANAGER_FIELD_FUNCTION" description="COM_FMMANAGER_FIELD_FUNCTION_DESC" default="0" class="input-medium">
+        <option value="0">FMLIB_NONE_2</option>
+      </field>
+    </field>
+  </fieldset>
+
+  <fields name="attribs" label="FMLIB_TAB_PARAMS">
+    <fieldset name="basic" label="FMLIB_TAB_PARAMS">
+
+      <field name="roster_title" type="fmtitle" label="COM_FMMANAGER_LEGEND_ROSTER" />
+
+      <field
+       name="roster_show_contacts"
+       type="list"
+       class="chzn-color"
+       label="COM_FMMANAGER_SHOW_CONTACTS"
+       description="COM_FMMANAGER_SHOW_CONTACTS_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JSHOW</option>
+        <option value="0">JHIDE</option>
+      </field>
+      <field
+       name="roster_show_diploma"
+       type="list"
+       class="chzn-color"
+       label="COM_FMMANAGER_SHOW_DIPLOMA"
+       description="COM_FMMANAGER_SHOW_DIPLOMA_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JSHOW</option>
+        <option value="0">JHIDE</option>
+      </field>
+      <field
+       name="roster_show_function"
+       type="list"
+       class="chzn-color"
+       label="COM_FMMANAGER_SHOW_FUNCTION"
+       description="COM_FMMANAGER_SHOW_FUNCTION_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JSHOW</option>
+        <option value="0">JHIDE</option>
+      </field>
+
+      <field name="players_title" type="fmtitle" label="COM_FMMANAGER_LEGEND_PLAYERS" />
+
+      <field name="players_group_by" type="list"
+          label="COM_FMMANAGER_GROUP_BY"
+          description="COM_FMMANAGER_GROUP_BY_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="0">FMLIB_NONE_1</option>
+        <option value="positions">COM_FMMANAGER_FIELD_POSITION</option>
+        <option value="categories">COM_FMMANAGER_FIELD_CATEGORY</option>
+      </field>
+      <field
+				name="players_show_outclassed"
+				type="list"
+				class="chzn-color"
+				label="COM_FMMANAGER_SHOW_OUTCLASSED"
+				description="COM_FMMANAGER_SHOW_OUTCLASSED_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JSHOW</option>
+        <option value="0">JHIDE</option>
+      </field>
+      <field
+				name="players_show_category"
+				type="list"
+				class="chzn-color"
+				label="COM_FMMANAGER_SHOW_CATEGORY"
+				description="COM_FMMANAGER_SHOW_CATEGORY_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JSHOW</option>
+        <option value="0">JHIDE</option>
+      </field>
+      <field
+				name="players_show_position"
+				type="list"
+				class="chzn-color"
+				label="COM_FMMANAGER_SHOW_POSITION"
+				description="COM_FMMANAGER_SHOW_POSITION_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JSHOW</option>
+        <option value="0">JHIDE</option>
+      </field>
+      <field
+       name="players_show_contacts"
+       type="list"
+       class="chzn-color"
+       label="COM_FMMANAGER_SHOW_CONTACTS"
+       description="COM_FMMANAGER_SHOW_CONTACTS_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JSHOW</option>
+        <option value="0">JHIDE</option>
+      </field>
+
+      <field name="events_title" type="fmtitle" label="COM_FMMANAGER_LEGEND_EVENTS" />
+
+      <field
+          name="events_show_events"
+          type="list"
+          label="COM_FMMANAGER_SHOW_EVENTS_STATE"
+          description="COM_FMMANAGER_SHOW_EVENTS_STATE_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="all">FMLIB_ALL_3</option>
+        <option value="passed">COM_FMMANAGER_PASSED</option>
+        <option value="future">COM_FMMANAGER_FUTURE</option>
+      </field>
+      <field
+				name="events_show_name"
+				type="list"
+				label="COM_FMMANAGER_SHOW_NAME_FIELD"
+				description="COM_FMMANAGER_SHOW_NAME_FIELD_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="name">COM_FMMANAGER_FIELD_NAME</option>
+        <option value="small_name">COM_FMMANAGER_FIELD_SMALL_NAME</option>
+        <option value="abbreviation">COM_FMMANAGER_FIELD_ABBREVIATION</option>
+      </field>
+      <field
+				name="events_show_date"
+				type="list"
+				class="chzn-color"
+				label="COM_FMMANAGER_SHOW_DATE"
+				description="COM_FMMANAGER_SHOW_DATE_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JSHOW</option>
+        <option value="0">JHIDE</option>
+      </field>
+      <field
+				name="events_show_tournament"
+				type="list"
+				class="chzn-color"
+				label="COM_FMMANAGER_SHOW_TOURNAMENT"
+				description="COM_FMMANAGER_SHOW_TOURNAMENT_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JSHOW</option>
+        <option value="0">JHIDE</option>
+      </field>
+
+      <field name="playersstats_title" type="fmtitle" label="COM_FMMANAGER_LEGEND_PERSONAL_STATISTICS" />
+
+      <field
+				name="playersstats_show_filters"
+				type="list"
+				class="chzn-color"
+				label="COM_FMMANAGER_SHOW_FILTERS"
+				description="COM_FMMANAGER_SHOW_FILTERS_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JSHOW</option>
+        <option value="0">JHIDE</option>
+      </field>
+      <field
+				name="playersstats_show_podium_goals"
+				type="list"
+				class="chzn-color"
+				label="COM_FMMANAGER_SHOW_PODIUM_GOALS"
+				description="COM_FMMANAGER_SHOW_PODIUM_GOALS_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JSHOW</option>
+        <option value="0">JHIDE</option>
+      </field>
+      <field
+				name="playersstats_show_podium_assists"
+				type="list"
+				class="chzn-color"
+				label="COM_FMMANAGER_SHOW_PODIUM_ASSISTS"
+				description="COM_FMMANAGER_SHOW_PODIUM_ASSISTS_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JSHOW</option>
+        <option value="0">JHIDE</option>
+      </field>
+      <field name="playersstats_order" type="list"
+          label="COM_FMMANAGER_FIELD_ORDER"
+          description="COM_FMMANAGER_FIELD_ORDER_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="name">COM_FMMANAGER_FIELD_NAME</option>
+        <option value="position_ordering">COM_FMMANAGER_FIELD_POSITION</option>
+      </field>
+
+      <field name="teamstats_title" type="fmtitle" label="COM_FMMANAGER_LEGEND_TEAMS_STATISTICS" />
+
+      <field
+				name="teamstats_show_filters"
+				type="list"
+				class="chzn-color"
+				label="COM_FMMANAGER_SHOW_FILTERS"
+				description="COM_FMMANAGER_SHOW_FILTERS_DESC">
+        <option value="">JGLOBAL_USE_GLOBAL</option>
+        <option value="1">JSHOW</option>
+        <option value="0">JHIDE</option>
+      </field>
+      <field name="teamstats_count_in_series" type="fmtouchspin"  label="COM_FMMANAGER_FIELD_COUNT_IN_SERIES" description="COM_FMMANAGER_FIELD_COUNT_IN_SERIES_DESC" max="15" />
+    </fieldset>
+  </fields>
+</form>

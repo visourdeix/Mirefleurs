@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset addfieldpath="/libraries/FootManager/Form/fields">
+
+    <field name="asset_id" type="hidden" filter="unset" />
+    <field name="label" type="text" label="COM_FMMANAGER_FIELD_LABEL" description="COM_FMMANAGER_FIELD_LABEL_DESC" default="" required="true" />
+    <field name="abbreviation" type="text" label="COM_FMMANAGER_FIELD_ABBREVIATION" description="COM_FMMANAGER_FIELD_ABBREVIATION_DESC" default="" required="true" class="fm-input-xmini" />
+    <field name="color" type="color" label="COM_FMMANAGER_FIELD_COLOR" description="COM_FMMANAGER_FIELD_COLOR_DESC" default="#bdbdbd" required="true" />
+    <field name="year" type="fmdatepicker" format="YYYY" label="COM_FMMANAGER_FIELD_YEAR" description="COM_FMMANAGER_FIELD_YEAR_DESC" />
+    <field name="in_team_name" type="fmradio"  default="1"  label="COM_FMMANAGER_FIELD_IN_TEAM_NAME" description="COM_FMMANAGER_FIELD_IN_TEAM_NAME_DESC">
+      <option value="1" active_class="btn-info">FMLIB_BEFORE</option>
+      <option value="0" active_class="btn-inverse" title="FMLIB_NONE_1">FMLIB_NONE_ICON</option>
+      <option value="2" active_class="btn-info">FMLIB_AFTER</option>
+    </field>
+    <field name="in_tournament_name" type="fmradio"  default="1"  label="COM_FMMANAGER_FIELD_IN_TOURNAMENT_NAME" description="COM_FMMANAGER_FIELD_IN_TOURNAMENT_NAME_DESC">
+      <option value="1" active_class="btn-info">FMLIB_BEFORE</option>
+      <option value="0" active_class="btn-inverse" title="FMLIB_NONE_1">FMLIB_NONE_ICON</option>
+      <option value="2" active_class="btn-info">FMLIB_AFTER</option>
+    </field>
+
+    <field name="rules" type="rules" label="JFIELD_RULES_LABEL" translate_label="false" filter="rules" component="com_fmmanager" section="category" validate="rules" />
+  </fieldset>
+</form>

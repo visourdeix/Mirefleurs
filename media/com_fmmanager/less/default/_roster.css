@@ -1,0 +1,7 @@
+.fm-roster .fm-competitions .fm-info-value {
+  width: 120px;
+}
+.fm-roster .fm-competitions .fm-info-value .fm-text {
+  font-size: 100%;
+  line-height: 18px;
+}

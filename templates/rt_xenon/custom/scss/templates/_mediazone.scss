@@ -1,0 +1,101 @@
+#g-bottom {
+    color: #fff;
+    position: relative;
+    z-index: 100;
+    background: rgba(56, 110, 28, 0) url(../../../../templates/rt_xenon/images/backgrounds/extension/media.jpg) top center no-repeat;
+    background-size: cover;
+
+    /* ########################################################### 
+       ========================= TITLE ===========================
+       ########################################################### */
+
+	.fm-home-title {
+		color: white;
+		font-size: 3em;
+		text-shadow: 1px 1px 1px rgb(0, 0, 0);
+		text-transform: uppercase;
+		font-family: $tradeGothic;
+        margin: 0.75rem 0 0 0;
+	}
+
+	.fm-home-title span:last-child {
+		color: #000000;
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, 1)
+	}
+
+    .fm-button {
+        background-color: rgba(0, 0, 0, 0.7) !important;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    .fm-button:active, 
+    .fm-button:hover, 
+    .fm-button:focus {
+        background-color: $darkgreen !important;
+        color: white !important;
+    }
+
+    .mod-fmgallery-latestmedias {
+
+        .fm-masonry-item {
+            margin: 1.5px;
+        }
+        
+        .fm-masonry-item-thumbnail {
+            border: 1px solid #000;
+        }
+
+        .fm-mask {
+            box-shadow: inset 0px 6px 0px 0px #fff;
+            background-color: rgba(51, 51, 51, 0.3);
+            color: #fff;
+
+            span {
+                border-color: #fff;
+            }
+        }
+
+        .fm-category-header {
+
+            .fm-category {
+                color: rgba(0,0,0,0.8);
+                font-family: $tradeGothic;
+            }
+
+            .fm-title {
+                color: white;
+                font-family: $tradeGothic;
+            }
+
+            .fm-subtitle {
+                font-family: $tradeGothic;
+            }
+
+        }
+
+    }
+    
+}
+
+#g-bottom:before {
+    background: rgba(13,96,46,0.9);
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.g-wrapper {
+	#fm {
+		.fm-category-header {
+			h2 {
+				@include breakpoint(mobile-only) {
+					font-size: 1.4rem;
+				}
+			}
+		}
+	}
+}

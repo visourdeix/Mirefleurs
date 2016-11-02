@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="administrator" method="upgrade">
+  <name>mod_fmmanager_nextmatches</name>
+  <author>Stéphane ANDRE</author>
+  <creationDate>December 2015</creationDate>
+  <copyright>(C) 2016 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <version>1.0.2</version>
+  <description>MOD_FMMANAGER_NEXTMATCHES_XML_DESCRIPTION</description>
+  <position>fmmanager-tabs</position>
+  <!-- Runs on install/uninstall/update; New in 2.5 -->
+  <config>
+    <fields name="params" addfieldpath="/libraries/FootManager/Form/fields">
+      <fieldset name="basic" addfieldpath="/administrator/components/com_fmmanager/models/fields">
+        <field name="show_filters" type="list" class="chzn-color" label="MOD_FMMANAGER_NEXTMATCHES_SHOW_FILTERS" description="MOD_FMMANAGER_NEXTMATCHES_SHOW_FILTERS_DESC" default="1">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+        <field name="isEditable" type="list" class="chzn-color" label="MOD_FMMANAGER_NEXTMATCHES_IS_EDITABLE" description="MOD_FMMANAGER_NEXTMATCHES_IS_EDITABLE_DESC" default="1">
+          <option value="1">JSHOW</option>
+          <option value="0">JHIDE</option>
+        </field>
+        <field name="days" type="fmtouchspin" label="MOD_FMMANAGER_NEXTMATCHES_FIELD_DAYS" description="MOD_FMMANAGER_NEXTMATCHES_FIELD_DAYS_DESC" default="10"/>
+        <field name="states" type="stateslist" multiple="true" label="MOD_FMMANAGER_NEXTMATCHES_FIELD_STATES" description="MOD_FMMANAGER_NEXTMATCHES_FIELD_STATES_DESC" class="fm-chzn-states input-medium"/>
+        <field name="teams" type="fmradio" default="my" label="MOD_FMMANAGER_NEXTMATCHES_FIELD_TEAMS" description="MOD_FMMANAGER_NEXTMATCHES_FIELD_TEAMS_DESC">
+          <option value="all" active_class="btn-info">FMLIB_ALL_4</option>
+          <option value="my" active_class="btn-info">MOD_FMMANAGER_NEXTMATCHES_MY_TEAMS</option>
+        </field>
+        <field name="categories" type="categorieslist" editLink="" default="" class="input-large" multiple="true" label="MOD_FMMANAGER_NEXTMATCHES_FIELD_CATEGORIES" description="MOD_FMMANAGER_NEXTMATCHES_FIELD_CATEGORIES_DESC">
+          <option value="allowed">MOD_FMMANAGER_NEXTMATCHES_ALLOWED_CATEGORIES</option>
+        </field>
+        <field name="group_by" type="list" label="COM_FMMANAGER_GROUP_BY" class="input-small" default="dates" description="COM_FMMANAGER_GROUP_BY_DESC">
+          <option value="dates">COM_FMMANAGER_FIELD_DATE</option>
+          <option value="competitions">COM_FMMANAGER_FIELD_COMPETITION</option>
+        </field>
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+        <field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+        <field name="cache" type="list" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+          <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+  <!-- /// INSTALL SCRIPT /// -->
+  <!-- /// FILES /// -->
+  <!-- /// LANGUAGES /// -->
+  <!-- /// INSTALL SCRIPT /// -->
+  <!-- /// FILES /// -->
+  <!-- /// LANGUAGES /// -->
+  <!-- /// INSTALL SCRIPT /// -->
+  <!-- /// FILES /// -->
+  <!-- /// LANGUAGES /// -->
+  <!-- /// INSTALL SCRIPT /// -->
+  <scriptfile>install.script.php</scriptfile>
+  <!-- /// FILES /// -->
+  <files folder="admin">
+    <folder>assets</folder>
+    <folder>forms</folder>
+    <folder>tmpl</folder>
+    <filename>CHANGELOG.md</filename>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <filename module="mod_fmmanager_nextmatches">mod_fmmanager_nextmatches.php</filename>
+  </files>
+  <!-- /// LANGUAGES /// -->
+  <languages folder="admin">
+    <language tag="fr-FR">language/fr-FR/fr-FR.mod_fmmanager_nextmatches.ini</language>
+    <language tag="fr-FR">language/fr-FR/fr-FR.mod_fmmanager_nextmatches.sys.ini</language>
+  </languages>
+</extension>

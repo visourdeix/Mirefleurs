@@ -1,0 +1,68 @@
+﻿#fm
+{
+    line-height: 18px;
+    vertical-align: middle;
+
+    img
+    {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+    }    
+    
+    table img {
+        max-width: none;
+    }
+
+    a,
+    a:visited,
+    a:focus
+    {
+        text-decoration: none;
+        color: @activeFontColor;
+        .transition(@transition);
+        outline: none;
+        background: none;
+
+        &:hover,
+        &:active
+        {
+            text-decoration: none;
+            color: @linkFontColor;
+            background: none;
+        }
+    }
+
+    button
+    {
+        &:hover,
+        &:focus
+        {
+            background: none;
+        }
+    }
+
+    ul
+    {
+        margin: 0;
+        padding: 0;
+    }
+
+    table
+    {
+        margin: 0 !important;
+    }
+}
+
+#fm-admin
+{
+    line-height: 18px;
+    vertical-align: middle;
+
+    img
+    {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.2" type="plugin" group="fmcontenttemplates" method="upgrade">
+  <name>plg_fmcontenttemplates_planning</name>
+  <author>Stéphane ANDRE</author>
+  <creationDate>January 2016</creationDate>
+  <copyright>(C) 2015 Stéphane ANDRE. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>andre.cs2i@gmail.com</authorEmail>
+  <authorUrl/>
+  <version>1.0.0</version>
+  <description>PLG_FMCONTENTTEMPLATES_PLANNING_XML_DESCRIPTION</description>
+  <!-- Runs on install/uninstall/update; New in 2.5 -->
+  <config>
+    <fields name="params">
+      <fieldset name="basic" addfieldpath="/libraries/FootManager/Form/fields">
+        <field name="note" type="fmnote" label="FMLIB_PLG_CONTENTTEMPLATES_NOTE" description="FMLIB_PLG_CONTENTTEMPLATES_NOTE_DESC"/>
+        <field name="notelist" type="fmnotelist" label="FMLIB_PLG_CONTENTTEMPLATES_VARIABLES" description="FMLIB_PLG_CONTENTTEMPLATES_VARIABLES_DESC">
+          <option value="start_date">PLG_FMCONTENTTEMPLATES_PLANNING_START_DATE_DESC</option>
+          <option value="end_date">PLG_FMCONTENTTEMPLATES_PLANNING_END_DATE_DESC</option>
+          <option value="planning">PLG_FMCONTENTTEMPLATES_PLANNING_PLANNING_DESC</option>
+        </field>
+      </fieldset>
+      <fieldset name="general" label="FMLIB_TAB_GENERAL" addfieldpath="/administrator/components/com_categories/models/fields">
+        <field name="jform_title" type="text" size="30" default="" label="JGLOBAL_TITLE" description="JFIELD_TITLE_DESC" class="input-xxlarge"/>
+        <field name="jform_alias" type="text" label="JFIELD_ALIAS_LABEL" description="JFIELD_ALIAS_DESC" hint="JFIELD_ALIAS_PLACEHOLDER" size="40" class="input-xxlarge"/>
+        <field name="jform_catid" type="categoryedit" label="JCATEGORY" description="JFIELD_CATEGORY_DESC" extension="com_content" default="-3">
+          <option value="-3">FMLIB_IGNORE</option>
+        </field>
+        <field name="jform_state" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="chzn-color-state" filter="intval" size="1" default="1">
+          <option value="-3">FMLIB_IGNORE</option>
+          <option value="1">
+            JPUBLISHED
+          </option>
+          <option value="0">
+            JUNPUBLISHED
+          </option>
+          <option value="2">
+            JARCHIVED
+          </option>
+          <option value="-2">
+            JTRASHED
+          </option>
+        </field>
+        <field name="jform_featured" type="list" label="JFEATURED" description="COM_CONTENT_FIELD_FEATURED_DESC" class="chzn-color-state" filter="intval" size="1" default="-3">
+          <option value="-3">FMLIB_IGNORE</option>
+          <option value="1">
+            JYES
+          </option>
+          <option value="0">
+            JNO
+          </option>
+        </field>
+        <field name="jform_tags" type="tag" label="JTAG" description="JTAG_DESC" class="input-large" multiple="true">
+        </field>
+      </fieldset>
+      <fieldset name="content" label="FMLIB_TAB_CONTENT">
+        <field name="jform_articletext" type="editor" size="30" default="" label="JGLOBAL_DESCRIPTION" description="" filter="JComponentHelper::filterText"/>
+      </fieldset>
+      <fieldset name="images" label="FMLIB_TAB_IMAGES">
+        <field name="jform_images_image_intro" type="media" label="COM_CONTENT_FIELD_INTRO_LABEL" description="COM_CONTENT_FIELD_INTRO_DESC"/>
+        <field name="jform_images_float_intro" type="list" label="COM_CONTENT_FLOAT_LABEL" description="COM_CONTENT_FLOAT_DESC">
+          <option value="">JGLOBAL_USE_GLOBAL</option>
+          <option value="right">COM_CONTENT_RIGHT</option>
+          <option value="left">COM_CONTENT_LEFT</option>
+          <option value="none">COM_CONTENT_NONE</option>
+        </field>
+        <field name="jform_images_image_intro_alt" type="text" label="COM_CONTENT_FIELD_IMAGE_ALT_LABEL" description="COM_CONTENT_FIELD_IMAGE_ALT_DESC" size="20"/>
+        <field name="jform_images_image_intro_caption" type="text" label="COM_CONTENT_FIELD_IMAGE_CAPTION_LABEL" description="COM_CONTENT_FIELD_IMAGE_CAPTION_DESC" size="20"/>
+        <field name="spacer1" type="spacer" hr="true"/>
+        <field name="jform_images_image_fulltext" type="media" label="COM_CONTENT_FIELD_FULL_LABEL" description="COM_CONTENT_FIELD_FULL_DESC"/>
+        <field name="jform_images_float_fulltext" type="list" label="COM_CONTENT_FLOAT_LABEL" description="COM_CONTENT_FLOAT_DESC">
+          <option value="">JGLOBAL_USE_GLOBAL</option>
+          <option value="right">COM_CONTENT_RIGHT</option>
+          <option value="left">COM_CONTENT_LEFT</option>
+          <option value="none">COM_CONTENT_NONE</option>
+        </field>
+        <field name="jform_images_image_fulltext_alt" type="text" label="COM_CONTENT_FIELD_IMAGE_ALT_LABEL" description="COM_CONTENT_FIELD_IMAGE_ALT_DESC" size="20"/>
+        <field name="jform_images_image_fulltext_caption" type="text" label="COM_CONTENT_FIELD_IMAGE_CAPTION_LABEL" description="COM_CONTENT_FIELD_IMAGE_CAPTION_DESC" size="20"/>
+      </fieldset>
+      <fieldset name="urls" label="FMLIB_TAB_LINKS">
+        <field name="jform_urls_urla" type="url" validate="url" filter="url" relative="true" label="COM_CONTENT_FIELD_URLA_LABEL" description="COM_CONTENT_FIELD_URL_DESC"/>
+        <field name="jform_urls_urlatext" type="text" label="COM_CONTENT_FIELD_URLA_LINK_TEXT_LABEL" description="COM_CONTENT_FIELD_URL_LINK_TEXT_DESC" size="20"/>
+        <field name="jform_urls_targeta" type="list" label="COM_CONTENT_URL_FIELD_BROWSERNAV_LABEL" description="COM_CONTENT_URL_FIELD_BROWSERNAV_DESC" default="" filter="options">
+          <option value="">JGLOBAL_USE_GLOBAL</option>
+          <option value="0">JBROWSERTARGET_PARENT</option>
+          <option value="1">JBROWSERTARGET_NEW</option>
+          <option value="2">JBROWSERTARGET_POPUP</option>
+          <option value="3">JBROWSERTARGET_MODAL</option>
+        </field>
+        <field name="spacer3" type="spacer" hr="true"/>
+        <field name="jform_urls_urlb" type="url" validate="url" filter="url" relative="true" label="COM_CONTENT_FIELD_URLB_LABEL" description="COM_CONTENT_FIELD_URL_DESC"/>
+        <field name="jform_urls_urlbtext" type="text" label="COM_CONTENT_FIELD_URLB_LINK_TEXT_LABEL" description="COM_CONTENT_FIELD_URL_LINK_TEXT_DESC" size="20"/>
+        <field name="jform_urls_targetb" type="list" label="COM_CONTENT_URL_FIELD_BROWSERNAV_LABEL" description="COM_CONTENT_URL_FIELD_BROWSERNAV_DESC" default="" filter="options">
+          <option value="">JGLOBAL_USE_GLOBAL</option>
+          <option value="0">JBROWSERTARGET_PARENT</option>
+          <option value="1">JBROWSERTARGET_NEW</option>
+          <option value="2">JBROWSERTARGET_POPUP</option>
+          <option value="3">JBROWSERTARGET_MODAL</option>
+        </field>
+        <field name="spacer4" type="spacer" hr="true"/>
+        <field name="jform_urls_urlc" type="url" validate="url" filter="url" relative="true" label="COM_CONTENT_FIELD_URLC_LABEL" description="COM_CONTENT_FIELD_URL_DESC"/>
+        <field name="jform_urls_urlctext" type="text" label="COM_CONTENT_FIELD_URLC_LINK_TEXT_LABEL" description="COM_CONTENT_FIELD_URL_LINK_TEXT_DESC" size="20"/>
+        <field name="jform_urls_targetc" type="list" label="COM_CONTENT_URL_FIELD_BROWSERNAV_LABEL" description="COM_CONTENT_URL_FIELD_BROWSERNAV_DESC" default="" filter="options">
+          <option value="">JGLOBAL_USE_GLOBAL</option>
+          <option value="0">JBROWSERTARGET_PARENT</option>
+          <option value="1">JBROWSERTARGET_NEW</option>
+          <option value="2">JBROWSERTARGET_POPUP</option>
+          <option value="3">JBROWSERTARGET_MODAL</option>
+        </field>
+      </fieldset>
+      <fieldset name="publication" label="FMLIB_TAB_PUBLICATION">
+        <field name="jform_version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inpu-large" maxlength="255" size="45"/>
+        <field name="jform_access" type="accesslevel" label="JFIELD_ACCESS_LABEL" description="JFIELD_ACCESS_DESC" size="1"/>
+        <field name="jform_language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL" description="COM_CONTENT_FIELD_LANGUAGE_DESC">
+          <option value="*">JALL</option>
+        </field>
+      </fieldset>
+      <fieldset name="metadata" label="JGLOBAL_FIELDSET_METADATA_OPTIONS">
+        <field name="jform_metakey" type="textarea" label="JFIELD_META_KEYWORDS_LABEL" description="JFIELD_META_KEYWORDS_DESC" rows="3" cols="30"/>
+        <field name="jform_metadesc" type="textarea" label="JFIELD_META_DESCRIPTION_LABEL" description="JFIELD_META_DESCRIPTION_DESC" rows="3" cols="30"/>
+        <field name="jform_metadata_robots" type="list" label="JFIELD_METADATA_ROBOTS_LABEL" description="JFIELD_METADATA_ROBOTS_DESC">
+          <option value="">JGLOBAL_USE_GLOBAL</option>
+          <option value="index, follow">JGLOBAL_INDEX_FOLLOW</option>
+          <option value="noindex, follow">JGLOBAL_NOINDEX_FOLLOW</option>
+          <option value="index, nofollow">JGLOBAL_INDEX_NOFOLLOW</option>
+          <option value="noindex, nofollow">JGLOBAL_NOINDEX_NOFOLLOW</option>
+        </field>
+        <field name="jform_metadata_author" type="text" label="JAUTHOR" description="JFIELD_METADATA_AUTHOR_DESC" size="20"/>
+        <field name="jform_metadata_rights" type="textarea" label="JFIELD_META_RIGHTS_LABEL" description="JFIELD_META_RIGHTS_DESC" required="false" filter="string" cols="30" rows="2"/>
+      </fieldset>
+    </fields>
+  </config>
+  <!-- /// INSTALL SCRIPT /// -->
+  <!-- /// FILES /// -->
+  <!-- /// LANGUAGES /// -->
+  <!-- /// INSTALL SCRIPT /// -->
+  <scriptfile>install.script.php</scriptfile>
+  <!-- /// FILES /// -->
+  <files folder="admin">
+    <folder>tmpl</folder>
+    <filename>form.xml</filename>
+    <filename>index.html</filename>
+    <filename plugin="planning">planning.php</filename>
+  </files>
+  <!-- /// LANGUAGES /// -->
+  <languages folder="admin">
+    <language tag="fr-FR">language/fr-FR/fr-FR.plg_fmcontenttemplates_planning.ini</language>
+    <language tag="fr-FR">language/fr-FR/fr-FR.plg_fmcontenttemplates_planning.sys.ini</language>
+  </languages>
+</extension>

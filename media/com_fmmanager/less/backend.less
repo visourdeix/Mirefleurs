@@ -1,0 +1,180 @@
+﻿// Core variables and mixins
+@import "../../jui/less/variables.less";
+// Custom for this template
+@import "../../jui/less/mixins.less";
+
+// FootManager variables
+@import (reference) "../../FootManager/less/_variables.less";
+// FootManager Mixins
+@import (reference) "../../FootManager/less/mixins/_mixins.less";
+// --------------------------------
+
+@import "_common.less";
+@import "layouts/person/_thumbnail.less";
+@import "layouts/match/_thumbnail.less";
+
+.fm-my-club-row td
+{
+    background-color: lighten(@blue, 40%) !important;
+}
+
+table .fm-row-all
+{
+    border-bottom: 3px solid @gray !important;
+}
+
+table .fm-cell-all
+{
+    font-weight: bold !important;
+    font-style: italic !important;
+}
+
+@fmTacticCellHeight: 50px;
+@fmTacticCellWidth: 50px;
+
+.fm-tactic-editor
+{
+    padding: 10px;
+    background-image: url('../images/tactic-background.jpg');
+    width: 260px;
+    height: 364px;
+
+    & > table
+    {
+        width: 100%;
+        height: 100%;
+
+        td
+        {
+            width: @fmTacticCellWidth;
+            height: @fmTacticCellHeight;
+            line-height: @fmTacticCellHeight;
+            vertical-align: middle;
+            text-align: center;
+            position: relative;
+
+            input[type="checkbox"]
+            {
+                display: none !important;
+                /* Cell */
+                & + label
+                {
+                    .user-select(none);
+                    width: @fmTacticCellWidth;
+                    height: @fmTacticCellHeight;
+                    line-height: @fmTacticCellHeight;
+                    vertical-align: middle;
+                    text-align: center;
+                    margin: 0;
+                    /* Position in cell */
+                    &:after,
+                    &:before
+                    {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: @fmTacticCellWidth;
+                        height: @fmTacticCellHeight;
+                        line-height: @fmTacticCellHeight;
+                    }
+                    /* Font Number */
+                    &:not([data-number="0"]):after
+                    {
+                        font-weight: bold;
+                        font-size: 14px;
+                        color: @gold;
+                        content: attr(data-number);
+                        padding-top: 3px;
+                    }
+                    /* Font icon */
+                    &:before
+                    {
+                        font-family: 'icomoon';
+                        speak: none;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        font-size: 30px;
+                        /* Better Font Rendering =========== */
+                        -webkit-font-smoothing: antialiased;
+                        content: "\e801";
+                        .transition(@transition);
+                    }
+
+                    & > div
+                    {
+                        color: @white;
+                        padding-top: 45px;
+                        line-height: 11px;
+                        font-size: 10px;
+                        font-weight: bold;
+                    }
+                }
+
+                &:not(:checked) + label:before
+                {
+                    opacity: 0.6;
+                    color: @white;
+                }
+
+                &:not(:checked) + label:after
+                {
+                    display: none;
+                }
+
+                &:checked + label:before
+                {
+                    opacity: 1;
+                    color: @black;
+                }
+
+                &[readonly="readonly"]:not(:checked) + label
+                {
+                    display: none;
+                }
+
+                &[readonly="readonly"]:checked + label:before
+                {
+                    color: @gray;
+                }
+
+                &:not(:checked):not([readonly="readonly"]) + label:hover:before
+                {
+                    color: lighten(@black, 5%);
+                }
+
+                & ~ .fm-edit
+                {
+                    position: absolute;
+                    top: 0;
+                    left: 25px;
+                    .border-radius(50px);
+                    padding: 3px;
+                }
+
+                & ~ .fm-tactic-captain
+                {
+                    position: absolute;
+                    top: 5px;
+                    left: 30px;
+                    color: orange;
+                    line-height: 1px;
+                    font-size: 17px;
+                }
+
+                &[readonly="readonly"] ~ .fm-edit,
+                &:not(:checked) ~ .fm-edit
+                {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .fm-tactic-modal
+    {
+        max-width: 500px;
+        padding: 5px;
+    }
+}

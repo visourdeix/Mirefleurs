@@ -1,0 +1,171 @@
+﻿.fm-medias-thumbnail {
+    display: block;
+    margin: 0;
+
+    & > a {
+        .flex-display();
+        .flex-flow(column);
+        .justify-content(flex-start);
+        .align-items(stretch);
+        position: relative;
+        height: 100%;
+
+        & > .fm-image {
+            position: relative;
+            width: 100% !important;
+            .flex-display();
+            .flex-flow(column);
+            .justify-content(flex-start);
+            .align-items(stretch);
+
+            img {
+                width: 100% !important;
+            }
+
+            & > .fm-mask-visible,
+            & > .fm-mask {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                .opacity(0);
+                #translucent > .background(@activeBackgroundColor, 0.2);
+                .transition(@transition);
+                .box-shadow(inset 0px 6px 0px 0px @activeBorderColor);
+                .flex-display();
+                .justify-content(center);
+                .align-items(center);
+                font-size: 30px;
+                color: @activeLightFontColor;
+
+                & > span {
+                    padding: 10px;
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    border: 4px solid @white;
+                    .border-radius(50%);
+                    -webkit-box-sizing: content-box;
+                    -moz-box-sizing: content-box;
+                    box-sizing: content-box;
+                }
+            }
+
+            & > .fm-mask-visible {
+                .opacity(60);
+                .box-shadow(none);
+                background-color: transparent !important;
+            }
+
+            & > .fm-bull {
+                display: block;
+                position: absolute;
+                z-index: 1;
+                margin-left: -1em;
+                margin-top: -1em;
+                left: 50%;
+                top: 100%;
+                padding: 0 3px;
+            }
+        }
+
+        & > figcaption {
+            display: block;
+            .transition(@transition);
+            padding: 5px;
+            color: @fontColor;
+            background-color: @white;
+
+            & > * {
+                .transition(@transition);
+                color: @fontColor;
+            }
+
+            .fm-category {
+                margin: 0;
+                color: @activeBackgroundColor;
+                padding: 0;
+                text-align:center;
+            }
+
+            .fm-separator {
+                margin: auto;
+                margin-top: 5px;
+                margin-bottom: 10px;
+                width: 100px;
+                border-bottom: 1px solid @borderColor;
+            }
+
+            .fm-title {
+                color: @black;
+                font-size: 1.2rem;
+                line-height:1.3rem;
+                margin: 0;
+                padding: 0;
+                text-align:center;
+
+                &:before {
+                    border:none;
+                }
+            }
+
+            .fm-subtitle {
+                color: #aaa;
+                margin: 0;
+                padding: 0;
+                margin-top: 10px;
+                font-size: 0.85rem;
+                text-align:center;
+            }
+
+            .fm-desc {
+                margin-top: 7px;
+                font-size: 0.85rem;
+            }
+        }
+    }
+
+    &:hover {
+        & > a {
+            & > .fm-image {
+                & > .fm-mask {
+                    .opacity(100);
+                }
+            }
+
+            & > figcaption {
+                #translucent > .background(@activeBackgroundColor, 0.2);
+            }
+        }
+    }
+}
+
+.fm-small .fm-medias-thumbnail,
+.fm-medias-thumbnail.fm-small {
+    & > a {
+        & > .fm-image {
+            & > .fm-mask,
+            & > .fm-mask-visible {
+                font-size: 18px;
+
+                & > span {
+                    padding: 7px;
+                    width: 20px;
+                    height: 20px;
+                    border: 3px solid @white;
+                }
+            }
+        }
+
+        & > figcaption {
+            padding: 4px;
+            font-size: 85%;
+            line-height: 17px;
+
+            & .fm-subtitle {
+                font-size: 90%;
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset addfieldpath="/libraries/FootManager/Form/fields">
+
+    <field name="label" type="text" label="COM_FMMANAGER_FIELD_LABEL" description="COM_FMMANAGER_FIELD_LABEL_DESC" default="" required="true" />
+    <field name="abbreviation" type="text" label="COM_FMMANAGER_FIELD_ABBREVIATION" description="COM_FMMANAGER_FIELD_ABBREVIATION_DESC" default="" required="true" class="input-mini" />
+    <field name="image" type="fmmedia" label="COM_FMMANAGER_FIELD_IMAGE" description="COM_FMMANAGER_FIELD_IMAGE_DESC" directory="statistics" />
+    <field name="by_player" type="fmtoggle" label="COM_FMMANAGER_FIELD_BY_PLAYER" description="COM_FMMANAGER_FIELD_BY_PLAYER_DESC" />
+    <field name="by_staff" type="fmtoggle" label="COM_FMMANAGER_FIELD_BY_STAFF" description="COM_FMMANAGER_FIELD_BY_STAFF_DESC" />
+    <field name="by_team" type="fmtoggle" label="COM_FMMANAGER_FIELD_BY_TEAM" description="COM_FMMANAGER_FIELD_BY_TEAM_DESC" />
+    <field name="by_match" type="fmtoggle" label="COM_FMMANAGER_FIELD_BY_MATCH" description="COM_FMMANAGER_FIELD_BY_MATCH_DESC" />
+    <field name="by_matchday" type="fmtoggle" label="COM_FMMANAGER_FIELD_BY_MATCHDAY" description="COM_FMMANAGER_FIELD_BY_MATCHDAY_DESC" />
+    <field name="is_event" type="fmtoggle" label="COM_FMMANAGER_FIELD_IS_STATISTIC_EVENT" description="COM_FMMANAGER_FIELD_IS_STATISTIC_EVENT_DESC" />
+    <field name="unit" type="fmradio"  default="0"  label="COM_FMMANAGER_FIELD_UNIT" description="COM_FMMANAGER_FIELD_UNIT_DESC">
+      <option value="0" active_class="btn-info">FMLIB_NONE_2</option>
+      <option value="1" active_class="btn-info" title="FM_UNIT_1">FM_UNIT_1_ICON</option>
+    </field>
+    <field name="calculation" type="fmradio"  default="1"  label="COM_FMMANAGER_FIELD_CALCULATION" description="COM_FMMANAGER_FIELD_CALCULATION_DESC">
+      <option value="sum" active_class="btn-info">FM_CALCULATION_SUM</option>
+      <option value="avg" active_class="btn-info">FM_CALCULATION_AVG</option>
+    </field>
+    <field name="color" type="color" label="COM_FMMANAGER_FIELD_COLOR" description="COM_FMMANAGER_FIELD_COLOR_DESC" default="#bdbdbd" required="true" />
+  </fieldset>
+</form>
